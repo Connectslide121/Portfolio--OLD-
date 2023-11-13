@@ -7,22 +7,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="header">
+    <div id="home">
         <div class="container">
             <nav>
                 <img src="images/MainLogo.png" class="logo" alt="longlogo">
                 <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About me</a></li>
-                    <li><a href="#">My websites</a></li>
-                    <li><a href="#">My programs</a></li>
-                    <li><a href="#">My games</a></li>
-                    <li><a href="#">Contact me</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-house"></i></span> Home</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-address-card"></i></span> About me</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-globe"></i></span> My websites</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-gamepad"></i></span> My games</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-laptop-code"></i></span> My programs</a></li>
+                    <li><a href="#"><span><i class="fa-solid fa-envelope"></i></span> Contact me</a></li>
                 </ul>
             </nav>
-            <div class="header-text">
-                <h1>Hi! I'm <span>Jon</span></h1>
-                <p>FULL-STACK DEVELOPER</p>
+            <div class="home">
+                <div class="home-text">
+                    <h1>Hi, I'm <span>Jon</span></h1>
+                    <p>FULL-STACK DEVELOPER</p>
+                    <p>GAME DEVELOPER</p>
+                </div>
+                <div class="home-image">
+                    <img src="images/Home.png" alt="Home Image">
+                </div>
             </div>
         </div>
     </div>
@@ -31,13 +37,80 @@
         <div class="container">
             <div class="row">
                 <div class="about-col-1">
-                    <img src="images/AboutLogo.png" alt="logo">
+                    <img class="animated-aboutme9" src="images/aboutme9.png" alt="logo">
+                    <img class="animated-aboutme8" src="images/aboutme8.png" alt="logo">
+                    <img class="animated-aboutme7" src="images/aboutme7.png" alt="logo">
+                    <img class="animated-aboutme6" src="images/aboutme6.png" alt="logo">
+                    <img class="animated-aboutme5" src="images/aboutme5.png" alt="logo">
+                    <img class="animated-aboutme4" src="images/aboutme4.png" alt="logo">
+                    <img class="animated-aboutme3" src="images/aboutme3.png" alt="logo">
+                    <img class="animated-aboutme2" src="images/aboutme2.png" alt="logo">
+                    <img src="images/aboutme1.png" alt="logo">    
                 </div>
                 <div class="about-col-2">
-                    <h1>About me</h1>
+                    <h1>About <span>me</span></h1>
+
+                    <p>I am an aspiring web developer with a strong foundation in .NET development. I am passionate about coding and always eager to learn. In addition to my formal education, I have independently crafted video games using Unity, which has helped me sharpen my problem-solving skills and provided me with hands-on software development experience.<br><br>Beyond the world of programming, I am also deeply passionate about music and can often be found playing my guitar. My journey in this field is just beginning and I am excited to take on new challenges, collaborate with like-minded individuals and continue expanding my skill set.</p>
+
+                    <div class="tab-titles">
+                        <h2 class="tab-links active-link" onclick="opentab('skills')">Skills</h2>
+                        <h2 class="tab-links" onclick="opentab('education')">Education</h2>
+                        <h2 class="tab-links" onclick="opentab('experience')">Experience</h2>
+                    </div>
+                    <div class="tab-contents skills active-tab" id="skills">
+                        <ul>
+                            <img src="images/skill1.png" alt="html">
+                            <img src="images/skill2.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                            <img src="images/skill1.png" alt="html">
+
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023 - 2024</span><br>.NET Full-stack developer course at Lexicon Växjö (Sweden)</li>
+                            <li><span>2008 - 2010</span><br>HNC of Casting manufacturing [&] powder metallurgy at Lea-Artibai (Spain)</li>
+                            <li><span>2005 - 2008</span><br>Polymers Engineering at London Metropolitan University (Spain)</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2011 - 2023</span><br>Plant Manager/Product designer at AML SA (Spain)</li>
+                            <p>Managed production at a sand casting steel foundry. Daily [&] weekly MTO production planning, pattern designing, 3D drawing and process simulation have been part of my main responsibilities.</p>
+                            <li><span>2017 - 2017</span><br>Plant Manager/Product designer at ATPL PL (India)</li><p>Started up the production line in a newly opened foundry, designed workflow, taught employees and led the production team.</p>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+<script src="https://kit.fontawesome.com/05049b2b78.js" crossorigin="anonymous"></script>
+<script>
+   var tablinks = document.getElementsByClassName("tab-links");
+   var tabcontents = document.getElementsByClassName("tab-contents");
+
+   function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+   }
+</script>
 </body>
 </html>
