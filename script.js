@@ -30,21 +30,36 @@ function rotateLogo(logo) {
     const angle = Math.random() * 360;
     const direction = Math.random() < 0.5 ? -1 : 1;
 
-    // Set transform-origin and transform
-    logo.style.transition = 'none'; // Reset transition
+    logo.style.transition = 'none'; 
     logo.style.transformOrigin = 'center center';
-    logo.style.transform = 'rotate(0deg)'; // Reset rotation
+    logo.style.transform = 'rotate(0deg)';
 
 
-    // Apply the new styles with transition
     logo.style.transition = `transform ${duration}ms ease-in-out`;
     logo.style.transform = `rotate(${direction * angle}deg)`;
 
-    // Reset the transition and rotation after the animation duration
     setTimeout(() => {
         logo.style.transition = 'none';
-        logo.style.transformOrigin = 'initial'; // Reset transform origin
-        logo.style.transform = 'none'; // Reset transform
+        logo.style.transformOrigin = 'initial'; 
+        logo.style.transform = 'none';
         rotateLogo(logo);
     }, duration);
 }
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    const parallax_el = document.querySelectorAll(".parallax3D", "home-snippet");
+    
+    let xValue = 0;
+    let yValue = 0;
+    
+    window.addEventListener("mousemove", (e) => {
+        xValue = e.clientX - window.innerWidth / 2;
+        yValue = e.clientY - window.innerHeight / 2;
+    
+        parallax_el.forEach(el => {
+            el.style.transform = `translateX(calc(-50% + ${-xValue * 0.02}px)) translateY(calc(-50% + ${-yValue * 0.02}px))`;
+        })
+    })
+    });
+
