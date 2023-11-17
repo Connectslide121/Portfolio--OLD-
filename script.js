@@ -57,9 +57,25 @@ document.addEventListener("DOMContentLoaded", function() {
         xValue = e.clientX - window.innerWidth / 2;
         yValue = e.clientY - window.innerHeight / 2;
     
-        parallax_el.forEach(el => {
+        parallax_el.forEach((el) => {
             el.style.transform = `translateX(calc(-50% + ${-xValue * 0.02}px)) translateY(calc(-50% + ${-yValue * 0.02}px))`;
         })
     })
     });
 
+    document.addEventListener("DOMContentLoaded", function() {
+        const parallax_el = document.querySelectorAll(".parallaxBackground");
+        
+        let xValue = 0;
+        let yValue = 0;
+        
+        window.addEventListener("mousemove", (e) => {
+            xValue = e.clientX - window.innerWidth / 2;
+            yValue = e.clientY - window.innerHeight / 2;
+        
+            parallax_el.forEach((el) => {
+                el.style.transform = `translateX(calc(${-xValue * 0.3}px)) translateY(calc(10% + ${-yValue * 0.3}px)) scale(1.4)`;
+            })
+        })
+        });
+    
