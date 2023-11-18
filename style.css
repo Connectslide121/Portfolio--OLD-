@@ -748,7 +748,8 @@ nav .social-media ul li:hover a{
 }
 
 .contact-right form{
-    width: 100%;
+    margin-left: 10%;
+    width: 90%;
 }
 
 form input, form textarea{
@@ -785,7 +786,34 @@ form textarea{
 /*------------------------57:24-----------------------*/
 
 @media screen and (max-width: 768px) {
-    .home {
-        flex-direction: column;
+
+    body {
+        width: 100%;
+    }
+    
+    
+    .home{
+        height: 100%;
+    }
+
+    #about{
+        height: 100%;
+    }
+    
+    #services{
+        height: 100%;
+    }
+
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+
+    .about-col-1 img{
+        margin: 10% 10%;
+    }
+
+    .tab-links{
+        font-size: 18px;
+        margin-right: 20px;
     }
 }
