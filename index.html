@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jon Mendizabal - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/05049b2b78.js" crossorigin="anonymous"></script>
@@ -15,28 +15,37 @@
     <div id="home">
         <nav>
             <img src="images/NavLogo.png" class="nav-logo" alt="longlogo">
-            <ul>
-                <li><a href="#"><span><i class="fa-solid fa-house"></i></span> Home</a></li>
-                <li><a href="#"><span><i class="fa-solid fa-address-card"></i></span> About me</a></li>
-                <li><a href="#"><span><i class="fa-solid fa-bell-concierge"></i></span> Services</a></li>
-                <li><a href="#"><span><i class="fa-solid fa-globe"></i></span> Websites</a></li>
-                <li><a href="#"><span><i class="fa-solid fa-gamepad"></i></span> Games</a></li>
-                <li><a href="#"><span><i class="fa-solid fa-laptop-code"></i></span> Programs</a></li>
-                <li><a href="#"><span><i class="fa-solid fa-envelope"></i></span> Contact</a></li>
-            </ul>
+            <div class="social-media">
+                <ul>
+                    <li><a href="https://www.linkedin.com/in/jon-mendizabal" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="https://github.com/Connectslide121" target="_blank"><i class="fa-brands fa-github"></i></a></li>
+                    <li><a href="https://connect-slide-121.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a></li>
+                </ul>
+            </div>
+            <div class="nav-links">
+                <ul>
+                    <li><a href="#home"><span><i class="fa-solid fa-house"></i></span> Home</a></li>
+                    <li><a href="#about"><span><i class="fa-solid fa-address-card"></i></span> About me</a></li>
+                    <li><a href="#services"><span><i class="fa-solid fa-bell-concierge"></i></span> Services</a></li>
+                    <li><a href="#websites"><span><i class="fa-solid fa-globe"></i></span> Websites</a></li>
+                    <li><a href="#games"><span><i class="fa-solid fa-gamepad"></i></span> Games</a></li>
+                    <li><a href="#programs"><span><i class="fa-solid fa-laptop-code"></i></span> Programs</a></li>
+                    <li><a href="#contact"><span><i class="fa-solid fa-envelope"></i></span> Contact</a></li>
+                </ul>
+            </div>
         </nav>
 
         <div class="container">
             <div class="home">
-                <!-- <div class="home-snippet">
-                    <img class="parallax3D" src="images/snippet.png" alt="code snippet decoration">
-                </div>
-                <div class="home-snippet2">
-                    <img class="parallax3D" src="images/snippet2.png" alt="code snippet decoration">
-                </div> -->
                 <div class="home-main">
                     <div class="background parallaxBackground">
-                        <img src="images/blobs.png" alt="">
+                        <img src="images/HomeBackground.png" alt="">
+                    </div>
+                    <div class="blobfixed">
+                        <div class="blobs parallaxBlobs">
+                            <img src="images/blobs.png" alt="">
+                        </div>
+    
                     </div>
 
                     <div class="home-logo">
@@ -54,13 +63,6 @@
                         <div>
                             <p>FULL-STACK DEVELOPER</p>
                             <p>GAME DEVELOPER</p>
-                        </div>
-                        <div class="social-media">
-                            <ul>
-                                <li><a href="https://www.linkedin.com/in/jon-mendizabal" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                                <li><a href="https://github.com/Connectslide121" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                                <li><a href="https://connect-slide-121.itch.io/" target="_blank"><i class="fa-brands fa-itch-io"></i></a></li>
-                            </ul>
                         </div>
                     </div>
                 </div>
@@ -189,7 +191,19 @@
                 <h1>Websites</h1>
                     <div class="website-list">
                         <div class="website">
-                            <img src="images/website2.png" alt="Spotify clone">
+                            <img src="images/PatisserieLente.png" alt="Spotify clone">
+                            <div class="layer">
+                                <h2>Pattiserie Lente</h2>
+                                <p>My first ever website. A site for a made-up pastry business.</p>
+                                <h3>September 2023</h3>
+                                <div class="buttons">
+                                    <a href="https://github.com/Connectslide121/Patisserie-Lente" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://connectslide121.github.io/Patisserie-Lente/" target="_blank"><i class="fa-solid fa-link"></i></a>    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="website">
+                            <img src="images/Spotify.png" alt="Spotify clone">
                             <div class="layer">
                                 <h2>Spotify clone</h2>
                                 <p>A Spotify clone I made for practicing HTML and CSS</p>
@@ -201,7 +215,7 @@
                             </div>
                         </div>
                         <div class="website">
-                            <img src="images/website1.png" alt="My Portfolio">
+                            <img src="images/Portfolio.png" alt="My Portfolio">
                             <div class="layer">
                                 <h2>My portfolio website</h2>
                                 <p>My personal portfolio website</p>
