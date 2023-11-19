@@ -11,7 +11,7 @@ html {
 
 body{
     color: #3b467c;
-    background-image: url(images/homeBackground.png);
+    /* background-image: url(images/homeBackground.png); */
     background-position: center;
     background-size: cover;
     background-attachment: fixed;
@@ -44,11 +44,14 @@ nav{
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 10px 5%;
+    z-index: 1000;
+}
+
+.navbar-scroll {
     background-color: transparent;
     -webkit-backdrop-filter: blur(100px);
     backdrop-filter: blur(100px);
-    padding: 10px 5%;
-    z-index: 1000;
 }
 
 .nav-logo{
@@ -124,10 +127,16 @@ nav .social-media ul li:hover a{
 
 .home{
     height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
 }
 
 .background{
-    position: absolute;
+    position: fixed;
+    top: -300px;
     z-index: -100;
 }
 
@@ -142,10 +151,6 @@ nav .social-media ul li:hover a{
 
 
 .home-main{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .home-logo{

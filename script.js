@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         yValue = e.clientY - window.innerHeight / 2;
     
         parallax_el.forEach((el) => {
-            el.style.transform = `translateX(calc(${-xValue * 0.01}px)) translateY(calc(10% + ${-yValue * 0.01}px)) scale(1.4)`;
+            el.style.transform = `translateX(calc(${-xValue * 0.01}px)) translateY(calc(10% + ${-yValue * 0.01}px))`;
         })
     })
     });
