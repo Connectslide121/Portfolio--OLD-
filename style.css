@@ -22,10 +22,10 @@ body{
 
 body h1{
     font-family: 'Kumar One Outline';
-
     font-weight: 550;
     font-size: 72px;
     color: #3b467c;
+    margin-top: 0;
 }
 
 #home{
@@ -45,7 +45,8 @@ nav{
     justify-content: space-between;
     flex-wrap: wrap;
     background-color: transparent;
-    backdrop-filter: blur(160px);
+    -webkit-backdrop-filter: blur(100px);
+    backdrop-filter: blur(100px);
     padding: 10px 5%;
     z-index: 1000;
 }
@@ -186,20 +187,19 @@ nav .social-media ul li:hover a{
 /*------------------------about-----------------------*/
 
 #about{
-    padding: 100px 2%;
+    padding: 100px 0;
     height: 100vh;
 }
 
 .row{
     background-color: transparent;
-    backdrop-filter: blur(100px);
-    border: 1px solid #3b467c;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
     height: auto;
-    border-radius: 30px;
 }
 
 .about-col-1{
@@ -314,32 +314,22 @@ nav .social-media ul li:hover a{
 
 /*------------------------services-----------------------*/
 #services{
-    padding: 100px 2%;
+    padding: 100px 0;
     height: 100vh;
 }
 
 #services .container{
     background-color: transparent;
-    backdrop-filter: blur(100px);
-    border: 1px solid #3b467c;
-    border-radius: 30px;
-    padding-bottom: 5px;
-}
-
-#services .container h1{
-    padding-top: 50px;
-    padding-left: 6%;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    padding: 3% 5% 5% 5%;
 }
 
 
 .services-list{
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
     color: #f0f0ffc4;
 }
 
@@ -379,30 +369,22 @@ nav .social-media ul li:hover a{
 /*------------------------websites-----------------------*/
 
 #websites{
-    padding: 100px 2%;
-    height: 100%;
+    padding: 100px 0;
+    height: 100vh;
 }
 
 #websites .container{
     background-color: transparent;
-    backdrop-filter: blur(100px);
-    border: 1px solid #3b467c;
-    border-radius: 30px;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    padding: 3% 5% 5% 5%;
 }
 
-#websites .container h1{
-    padding-top: 50px;
-    padding-left: 6%;
-}
 
 .website-list{
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
 }
 
 .website{
@@ -479,30 +461,21 @@ nav .social-media ul li:hover a{
 
 /*------------------------games-----------------------*/
 #games{
-    padding: 100px 2%;
-    height: 100%;
+    padding: 100px 0;
+    height: 100vh;
 }
 
 #games .container{
     background-color: transparent;
-    backdrop-filter: blur(100px);
-    border: 1px solid #3b467c;
-    border-radius: 30px;
-}
-
-#games .container h1{
-    padding-top: 50px;
-    padding-left: 6%;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    padding: 3% 5% 5% 5%;
 }
 
 .game-list{
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
 }
 
 .game{
@@ -577,30 +550,21 @@ nav .social-media ul li:hover a{
 /*------------------------programs-----------------------*/
 
 #programs{
-    padding: 100px 2%;
-    height: 100%;
+    padding: 100px 0;
+    height: 100vh;
 }
 
 #programs .container{
     background-color: transparent;
-    backdrop-filter: blur(100px);
-    border: 1px solid #3b467c;
-    border-radius: 30px;
-}
-
-#programs .container h1{
-    padding-top: 50px;
-    padding-left: 6%;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    padding: 3% 5% 5% 5%;
 }
 
 .program-list{
-    margin-top: 2%;
-    margin-right: 5%;
-    margin-left: 5%;
-    margin-bottom: 5%;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-    grid-gap: 100px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-gap: 40px;
 }
 
 .program{
@@ -672,13 +636,14 @@ nav .social-media ul li:hover a{
 /*------------------------contact-----------------------*/
 
 #contact{
-    padding: 100px 2%;
+    padding: 100px 0 20px 0;
 }
 
 #contact .container{
     background-color: transparent;
-    backdrop-filter: blur(100px);
-    border-radius: 30px;
+    -webkit-backdrop-filter: blur(40px);
+    backdrop-filter: blur(40px);
+    padding: 3% 5% 5% 5%;
 }
 
 
@@ -785,25 +750,25 @@ form textarea{
 
 /*------------------------57:24-----------------------*/
 
+@media screen and (max-width: 1450px){
+
+    #home, #services, #about, #websites, #games, #programs, #contact{
+        height: 100%;
+    }
+
+    #services, #about, #websites, #games, #programs, #contact{
+        padding: 50px 0;
+    }
+
+    
+}
+
 @media screen and (max-width: 768px) {
 
     body {
         width: 100%;
     }
-    
-    
-    .home{
-        height: 100%;
-    }
-
-    #about{
-        height: 100%;
-    }
-    
-    #services{
-        height: 100%;
-    }
-
+        
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
