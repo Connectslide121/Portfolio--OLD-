@@ -7,8 +7,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="/images/favicon.png">
     <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/05049b2b78.js" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
 
 </head>
 <body>
@@ -23,20 +21,25 @@
                 </ul>
             </div>
             <div class="nav-links">
-                <ul>
-                    <li><a href="#home"><span><i class="fa-solid fa-house"></i></span> Home</a></li>
-                    <li><a href="#about"><span><i class="fa-solid fa-address-card"></i></span> About me</a></li>
-                    <li><a href="#services"><span><i class="fa-solid fa-bell-concierge"></i></span> Services</a></li>
-                    <li><a href="#websites"><span><i class="fa-solid fa-globe"></i></span> Websites</a></li>
-                    <li><a href="#games"><span><i class="fa-solid fa-gamepad"></i></span> Games</a></li>
-                    <li><a href="#programs"><span><i class="fa-solid fa-laptop-code"></i></span> Programs</a></li>
-                    <li><a href="#contact"><span><i class="fa-solid fa-envelope"></i></span> Contact</a></li>
+                <ul id="sidemenu">
+                    <li><a class="navbar-link active-link" href="#home"><span><i class="fa-solid fa-house"></i></span> Home</a></li>
+                    <li><a class="navbar-link" href="#about"><span><i class="fa-solid fa-address-card"></i></span> About me</a></li>
+                    <li><a class="navbar-link" href="#services"><span><i class="fa-solid fa-bell-concierge"></i></span> Services</a></li>
+                    <li><a class="navbar-link" href="#websites"><span><i class="fa-solid fa-globe"></i></span> Websites</a></li>
+                    <li><a class="navbar-link" href="#games"><span><i class="fa-solid fa-gamepad"></i></span> Games</a></li>
+                    <li><a class="navbar-link" href="#programs"><span><i class="fa-solid fa-laptop-code"></i></span> Programs</a></li>
+                    <li><a class="navbar-link" href="#contact"><span><i class="fa-solid fa-envelope"></i></span> Contact</a></li>
+                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
             </div>
         </nav>
 
         <div class="container">
             <div class="home">
+                <div class="mobile-background">
+                    <img src="images/HomeBackground.png" alt="">
+                </div>
                 <div class="background parallaxBackground">
                     <img src="images/HomeBackground.png" alt="">
                 </div>
@@ -165,19 +168,19 @@
                     <i class="fa-solid fa-code"></i>
                     <h2>Web Design</h2>
                     <p>Elevate your digital experience and captivate your audience with a website that sets you apart.</p>
-                    <a href="#">Contact me</a>
+                    <a href="#contact">Contact me</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-server"></i>
                     <h2>Backend Solutions</h2>
                     <p>Empower your digital infrastructure with robust backend programming solutions.</p>
-                    <a href="#">Contact me</a>
+                    <a href="#contact">Contact me</a>
                 </div>
                 <div>
                     <i class="fa-solid fa-ghost"></i>
                     <h2>Game Development</h2>
                     <p>Gaming experiences that push boundaries and keep players coming back for more.</p>
-                    <a href="#">Contact me</a>
+                    <a href="#contact">Contact me</a>
                 </div>
             </div>
         </div>
@@ -204,7 +207,7 @@
                             <img src="images/Spotify.png" alt="Spotify clone">
                             <div class="layer">
                                 <h2>Spotify clone</h2>
-                                <p>A Spotify clone I made for practicing HTML and CSS</p>
+                                <p>A Spotify clone I made for practicing HTML and CSS.</p>
                                 <h3>November 2023</h3>
                                 <div class="buttons">
                                     <a href="https://github.com/Connectslide121/Spotify-clone" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -216,7 +219,7 @@
                             <img src="images/Portfolio.png" alt="My Portfolio">
                             <div class="layer">
                                 <h2>My portfolio website</h2>
-                                <p>My personal portfolio website</p>
+                                <p>My personal portfolio website.</p>
                                 <h3>November 2023</h3>
                                 <div class="buttons">
                                     <a href="https://github.com/Connectslide121/Portfolio" target="_blank"><i class="fa-brands fa-github"></i></a>
@@ -277,30 +280,30 @@
                 <h1>Programs</h1>
                     <div class="program-list">
                         <div class="program">
-                            <img src="images/game1.png" alt="Flapry blirb game">
+                            <img src="images/bookstore.jpg" alt="Bookstore">
                             <div class="layer">
-                                <h2>Flapry Blirb</h2>
-                                <p>My first ever game. A “flappy bird” style game made with Unity.</p>
+                                <h2>Bookstore manager</h2>
+                                <p>A desktop app for managing a book store made with Windows Forms.</p>
                                 <h3>October 2023</h3>
-                                    <a href="https://github.com/Connectslide121/Flapry-Birb" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://github.com/Connectslide121/Bookstore-Inventory-Manager-Desktop" target="_blank"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                         <div class="program">
-                            <img src="images/game1.png" alt="Flapry blirb game">
+                            <img src="images/lawnmowers.jpg" alt="Lawnmowers">
                             <div class="layer">
-                                <h2>Flapry Blirb</h2>
-                                <p>My first ever game. A “flappy bird” style game made with Unity.</p>
+                                <h2>Lawn mower rental app</h2>
+                                <p>A console app for managing a lawn mower rental business.</p>
                                 <h3>October 2023</h3>
-                                    <a href="https://github.com/Connectslide121/Flapry-Birb" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                    <a href="https://github.com/Lexicon-Group-4/Lawn-Mower-Rental-App" target="_blank"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                         <div class="program">
-                            <img src="images/game1.png" alt="Flapry blirb game">
+                            <img src="images/vendingmachines.jpg" alt="Vending machines">
                             <div class="layer">
-                                <h2>Flapry Blirb</h2>
-                                <p>My first ever game. A “flappy bird” style game made with Unity.</p>
-                                <h3>October 2023</h3>
-                                    <a href="https://github.com/Connectslide121/Flapry-Birb" target="_blank"><i class="fa-brands fa-github"></i></a>
+                                <h2>Vending machine</h2>
+                                <p>A console app for managing vending machine operations.</p>
+                                <h3>November 2023</h3>
+                                    <a href="https://github.com/Connectslide121/Vending-Machine" target="_blank"><i class="fa-brands fa-github"></i></a>
                             </div>
                         </div>
                     </div>    
@@ -326,8 +329,8 @@
                 </div>
                 <div class="contact-right">
                     <form name="submit-to-google-sheet">
-                        <input type="text" name="Name" placeholder="Your name" required>
-                        <input type="email" name="Email" placeholder="Your email" required>
+                        <input type="text" name="Name" placeholder="Your name" required autocomplete="name" >
+                        <input type="email" name="Email" placeholder="Your email" required autocomplete ="email">
                         <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
                         <button type="submit" class="btn">Submit</button>
                     </form>
@@ -339,16 +342,8 @@
         <p>Copyright <i class="fa-regular fa-copyright"></i> 2023 Jon Mendizabal</p>
     </div>
 
-    <script>
-        const scriptURL = 'https://script.google.com/macros/s/AKfycbyWMEbSjv7PkPlNGfHj21ZlGEIEAS4eRiStKutJzFmCFUwpoKddl21PHMYYs7qWgxDE/exec'
-        const form = document.forms['submit-to-google-sheet']
-      
-        form.addEventListener('submit', e => {
-          e.preventDefault()
-          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-            .then(response => console.log('Success!', response))
-            .catch(error => console.error('Error!', error.message))
-        })
-      </script>
+    <script src="https://kit.fontawesome.com/05049b2b78.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+
 </body>
 </html>

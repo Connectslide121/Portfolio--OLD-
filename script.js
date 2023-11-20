@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         yValue = e.clientY - window.innerHeight / 2;
     
         parallax_el.forEach((el) => {
-            el.style.transform = `translateX(calc(${-xValue * 0.01}px)) translateY(calc(10% + ${-yValue * 0.01}px))`;
+            el.style.transform = `translateX(calc(${-xValue * 0.2}px)) translateY(calc(10% + ${-yValue * 0.1}px))`;
         })
     })
     });
@@ -91,9 +91,76 @@ document.addEventListener("DOMContentLoaded", function() {
         yValue = e.clientY - window.innerHeight / 2;
     
         parallax_el.forEach((el) => {
-            el.style.transform = `translateX(calc(-50% + ${-xValue * 0.03}px)) translateY(calc(10% + ${-yValue * 0.03}px)) scale(1.4)`;
+            el.style.transform = `translateX(calc(-50% + ${-xValue * 0.1}px)) translateY(calc(10% + ${-yValue * 0.1}px)) scale(1.4)`;
         })
     })
     });
 
+document.addEventListener("DOMContentLoaded", function () {
+    var navbar = document.getElementById("navbar");
+    var homeSection = document.getElementById("home");
 
+    var sections = document.querySelectorAll('#home, #about, #services, #websites, #games, #programs, #contact');
+    var navbarLinks = document.querySelectorAll('.navbar-link');
+
+    var options = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.5 // Adjust this value based on your layout
+    };
+
+    function highlightNav(entries, observer) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                var index = Array.from(sections).indexOf(entry.target);
+                for (var link of navbarLinks) {
+                    link.classList.remove("active-link");
+                }
+                navbarLinks[index].classList.add("active-link");
+            }
+        });
+    }
+
+    var observer = new IntersectionObserver(highlightNav, options);
+
+    sections.forEach(section => {
+        observer.observe(section);
+    });
+
+    window.addEventListener("scroll", function () {
+        var scrollPosition = window.scrollY;
+        var triggerPosition = homeSection.offsetHeight;
+
+        if (scrollPosition > triggerPosition) {
+            navbar.classList.add("navbar-scroll");
+        } else {
+            navbar.classList.remove("navbar-scroll");
+        }
+    });
+});
+
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu() {
+        console.log("Opening menu");
+        console.log("Current right value:", sidemenu.style.right);
+        sidemenu.style.right = "0";
+    }
+    
+    function closemenu() {
+        console.log("Closing menu");
+        sidemenu.style.right = "-200px";
+    }
+
+
+
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwpUYTj9hV9O4kHlMU4RpDc5IS9OnF2KNdxO1IxJ_1n2nH0mfW9fa2o6S6nzxUwAxvp/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })

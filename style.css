@@ -10,11 +10,7 @@ html {
 }
 
 body{
-    color: #3b467c;
-    /* background-image: url(images/homeBackground.png); */
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
+    color: #646b89;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
@@ -24,13 +20,19 @@ body h1{
     font-family: 'Kumar One Outline';
     font-weight: 550;
     font-size: 72px;
-    color: #3b467c;
+    color: #646b89;
     margin-top: 0;
 }
 
 #home{
     display: flex;
     flex-direction: column;
+}
+
+.mobile-background{
+    display: none;
+    position: fixed;
+    z-index: -1000000;
 }
 
 /*--------------------------navbar-----------------------*/
@@ -50,8 +52,8 @@ nav{
 
 .navbar-scroll {
     background-color: transparent;
-    -webkit-backdrop-filter: blur(100px);
-    backdrop-filter: blur(100px);
+    -webkit-backdrop-filter: blur(60px);
+    backdrop-filter: blur(60px);
 }
 
 .nav-logo{
@@ -62,40 +64,36 @@ nav{
 nav .nav-links ul li{
     display: inline-block;
     list-style: none;
-    margin: 10px 10px;
+    margin: 10px 2px;
 }
 
-nav .nav-links ul li a{
-    color: #3b467c;
+.navbar-link{
+    color: #646b89;
     text-decoration: none;
     font-size: 18px;
     position: relative;
+    padding: 5px 10px;
+    border: 2px solid transparent;
+    border-radius: 25px;
 }
 
-nav .nav-links ul li a span{
-    color:#3b467c;
+.navbar-link span{
+    color:#646b89;
 }
 
-nav .nav-links ul li a::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: #3b467c;
-
-    position: absolute;
-    left: 0;
-    bottom: -6px;
-    transition: 0.5s;
-}
-
-nav .nav-links ul li a:hover{
+.navbar-link:hover{
     color: #6e78a5;
+    border: 2px solid #646b89;
+    border-radius: 25px;
+
 }
 
-nav .nav-links ul li a:hover::after{
-    width: 100%;
-}
-
+.navbar-link.active-link {
+    border: 2px solid #646b89;
+    border-radius: 25px;
+    background-color: #f0f0ff80;
+  }
+  
 nav .social-media{
     padding: 0 60px;
 }
@@ -103,7 +101,7 @@ nav .social-media{
 nav .social-media ul li{
     display: inline-block;
     margin-right: 20px;
-    color:#3b467c;
+    color:#646b89;
     font-size: 30px;
     cursor: pointer;
     transition: transform 0.5s;
@@ -111,7 +109,7 @@ nav .social-media ul li{
 }
 
 nav .social-media ul li a{
-    color: #3b467c;
+    color: #646b89;
 }
 
 nav .social-media ul li:hover{
@@ -121,7 +119,6 @@ nav .social-media ul li:hover{
 nav .social-media ul li:hover a{
     color: #6e78a5;
 }
-
 
 /*--------------------------home----------------------*/
 
@@ -149,10 +146,6 @@ nav .social-media ul li:hover a{
     position: absolute;
 }
 
-
-.home-main{
-}
-
 .home-logo{
     width: 40%;
     margin-top: 25%;
@@ -172,19 +165,19 @@ nav .social-media ul li:hover a{
 .home-text{
     margin-top: 10%;
     font-size: 20px;
-    color: #3b467c;
+    color: #646b89;
     z-index: -30;
 }
 
 
 .home-text h1{
     font-size: 60px;
-    color:#3b467c;
+    color:#646b89;
 }
 
 .home-text h1 span{
     font-size: 72px;
-    color: #3b467c;
+    color: #646b89;
 }
 
 
@@ -192,8 +185,8 @@ nav .social-media ul li:hover a{
 /*------------------------about-----------------------*/
 
 #about{
-    padding: 100px 0;
-    height: 100vh;
+    padding: 80px 0;
+    height: 100%;
 }
 
 .row{
@@ -208,13 +201,13 @@ nav .social-media ul li:hover a{
 }
 
 .about-col-1{
-    flex-basis: 25%;
+    flex-basis: 40%;
     position: relative;
     height: auto;
 }
 
 .about-col-1 img{
-    margin: 5% 5% 5% 15%;
+    margin: 10% 0 10% 15%;
     position: relative;
     width: 80%;
     height: auto;
@@ -222,7 +215,7 @@ nav .social-media ul li:hover a{
 }
 
 .about-col-2{
-    flex-basis: 65%;
+    flex-basis: 50%;
     margin: 5%;
 }
 
@@ -241,32 +234,26 @@ nav .social-media ul li:hover a{
     margin-right: 80px;
     font-size: 24px;
     font-weight: 600;
-    color:#3b467c;
+    color:#646b89;
     cursor: pointer;
     position: relative;
+    padding: 5px 10px;
+    border: 3px solid transparent;
+    border-radius: 25px;
+
 }
 
 .tab-links:hover{
     color: #6e78a5;
+    border: 3px solid #6e78a5;
+    border-radius: 25px;
 }
 
-.tab-links::after{
-    content: '';
-    width: 0;
-    height: 3px;
-    background-color: #3b467c;
-    position: absolute;
-    left: 0;
-    bottom: -8px;
-    transition: 0.5s;
-}
-
-.tab-links:hover::after{
-    width: 100%;
-}
-
-.tab-links.active-link::after{
-    width: 100%;
+.tab-links.active-link{
+    color: #6e78a5;
+    border: 3px solid #6e78a5;
+    border-radius: 25px;
+    background-color: #f0f0ff80;
 }
 
 .tab-contents.skills.active-tab{
@@ -284,9 +271,9 @@ nav .social-media ul li:hover a{
 
 .skillcard img{
     margin: 10px 20px;
-    width: 60px;
+    width: 70px;
     border-radius: 50%;
-    background-color: #6e78a5;
+    background-color: #646b89;
     box-shadow: 0 0 5px 4px #6e78a5;
 }
 
@@ -303,7 +290,7 @@ nav .social-media ul li:hover a{
 }
 
 .tab-contents ul li span{
-    color: #3b467c;
+    color: #646b89;
     font-weight: 500;
     font-size: 20px;
     font-weight: 580;
@@ -320,7 +307,7 @@ nav .social-media ul li:hover a{
 /*------------------------services-----------------------*/
 #services{
     padding: 100px 0;
-    height: 100vh;
+    height: 100%;
 }
 
 #services .container{
@@ -339,12 +326,12 @@ nav .social-media ul li:hover a{
 }
 
 .services-list div{
-    background: #3b467c;
+    background: #646b89;
     padding: 40px;
     font-size: 18px;
     font-weight: 550;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s, box-shadow 0.5s;
+    transition: background 0.5s, transform 0.5s, box-shadow 0.2s;
 }
 
 .services-list div i{
@@ -359,7 +346,7 @@ nav .social-media ul li:hover a{
 
 .services-list div a{
     text-decoration: none;
-    color: #3b467c;
+    color: #f0f0ffc4;
     font-size: 15px;
     margin-top: 20px;
     display: inline-block;
@@ -367,15 +354,15 @@ nav .social-media ul li:hover a{
 
 .services-list div:hover{
     background-color: #6e78a5;
-    box-shadow: 5px 5px 5px 5px #5b637a;
-    transform: translateY(-10px);
+    box-shadow: 3px 3px 5px 5px #5b637a;
+    transform: scale(1.02);
 }
 
 /*------------------------websites-----------------------*/
 
 #websites{
     padding: 100px 0;
-    height: 100vh;
+    height: 100%;
 }
 
 #websites .container{
@@ -409,7 +396,7 @@ nav .social-media ul li:hover a{
 .website .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #3b467c);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), #646b89);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -441,7 +428,7 @@ nav .social-media ul li:hover a{
 
 .website .layer .buttons a{
     margin: 0 20px;
-    color: #3b467c;
+    color: #646b89;
     text-decoration: none;
     font-size: 32px;
     line-height: 60px;
@@ -467,7 +454,7 @@ nav .social-media ul li:hover a{
 /*------------------------games-----------------------*/
 #games{
     padding: 100px 0;
-    height: 100vh;
+    height: 100%;
 }
 
 #games .container{
@@ -500,7 +487,7 @@ nav .social-media ul li:hover a{
 .game .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #3b467c);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), #646b89);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -532,7 +519,7 @@ nav .social-media ul li:hover a{
 
 .game .layer .buttons a{
     margin: 0 20px;
-    color: #3b467c;
+    color: #646b89;
     text-decoration: none;
     font-size: 32px;
     line-height: 60px;
@@ -556,7 +543,7 @@ nav .social-media ul li:hover a{
 
 #programs{
     padding: 100px 0;
-    height: 100vh;
+    height: 100%;
 }
 
 #programs .container{
@@ -589,7 +576,7 @@ nav .social-media ul li:hover a{
 .program .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #3b467c);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), #646b89);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -616,7 +603,7 @@ nav .social-media ul li:hover a{
 
 .program .layer a{
     margin: 5% 20px 0 20px;
-    color: #3b467c;
+    color: #646b89;
     text-decoration: none;
     font-size: 32px;
     line-height: 60px;
@@ -668,7 +655,7 @@ nav .social-media ul li:hover a{
 }
 
 .contact-left p i{
-    color: #3b467c;
+    color: #646b89;
     margin-right: 5%;
     font-size: 25px;
 }
@@ -680,7 +667,7 @@ nav .social-media ul li:hover a{
 .contact-left .social-media ul li{
     display: inline-block;
     margin-right: 20px;
-    color:#3b467c;
+    color:#646b89;
     font-size: 40px;
     cursor: pointer;
     transition: transform 0.5s;
@@ -688,7 +675,7 @@ nav .social-media ul li:hover a{
 }
 
 .contact-left .social-media ul li a{
-    color: #3b467c;
+    color: #646b89;
 }
 
 .contact-left .social-media ul li:hover{
@@ -703,8 +690,8 @@ nav .social-media ul li:hover a{
     display: block;
     margin-bottom: 5%;
     width: fit-content;
-    background-color: #3b467c;
-    border: 1px solid #3b467c;
+    background-color: #646b89;
+    border: 1px solid #646b89;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -724,12 +711,12 @@ nav .social-media ul li:hover a{
 
 form input, form textarea{
     width: 100%;
-    border: 1px solid #3b467c;
+    border: 1px solid #646b89;
     outline: none;
     background: #f0f0ffc4;
     padding: 15px;
     margin: 15px 0;
-    color: #3b467c;
+    color: #646b89;
     font-size: 18px;
     border-radius: 6px;
     resize: none;
@@ -743,7 +730,7 @@ form textarea{
     width: 100%;
     text-align: center;
     padding: 25px 0;
-    background: #3b467c;
+    background: #646b89;
     margin-top: 20px;
     z-index: -30;
 }
@@ -753,7 +740,12 @@ form textarea{
 }
 
 
-/*------------------------57:24-----------------------*/
+/*------------------------small screens-----------------------*/
+
+nav .fas{
+    display: none;
+}
+
 
 @media screen and (max-width: 1450px){
 
@@ -765,13 +757,93 @@ form textarea{
         padding: 50px 0;
     }
 
+    nav .fas{
+        display: block;
+        font-size: 25px;
+        color: #f0f0ff80;
+    }
+
+    nav .fa-bars{
+        color: #646b89;
+        position: absolute;
+        top: 15px;
+        right: 30px;;
+
+    }
+
+    .nav-links ul{
+        background: #646b89;
+        position: fixed;
+        top: 0;
+        right: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    
+    .nav-links ul .fas{
+        position: absolute;
+        top: 25px;
+        left: 110px;
+        cursor: pointer;
+    }
+
+    .navbar-link{
+        display: block;
+        margin: 5px 10px;
+        color: #f0f0ff80;
+    }
+
+    .navbar-link i{
+        color: #f0f0ff80;
+    }
+
+    .mobile-background{
+        display: flex;
+        position: fixed;
+        transform: scale(6);
+        z-index: -1000;
+    }
+    
     
 }
 
 @media screen and (max-width: 768px) {
 
-    body {
-        width: 100%;
+    .home{
+        background-image: url(images/mobileBackground.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .blobfixed{
+        display: none;
+    }
+
+    .home-text{
+        transform: translateY(200px);
+        z-index: 10;
+    }
+
+    .home-logo{
+        transform: scale(2);
+        z-index: 10;
+    }
+
+    body h1{
+        font-size: 40px;
+    }
+
+    body img{
+        padding-right: 20px;
+        max-width: 100%;
+    }
+
+    .layer{
+        max-width: 95%;
     }
         
     .about-col-1, .about-col-2{
@@ -786,4 +858,23 @@ form textarea{
         font-size: 18px;
         margin-right: 20px;
     }
+
+    .services-list div{
+        max-width: 90%;
+    }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+        margin-left: 15px;
+        padding-left: 0;
+    }
+
+    .contact-right form{
+        margin: 0;
+    }
+
+    .website:hover img, .game:hover img, .program:hover img{
+        transform: scale(1);
+    }
+    
 }
