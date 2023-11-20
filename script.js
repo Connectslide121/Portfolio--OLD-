@@ -48,7 +48,7 @@ function rotateLogo(logo) {
 
 
 document.addEventListener("DOMContentLoaded", function() {
-    const parallax_el = document.querySelectorAll(".parallax3D");
+    const parallax_el = document.querySelectorAll(".parallaxLogo");
     
     let xValue = 0;
     let yValue = 0;
@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         yValue = e.clientY - window.innerHeight / 2;
     
         parallax_el.forEach((el) => {
-            el.style.transform = `translateX(calc(${-xValue * 0.2}px)) translateY(calc(10% + ${-yValue * 0.1}px))`;
+            el.style.transform = `translateX(calc(${-xValue * 0.5}px)) translateY(calc(10% + ${-yValue * 0.5}px)) scale(1.3)`;
         })
     })
     });
@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
         yValue = e.clientY - window.innerHeight / 2;
     
         parallax_el.forEach((el) => {
-            el.style.transform = `translateX(calc(-50% + ${-xValue * 0.1}px)) translateY(calc(10% + ${-yValue * 0.1}px)) scale(1.4)`;
+            el.style.transform = `translateX(calc(-50% + ${-xValue * 0.1}px)) translateY(calc(-25% + ${-yValue * 0.2}px)) scale(0.8)`;
         })
     })
     });
@@ -106,7 +106,7 @@ document.addEventListener("DOMContentLoaded", function () {
     var options = {
         root: null,
         rootMargin: '0px',
-        threshold: 0.5 // Adjust this value based on your layout
+        threshold: 0.5
     };
 
     function highlightNav(entries, observer) {
@@ -155,12 +155,60 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbwpUYTj9hV9O4kHlMU4RpDc5IS9OnF2KNdxO1IxJ_1n2nH0mfW9fa2o6S6nzxUwAxvp/exec'
-    const form = document.forms['submit-to-google-sheet']
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => console.log('Success!', response))
-        .catch(error => console.error('Error!', error.message))
-    })
+    document.addEventListener("DOMContentLoaded", function () {
+        const parallaxLeft = document.querySelector(".parallax-left");
+        const parallaxRight = document.querySelector(".parallax-right");
+        const parallaxLogo = document.querySelector(".home-logo");
+        const aboutSection = document.getElementById("my-work");
+    
+        const scrollLimit = aboutSection.offsetTop + aboutSection.offsetHeight;
+    
+        window.addEventListener("scroll", function () {
+            const scrollPosition = window.scrollY;
+    
+            if (scrollPosition >= aboutSection.offsetTop) {
+                const limitedTranslation = Math.min(scrollPosition - aboutSection.offsetTop, scrollLimit - aboutSection.offsetTop);
+                parallaxLeft.style.transform = `translateX(-${limitedTranslation}px) translateY(${limitedTranslation * 1.1}px)`;
+                parallaxRight.style.transform = `translateX(${limitedTranslation}px) translateY(${limitedTranslation * 1.1}px)`;
+                parallaxLogo.style.transform = `translateX(0) translateY(-${limitedTranslation * 0.3}px)`;
+            }
+        });
+    });
+gsap.registerPlugin(ScrollTrigger, EasePack);
+
+let tl;
+
+function setupGSAPAnimation() {
+    tl = gsap.timeline();
+    tl.to("#my-work", 5, { x: -window.innerWidth * 2.5, ease: "none" });
+
+    ScrollTrigger.create({
+        animation: tl,
+        trigger: "#my-work",
+        start: "center center",
+        end: "+=8000",
+        scrub: true,
+        pin: true
+    });
+}
+
+function destroyGSAPAnimation() {
+    if (tl) {
+        tl.kill();
+        tl = null;
+    }
+}
+
+document.addEventListener("DOMContentLoaded", function () {
+    if (window.innerWidth > 1450) {
+        setupGSAPAnimation();
+    }
+
+    window.addEventListener("resize", function () {
+        if (window.innerWidth > 1450) {
+            setupGSAPAnimation();
+        } else {
+            destroyGSAPAnimation();
+        }
+    });
+});
