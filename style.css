@@ -435,13 +435,11 @@ nav .social-media ul li:hover a{
 .website{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 .website img{
     width: auto;
     height: 400px;
-    border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
@@ -450,7 +448,6 @@ nav .social-media ul li:hover a{
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
-    border-radius: 10px;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -525,13 +522,12 @@ nav .social-media ul li:hover a{
 .game{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    width: 710px;
 }
 
-.game img{
-    width: auto;
-    height: 400px;
-    border-radius: 10px;
+.game video{
+    width: 100%;
+    height: 100%;
     display: block;
     transition: transform 0.5s;
 }
@@ -540,10 +536,9 @@ nav .social-media ul li:hover a{
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
-    border-radius: 10px;
     position: absolute;
     left: 0;
-    bottom: 0;
+    top: 0;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -587,7 +582,7 @@ nav .social-media ul li:hover a{
 }
 
 .game:hover .layer{
-    height: 100%;
+    height: 50%;
 }
 
 
@@ -613,13 +608,11 @@ nav .social-media ul li:hover a{
 .program{
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
 }
 
 .program img{
     width: auto;
     height: 400px;
-    border-radius: 10px;
     display: block;
     transition: transform 0.5s;
 }
@@ -628,7 +621,6 @@ nav .social-media ul li:hover a{
     width: 100%;
     height: 0;
     background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
-    border-radius: 10px;
     position: absolute;
     left: 0;
     bottom: 0;
