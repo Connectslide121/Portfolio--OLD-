@@ -7,26 +7,30 @@
 
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
+
 }
 
 body{
-    color: #646b89;
+    color: #221d34;
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
 }
 
 body h1{
-    font-family: 'Kumar One Outline';
     font-weight: 550;
     font-size: 72px;
-    color: #646b89;
-    margin-top: 0;
+    color: #221d34;
+    margin: 0 0 20px 0;
 }
 
 #home{
     display: flex;
     flex-direction: column;
+    background-color: 
+    #221d34;
+
 }
 
 .mobile-background{
@@ -48,17 +52,12 @@ nav{
     flex-wrap: wrap;
     padding: 10px 5%;
     z-index: 1000;
-}
-
-.navbar-scroll {
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(60px);
-    backdrop-filter: blur(60px);
+    background-color: #221d34;
 }
 
 .nav-logo{
     width: 80px;
-    background-color: #f0f0ff80;
+    background-color: #d47636;
     padding: 10px;
     border-radius: 40px;
 }
@@ -71,53 +70,55 @@ nav .nav-links ul li{
 }
 
 .navbar-link{
-    color: #646b89;
+    color: #221d34;
     text-decoration: none;
     font-size: 18px;
     position: relative;
     padding: 5px 10px;
-    border: 2px solid transparent;
     border-radius: 25px;
+    background-color: #80c3b3;
 }
 
 .navbar-link span{
-    color:#646b89;
+    color:#221d34;
 }
 
 .navbar-link:hover{
     color: #6e78a5;
-    border: 2px solid #646b89;
-    border-radius: 25px;
 
 }
 
 .navbar-link.active-link {
-    border: 2px solid #646b89;
     border-radius: 25px;
-    background-color: #646b89;
-    color: #e6e6f3;
+    background-color: #80c3b3;
+    color: #221d34;
+}
+
+.navbar-link.active-link:hover {
+    color: #6e78a5;
 }
 
 .navbar-link.active-link span{
-    color: #e6e6f3;
+    color: #221d34;
 }
 
 nav .social-media{
-    padding: 0 60px;
+    padding: 0;
+    background-color: #c6aed2;
+    border-radius: 15px;
+
 }
 
 nav .social-media ul li{
     display: inline-block;
-    margin-right: 20px;
-    color:#646b89;
+    margin: 0 15px;
     font-size: 30px;
     cursor: pointer;
     transition: transform 0.5s;
-
 }
 
 nav .social-media ul li a{
-    color: #646b89;
+    color: #221d34;
 }
 
 nav .social-media ul li:hover{
@@ -130,15 +131,27 @@ nav .social-media ul li:hover a{
 
 /*--------------------------home----------------------*/
 
+
 .home{
     height: 100vh;
     width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 500px;
+    margin-bottom: 1200px;
+}
 
+.hero-image{
+    z-index: 0;
+}
 
+.hero-image img{
+    width: 100%;
+    z-index: 0;
+}
+
+.hero-mobile{
+    display: none;
 }
 
 .background{
@@ -173,7 +186,7 @@ nav .social-media ul li:hover a{
     width: 40%;
     margin-top: 25%;
     position: fixed;
-    z-index: -30;
+    z-index: 0;
 }
 
 .home-logo img {
@@ -186,12 +199,12 @@ nav .social-media ul li:hover a{
 }
 
 .home-text{
-    position: relative;
+    position: absolute;
     margin-top: 30%;
     width: 100%;;
     font-size: 20px;
-    color: #646b89;
-    z-index: -30;
+    color: #d3dcdf;
+    z-index: 100;
 }
 
 .parallax-right{
@@ -208,12 +221,12 @@ nav .social-media ul li:hover a{
 
 .home-text h1{
     font-size: 60px;
-    color:#646b89;
+    color:#d3dcdf;
 }
 
 .home-text h1 span{
     font-size: 72px;
-    color: #646b89;
+    color: #d3dcdf;
 }
 
 
@@ -223,12 +236,11 @@ nav .social-media ul li:hover a{
 #about{
     padding: 80px 0;
     height: 100%;
+    background-color: #d47636;
+
 }
 
 .row{
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -257,7 +269,7 @@ nav .social-media ul li:hover a{
 
 .about-col-2 p{
     padding-top: 5px;
-    font-size: 18px;
+    font-size: 20px;
     line-height: 1.2;
 }
 
@@ -270,7 +282,7 @@ nav .social-media ul li:hover a{
     margin-right: 80px;
     font-size: 24px;
     font-weight: 600;
-    color:#646b89;
+    color:#221d34;
     cursor: pointer;
     position: relative;
     padding: 5px 10px;
@@ -280,16 +292,16 @@ nav .social-media ul li:hover a{
 }
 
 .tab-links:hover{
-    color: #6e78a5;
-    border: 3px solid #6e78a5;
+    color: #221d34;
+    border: 3px solid #221d34;
     border-radius: 25px;
 }
 
 .tab-links.active-link{
     color: #e6e6f3;
-    border: 3px solid #6e78a5;
+    border: 3px solid #221d34;
     border-radius: 25px;
-    background-color: #6e78a5;
+    background-color: #221d34;
     font-weight: 520;
 }
 
@@ -328,7 +340,7 @@ nav .social-media ul li:hover a{
 }
 
 .tab-contents ul li span{
-    color: #646b89;
+    color: #221d34;
     font-weight: 500;
     font-size: 20px;
     font-weight: 580;
@@ -345,13 +357,12 @@ nav .social-media ul li:hover a{
 /*------------------------services-----------------------*/
 #services{
     padding: 100px 0;
-    height: 100%;
+    height: 100vh;    
+    background-color: #c6aed2;
+
 }
 
 #services .container{
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
     padding: 3% 5% 5% 5%;
 }
 
@@ -364,7 +375,7 @@ nav .social-media ul li:hover a{
 }
 
 .services-list div{
-    background: #646b89;
+    background: #221d34;
     padding: 40px;
     font-size: 18px;
     font-weight: 550;
@@ -404,15 +415,14 @@ nav .social-media ul li:hover a{
 
 #websites{
     padding: 100px 0;
-    height: 100%;
+    height: 100vh;
+    background-color: #80c3b3;
+
 }
 
 #websites .container{
     height: 700px;
     width: 100%;
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
     padding: 3% 5% 5% 5%;
 }
 
@@ -439,7 +449,7 @@ nav .social-media ul li:hover a{
 .website .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #646b89);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -471,7 +481,7 @@ nav .social-media ul li:hover a{
 
 .website .layer .buttons a{
     margin: 0 20px;
-    color: #646b89;
+    color: #221d34;
     text-decoration: none;
     font-size: 32px;
     line-height: 60px;
@@ -497,15 +507,13 @@ nav .social-media ul li:hover a{
 /*------------------------games-----------------------*/
 #games{
     padding: 100px 0;
-    height: 100%;
+    height: 100vh;
+    background-color: #d47636;
 }
 
 #games .container{
     height: 700px;
     width: 100%;
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
     padding: 3% 5% 5% 5%;
 }
 
@@ -531,7 +539,7 @@ nav .social-media ul li:hover a{
 .game .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #646b89);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -563,7 +571,7 @@ nav .social-media ul li:hover a{
 
 .game .layer .buttons a{
     margin: 0 20px;
-    color: #646b89;
+    color: #221d34;
     text-decoration: none;
     font-size: 32px;
     line-height: 60px;
@@ -587,15 +595,13 @@ nav .social-media ul li:hover a{
 
 #programs{
     padding: 100px 0;
-    height: 100%;
+    height: 100vh;
+    background-color: #c6aed2;
 }
 
 #programs .container{
     height: 700px;
     width: 100%;
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
     padding: 3% 5% 5% 5%;
 }
 
@@ -621,7 +627,7 @@ nav .social-media ul li:hover a{
 .program .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #646b89);
+    background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -648,7 +654,7 @@ nav .social-media ul li:hover a{
 
 .program .layer a{
     margin: 5% 20px 0 20px;
-    color: #646b89;
+    color: #221d34;
     text-decoration: none;
     font-size: 32px;
     line-height: 60px;
@@ -674,19 +680,20 @@ nav .social-media ul li:hover a{
 
 #contact{
     padding: 8100px 0 20px 0;
+    background-color: #221d34;
 }
 
 #contact .container{
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(40px);
-    backdrop-filter: blur(40px);
     padding: 3% 5% 5% 5%;
 }
-
 
 .contact-left{
     flex-basis: 35%;
     padding-left: 6%;
+}
+
+.contact-left h1{
+    color: #e6e6f3;
 }
 
 .contact-right{
@@ -697,10 +704,11 @@ nav .social-media ul li:hover a{
 
 .contact-left p{
     margin-top: 5%;
+    color: #e6e6f3;
 }
 
 .contact-left p i{
-    color: #646b89;
+    color: #e6e6f3;
     margin-right: 5%;
     font-size: 25px;
 }
@@ -712,7 +720,6 @@ nav .social-media ul li:hover a{
 .contact-left .social-media ul li{
     display: inline-block;
     margin-right: 20px;
-    color:#646b89;
     font-size: 40px;
     cursor: pointer;
     transition: transform 0.5s;
@@ -720,7 +727,7 @@ nav .social-media ul li:hover a{
 }
 
 .contact-left .social-media ul li a{
-    color: #646b89;
+    color: #e6e6f3;
 }
 
 .contact-left .social-media ul li:hover{
@@ -735,18 +742,18 @@ nav .social-media ul li:hover a{
     display: block;
     margin-bottom: 5%;
     width: fit-content;
-    background-color: #646b89;
+    background-color: #80c3b3;
     border: 1px solid #646b89;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    color:#f0f0ffc4;
+    color:#221d34;
     transition: background 0.3s;
     font-size: 16px;
 }
 
 .btn:hover{
-    background: #6e78a5;
+    background: #d47636;
 }
 
 .contact-right form{
@@ -774,9 +781,8 @@ form textarea{
 .copyright{
     width: 100%;
     text-align: center;
-    padding: 25px 0;
+    padding: 50px 0;
     background: #646b89;
-    margin-top: 20px;
     z-index: -30;
 }
 
@@ -795,6 +801,7 @@ nav .fas{
 @media screen and (max-width: 1450px){
 
     body{
+        width: 100%;
         overflow-x: hidden;
     }
 
@@ -806,18 +813,37 @@ nav .fas{
         padding: 50px 0;
     }
 
+    .hero-image{
+        top: 0;
+    }
+
+    .home-logo{
+        position: absolute;
+        top: 5%;
+    }
+
+    .home-text{
+        position: absolute;
+        top: 1%;
+        left: -5%;
+    }
+
+    .home{
+        margin-bottom: 200px;
+    }
+
+
     nav .fas{
         display: block;
         font-size: 25px;
-        color: #f0f0ff80;
+        color: #80c3b3;
     }
 
     nav .fa-bars{
-        color: #646b89;
+        color: #80c3b3;
         position: absolute;
-        top: 15px;
-        right: 30px;;
-
+        top: 25px;
+        right: 25px;;
     }
 
     .nav-links ul{
@@ -835,13 +861,13 @@ nav .fas{
     .nav-links ul .fas{
         position: absolute;
         top: 25px;
-        left: 110px;
+        right: 30px;
         cursor: pointer;
     }
 
     .navbar-link{
         display: block;
-        margin: 5px 10px;
+        margin: 10px 0px 10px 20px;
         color: #f0f0ff80;
     }
 
@@ -850,23 +876,14 @@ nav .fas{
     }
 
     .navbar-link.active-link {
-        border: 2px solid #f0f0ff;
-        background-color: #f0f0ff;
-        color: #646b89;
+        background-color: #80c3b3;
+        color: #f0f0ff80;
     }
     
     .navbar-link.active-link i{
         color: #646b89;
     }
-    
-
-    .mobile-background{
-        display: flex;
-        position: fixed;
-        transform: scale(6);
-        z-index: -1000;
-    }
-    
+        
     #my-work{
         flex-direction: column;
         flex-wrap: wrap;
@@ -892,22 +909,27 @@ nav .fas{
 @media screen and (max-width: 768px) {
 
     .home{
-        background-image: url(images/mobileBackground.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 0;
     }
 
-    .blobfixed{
-        display: none;
-    }
-
     .home-text{
         font-size: 15px;
         transform: translateY(300px);
         z-index: 10;
-        left: -50px
+        left: -50px;
+        top: 160px;
+    }
+
+    .hero-image{
+        display: none;
+    }
+
+    .hero-mobile{
+        display: block;
+        width: 100vb;
     }
 
     .home-text h1{
@@ -943,6 +965,10 @@ nav .fas{
     .tab-links{
         font-size: 18px;
         margin-right: 20px;
+    }
+
+    .tab-contents p{
+        font-size: 18px;
     }
 
     .services-list div{

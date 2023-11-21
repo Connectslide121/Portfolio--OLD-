@@ -13,6 +13,7 @@ function opentab(tabname){
 }
 
 
+
 document.addEventListener('DOMContentLoaded', function () {
     rotateLogos();
 });
