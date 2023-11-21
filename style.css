@@ -582,7 +582,7 @@ nav .social-media ul li:hover a{
 }
 
 .game:hover .layer{
-    height: 50%;
+    height: 70%;
 }
 
 
@@ -984,4 +984,34 @@ nav .fas{
     .skillcard img{
         padding-right: 0;
     }
+
+    .game{
+        width: 100%;
+    }
+
+    .game video{
+        width: 100%;
+    }
+
+    .game .layer h2{
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    .game .layer p{
+        font-size: 14px;
+    }
+
+    .game .layer h3{
+        font-size: 14px;
+    }
+
+
+    .game .layer .buttons a{
+        font-size: 18px;
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+    }
+
 }
