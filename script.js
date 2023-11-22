@@ -188,7 +188,7 @@ function setupGSAPAnimation() {
         trigger: "#my-work",
         start: "center center",
         end: "+=8000",
-        scrub: true,
+        scrub: 1.6,
         pin: true
     });
 }
