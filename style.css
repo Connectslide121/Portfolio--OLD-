@@ -703,6 +703,11 @@ nav .social-media ul li:hover a{
     color: #e6e6f3;
 }
 
+.contact-left p a{
+    text-decoration: none;
+    color: #e6e6f3;
+}
+
 .contact-left p i{
     color: #e6e6f3;
     margin-right: 5%;
@@ -871,20 +876,20 @@ nav .fas{
     .navbar-link{
         display: block;
         margin: 10px 0px 10px 20px;
-        color: #f0f0ff80;
+        color: #221d34;
     }
 
     .navbar-link i{
-        color: #f0f0ff80;
+        color: #221d34;
     }
 
     .navbar-link.active-link {
         background-color: #80c3b3;
-        color: #f0f0ff80;
+        color: #221d34;
     }
     
     .navbar-link.active-link i{
-        color: #f0f0ff80;
+        color: #221d34;
     }
         
     #my-work{
@@ -958,7 +963,7 @@ nav .fas{
         height: auto;
     }
 
-    .layer{
+    .website .layer, .program .layer{
         max-width: 95%;
     }
         
@@ -1010,6 +1015,10 @@ nav .fas{
     }
 
     .game video{
+        width: 100%;
+    }
+
+    .game .layer{
         width: 100%;
     }
 
