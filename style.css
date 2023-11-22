@@ -806,18 +806,25 @@ nav .fas{
     }
 
     .hero-image{
-        top: 0;
+        display: none;
     }
 
+    .hero-mobile{
+        display: block;
+        width: 100%;
+    }
+
+    .hero-mobile img{
+        width: 100%;
+    }
+
+
     .home-logo{
-        position: absolute;
-        top: 5%;
+        display: none;
     }
 
     .home-text{
-        position: absolute;
-        top: 1%;
-        left: -5%;
+        display: none;
     }
 
     .home{
@@ -873,7 +880,7 @@ nav .fas{
     }
     
     .navbar-link.active-link i{
-        color: #646b89;
+        color: #f0f0ff80;
     }
         
     #my-work{
@@ -891,7 +898,12 @@ nav .fas{
         height: 100%;
     }
     
-    #websites .container img, #games .container img, #programs .container img{
+    #websites .container img, #programs .container img{
+        max-width: 100%;
+        height: auto;
+    }
+
+    .game{
         max-width: 100%;
         height: auto;
     }
@@ -899,6 +911,10 @@ nav .fas{
 }
 
 @media screen and (max-width: 768px) {
+
+    body{
+        overflow-x: hidden;
+    }
 
     .home{
         background-position: center;
@@ -908,11 +924,7 @@ nav .fas{
     }
 
     .home-text{
-        font-size: 15px;
-        transform: translateY(300px);
-        z-index: 10;
-        left: -50px;
-        top: 160px;
+        display: none;
     }
 
     .hero-image{
@@ -985,8 +997,12 @@ nav .fas{
         padding-right: 0;
     }
 
+    #my-work{
+        width: 100vw;
+    }
+
     .game{
-        width: 100%;
+        width: 380px;
     }
 
     .game video{
