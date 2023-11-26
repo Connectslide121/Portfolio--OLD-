@@ -213,3 +213,108 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+
+
+
+const numberOfCircles = 8;
+    const circles = [];
+    const cursorRadius = 50; // Adjust this value for the effective radius of the cursor
+
+    function getRandomPosition() {
+        const x = Math.random() * window.innerWidth;
+        const y = Math.random() * window.innerHeight;
+        return { x, y };
+    }
+
+    function createCircle() {
+        const circle = document.createElement('div');
+        circle.className = 'floating-circle';
+        document.getElementById('circle-container').appendChild(circle);
+
+        const { x, y } = getRandomPosition();
+        circle.style.transform = `translate(${x}px, ${y}px)`;
+
+        const vx = (Math.random() * 2 - 1) * 3;
+        const vy = (Math.random() * 2 - 1) * 3;
+
+        circles.push({
+            element: circle,
+            x,
+            y,
+            radius: 75,
+            vx,
+            vy,
+        });
+
+        // Add hover effect
+        circle.addEventListener('mouseenter', () => {
+            circle.style.transition = 'transform 0.5s ease-out';
+            circle.style.transform = `scale(1.5)`;
+        });
+
+        circle.addEventListener('mouseleave', () => {
+            circle.style.transition = 'transform 0.5s ease-out';
+            circle.style.transform = `scale(1)`;
+        });
+    }
+
+    function updateCircles(event) {
+        const mouseX = event.clientX;
+        const mouseY = event.clientY;
+
+        circles.forEach((circle, index) => {
+            circle.x += circle.vx;
+            circle.y += circle.vy;
+
+            if (circle.x - circle.radius < 0 || circle.x + circle.radius > window.innerWidth) {
+                circle.vx *= -1;
+            }
+
+            if (circle.y - circle.radius < 0 || circle.y + circle.radius > window.innerHeight) {
+                circle.vy *= -1;
+            }
+
+            const distanceToCursor = Math.sqrt((circle.x - mouseX) ** 2 + (circle.y - mouseY) ** 2);
+            if (distanceToCursor < circle.radius + cursorRadius) {
+                // Bounce off the cursor
+                const angle = Math.atan2(circle.y - mouseY, circle.x - mouseX);
+                circle.vx = Math.cos(angle) * 3; // Adjust the speed as needed
+                circle.vy = Math.sin(angle) * 3; // Adjust the speed as needed
+            }
+
+            for (let i = 0; i < circles.length; i++) {
+                if (i !== index && checkCollision(circle, circles[i])) {
+                    handleCollision(circle, circles[i]);
+                }
+            }
+
+            circle.element.style.transform = `translate(${circle.x}px, ${circle.y}px)`;
+        });
+    }
+
+    function checkCollision(circle1, circle2) {
+        const dx = circle1.x - circle2.x;
+        const dy = circle1.y - circle2.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        return distance < circle1.radius + circle2.radius;
+    }
+
+    function handleCollision(circle1, circle2) {
+        const tempVx = circle1.vx;
+        const tempVy = circle1.vy;
+        circle1.vx = circle2.vx;
+        circle1.vy = circle2.vy;
+        circle2.vx = tempVx;
+        circle2.vy = tempVy;
+    }
+
+    document.addEventListener('mousemove', updateCircles);
+
+    for (let i = 0; i < numberOfCircles; i++) {
+        createCircle();
+    }
+
+    setInterval(() => {
+        requestAnimationFrame(() => updateCircles({ clientX: 0, clientY: 0 }));
+    }, 1000 / 60);
