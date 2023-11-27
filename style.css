@@ -806,7 +806,7 @@ form textarea{
 .floating-circle {
     width: 150px;
     height: 150px;
-    border: 10px solid #f0f0ffc4;
+    border: 10px solid #d3dcdf;
     border-radius: 50%;
     background-color: transparent;
     position: absolute;
