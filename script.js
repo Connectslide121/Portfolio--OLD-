@@ -13,10 +13,22 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
+// Side menu
+var sidemenu = document.getElementById("sidemenu");
+
+function openmenu() {
+    console.log("Opening menu");
+    console.log("Current right value:", sidemenu.style.right);
+    sidemenu.style.right = "0";
+}
+
+function closemenu() {
+    console.log("Closing menu");
+    sidemenu.style.right = "-200px";
+};
+
+
 // Logo rotation
-document.addEventListener('DOMContentLoaded', function () {
-    rotateLogos();
-});
 
 function rotateLogos() {
     const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
@@ -45,83 +57,8 @@ function rotateLogo(logo) {
     }, duration);
 }
 
-// Parallax effects
-document.addEventListener("DOMContentLoaded", function () {
-    const applyParallaxEffect = (el, xFactor, yFactor, scale) => {
-        let xValue = 0;
-        let yValue = 0;
-
-        window.addEventListener("mousemove", (e) => {
-            xValue = e.clientX - window.innerWidth / 2;
-            yValue = e.clientY - window.innerHeight / 2;
-
-            el.style.transform = `translateX(calc(${xFactor * xValue}px)) translateY(calc(${yFactor * yValue}px)) scale(${scale})`;
-        });
-    };
-
-    applyParallaxEffect(document.querySelectorAll(".parallaxLogo"), -0.01, -0.01, 1);
-    applyParallaxEffect(document.querySelectorAll(".parallaxBackground"), -0.5, -0.5, 1.3);
-    applyParallaxEffect(document.querySelectorAll(".parallaxBlobs"), -0.1, -0.2, 0.8);
-});
-
-// Navigation and scroll
-document.addEventListener("DOMContentLoaded", function () {
-    var navbar = document.getElementById("navbar");
-    var homeSection = document.getElementById("home");
-
-    var sections = document.querySelectorAll('#home, #about, #services, #websites, #games, #programs, #contact');
-    var navbarLinks = document.querySelectorAll('.navbar-link');
-
-    var options = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.5
-    };
-
-    function highlightNav(entries, observer) {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                var index = Array.from(sections).indexOf(entry.target);
-                navbarLinks.forEach(link => link.classList.remove("active-link"));
-                navbarLinks[index].classList.add("active-link");
-            }
-        });
-    }
-
-    var observer = new IntersectionObserver(highlightNav, options);
-
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    window.addEventListener("scroll", function () {
-        var scrollPosition = window.scrollY;
-        var triggerPosition = homeSection.offsetHeight;
-
-        if (scrollPosition > triggerPosition) {
-            navbar.classList.add("navbar-scroll");
-        } else {
-            navbar.classList.remove("navbar-scroll");
-        }
-    });
-});
-
-// Side menu
-var sidemenu = document.getElementById("sidemenu");
-
-function openmenu() {
-    console.log("Opening menu");
-    console.log("Current right value:", sidemenu.style.right);
-    sidemenu.style.right = "0";
-}
-
-function closemenu() {
-    console.log("Closing menu");
-    sidemenu.style.right = "-200px";
-};
-
 // Parallax scrolling effect
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function parallaxScrollEffect () {
     const parallaxLeft = document.querySelector(".parallax-left");
     const parallaxRight = document.querySelector(".parallax-right");
     const parallaxLogo = document.querySelector(".home-logo");
@@ -149,12 +86,12 @@ let scrollSection = document.getElementById("my-work")
 
 function setupGSAPAnimation() {
     tl = gsap.timeline();
-    tl.to(scrollSection, { x: -scrollSection.offsetWidth * 2.47, ease: "power1.inOut" });
+    tl.to(scrollSection, { x: -scrollSection.offsetWidth * 2.83, ease: "power1.inOut" });
 
     ScrollTrigger.create({
         animation: tl,
         trigger: scrollSection,
-        start: "center center",
+        start: "left left",
         end: "+=6600",
         scrub: 1,
         pin: true
@@ -201,8 +138,8 @@ function createCircle() {
     const { x, y } = getRandomPosition();
     circle.style.transform = `translate(${x}px, ${y}px)`;
 
-    const vx = (Math.random() * 2 - 1) * 3;
-    const vy = (Math.random() * 2 - 1) * 3;
+    const vx = Math.random() * 10;
+    const vy = Math.random() * 10;
 
     circles.push({
         element: circle,
@@ -211,17 +148,6 @@ function createCircle() {
         radius: 75,
         vx,
         vy,
-    });
-
-    // Add hover effect
-    circle.addEventListener('mouseenter', () => {
-        circle.style.transition = 'transform 0.5s ease-out';
-        circle.style.transform = `scale(1.5)`;
-    });
-
-    circle.addEventListener('mouseleave', () => {
-        circle.style.transition = 'transform 0.5s ease-out';
-        circle.style.transform = `scale(1)`;
     });
 }
 
@@ -275,8 +201,6 @@ function handleCollision(circle1, circle2) {
     circle2.vy = tempVy;
 }
 
-document.addEventListener('mousemove', updateCircles);
-
 for (let i = 0; i < numberOfCircles; i++) {
     createCircle();
 }
@@ -284,3 +208,11 @@ for (let i = 0; i < numberOfCircles; i++) {
 setInterval(() => {
     requestAnimationFrame(() => updateCircles({ clientX: 0, clientY: 0 }));
 }, 1000 / 60);
+
+
+rotateLogos()
+
+
+document.addEventListener('mousemove', updateCircles);
+
+

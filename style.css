@@ -388,7 +388,7 @@ nav .social-media ul li:hover a{
 
 #services{
     padding: 100px 0;
-    height: 100vh;    
+    height: 110vh;    
     background-color: #221d34;
     z-index: 10;
 }
@@ -481,9 +481,8 @@ nav .social-media ul li:hover a{
 }
 
 #websites .container{
-    height: 100vh;
     width: 2200px;
-    padding: 3% 5% 5% 5%;
+    padding: 50px 5% 5% 5%;
 }
 
 #websites h1{
@@ -501,7 +500,7 @@ nav .social-media ul li:hover a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     border-radius: 30px;
     transition: transform 0.3s, box-shadow 0.3s;
     background: #221d34;
@@ -586,9 +585,8 @@ nav .social-media ul li:hover a{
 }
 
 #games .container{
-    height: 100vh;
-    width: 2200px;
-    padding: 3% 5% 5% 5%;
+    width: 2900px;
+    padding: 50px 5% 5% 5%;
 }
 
 #games h1{
@@ -606,7 +604,7 @@ nav .social-media ul li:hover a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     border-radius: 30px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -627,6 +625,10 @@ nav .social-media ul li:hover a{
 
 .game3{
     background: #80c3b3;
+}
+
+.game4{
+    background: #d47636;
 }
 
 .game video{
@@ -688,9 +690,8 @@ nav .social-media ul li:hover a{
 }
 
 #programs .container{
-    height: 100vh;
     width: 2200px;
-    padding: 3% 5% 5% 5%;
+    padding: 50px 5% 5% 5%;
 }
 
 #programs h1{
@@ -708,7 +709,7 @@ nav .social-media ul li:hover a{
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 50px;
+    padding: 30px;
     border-radius: 30px;
     transition: transform 0.3s, box-shadow 0.3s;
 }
