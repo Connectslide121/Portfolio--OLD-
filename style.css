@@ -51,7 +51,7 @@ nav{
     flex-wrap: wrap;
     padding: 10px 5%;
     z-index: 1000;
-    background-color: #221d34;
+    /* background-color: #221d34; */
 }
 
 .nav-logo{
@@ -385,6 +385,7 @@ nav .social-media ul li:hover a{
 }
 
 /*------------------------services-----------------------*/
+
 #services{
     padding: 100px 0;
     height: 100vh;    
@@ -393,7 +394,7 @@ nav .social-media ul li:hover a{
 }
 
 #services .container{
-    padding: 3% 5% 5% 5%;
+    padding: 6% 5% 5% 5%;
 }
 
 #services h1{
@@ -437,7 +438,7 @@ nav .social-media ul li:hover a{
     font-size: 18px;
     font-weight: 550;
     border-radius: 10px;
-    transition: background 0.5s, transform 0.5s, box-shadow 0.2s;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .services-list div i{
@@ -467,75 +468,96 @@ nav .social-media ul li:hover a{
 }
 
 /*------------------------websites-----------------------*/
+
 #my-work{
     display: flex;
 }
 
 
 #websites{
-    padding: 100px 0;
+    padding: 50px 0;
     height: 100vh;
     background-color: #e6e6f3;
-
 }
 
 #websites .container{
-    height: 700px;
+    height: 100vh;
     width: 2200px;
     padding: 3% 5% 5% 5%;
 }
 
+#websites h1{
+    margin-bottom: 30px;
+}
 
 .website-list{
     display: flex;
-    grid-gap: 40px;
+    grid-gap: 160px;
 }
 
 .website{
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    background: #221d34;
+}
+
+.website:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 5px 5px #646b89;
+
+}
+
+.website1{
+    background: #d47636;
+}
+
+.website2{
+    background: #c6aed2;
+}
+
+.website3{
+    background: #80c3b3;
 }
 
 .website img{
-    width: auto;
-    height: 400px;
+    width: 450px;
+    height: 250px;
     display: block;
-    transition: transform 0.5s;
 }
 
-.website .layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.website-description{
+    width: 450px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 10%;
     text-align: center;
     transition: height 0.5s;
 }
 
-.website .layer h2{
-    font-weight: 500;
-    margin-bottom: 5%;
+.website-description h2{
+    font-weight: bold;
+    margin: 3% 0;
 }
 
-.website .layer h3{
+.website-description h3{
     font-weight: 400;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
-.website .layer .buttons{
+.website-description .buttons{
     margin-top: 5%;
     display: flex;
 }
 
-.website .layer .buttons a{
+.website-description .buttons a{
     margin: 0 20px;
     color: #221d34;
     text-decoration: none;
@@ -548,88 +570,98 @@ nav .social-media ul li:hover a{
     text-align: center;
 }
 
-.website:hover img{
-    transform: scale(1.1);
+.website-description .buttons a:hover{
+    background: #646b89;
 }
-
-.website:hover .layer{
-    height: 100%;
-}
-
-
 
 
 
 /*------------------------games-----------------------*/
 #games{
-    padding: 100px 0;
+    padding: 50px 0;
     height: 100vh;
     background-color: #e6e6f3;
-    border-right: solid 10px #221d34;
-    border-left: solid 10px #221d34;
+    border-left: solid 3px #221d34;
+    border-right: solid 3px #221d34;
 }
 
 #games .container{
-    height: 700px;
+    height: 100vh;
     width: 2200px;
     padding: 3% 5% 5% 5%;
 }
 
 #games h1{
-    color: #221d34;
+    margin-bottom: 30px;
 }
 
 .game-list{
     display: flex;
-    grid-gap: 40px;
+    grid-gap: 160px;
 }
 
 .game{
     position: relative;
     overflow: hidden;
-    width: 710px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 5px 5px #646b89;
+
+}
+
+.game1{
+    background: #d47636;
+}
+
+.game2{
+    background: #c6aed2;
+}
+
+.game3{
+    background: #80c3b3;
 }
 
 .game video{
-    width: 100%;
-    height: 100%;
+    width: 450px;
+    height: 250px;
     display: block;
-    transition: transform 0.5s;
 }
 
-.game .layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
-    position: absolute;
-    left: 0;
-    top: 0;
+.game-description{
+    width: 450px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 10%;
     text-align: center;
     transition: height 0.5s;
 }
 
-.game .layer h2{
-    font-weight: 500;
-    margin-bottom: 5%;
+.game-description h2{
+    font-weight: bold;
+    margin: 3% 0;
 }
 
-.game .layer h3{
+.game-description h3{
     font-weight: 400;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
-.game .layer .buttons{
+.game-description .buttons{
     margin-top: 5%;
     display: flex;
 }
 
-.game .layer .buttons a{
+.game-description .buttons a{
     margin: 0 20px;
     color: #221d34;
     text-decoration: none;
@@ -642,75 +674,92 @@ nav .social-media ul li:hover a{
     text-align: center;
 }
 
-.game:hover img{
-    transform: scale(1.1);
-}
-
-.game:hover .layer{
-    height: 70%;
+.game-description .buttons a:hover{
+    background: #646b89;
 }
 
 
 /*------------------------programs-----------------------*/
 
 #programs{
-    padding: 100px 0;
+    padding: 50px 0;
     height: 100vh;
     background-color: #e6e6f3;
 }
 
 #programs .container{
-    height: 700px;
+    height: 100vh;
     width: 2200px;
     padding: 3% 5% 5% 5%;
 }
 
+#programs h1{
+    margin-bottom: 30px;
+}
+
 .program-list{
     display: flex;
-    grid-gap: 40px;
+    grid-gap: 160px;
 }
 
 .program{
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    border-radius: 30px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.program:hover{
+    transform: scale(1.03);
+    box-shadow: 0px 0px 5px 5px #646b89;
+
+}
+
+.program1{
+    background: #d47636;
+}
+
+.program2{
+    background: #c6aed2;
+}
+
+.program3{
+    background: #80c3b3;
 }
 
 .program img{
-    width: auto;
-    height: 400px;
+    width: 450px;
+    height: 250px;
     display: block;
-    transition: transform 0.5s;
 }
 
-.program .layer{
-    width: 100%;
-    height: 0;
-    background: linear-gradient(rgba(255, 255, 255, 0.8), #221d34);
-    position: absolute;
-    left: 0;
-    bottom: 0;
+.program-description{
+    width: 450px;
     overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 0 10%;
     text-align: center;
     transition: height 0.5s;
 }
 
-.program .layer h2{
-    font-weight: 500;
-    margin-bottom: 5%;
+.program-description h2{
+    font-weight: bold;
+    margin: 3% 0;
 }
 
-.program .layer h3{
+.program-description h3{
     font-weight: 400;
-    margin-top: 2%;
+    margin-top: 3%;
 }
 
-.program .layer a{
-    margin: 5% 20px 0 20px;
+.program-description a{
+    margin-top: 5%;
     color: #221d34;
     text-decoration: none;
     font-size: 32px;
@@ -722,12 +771,8 @@ nav .social-media ul li:hover a{
     text-align: center;
 }
 
-.program:hover img{
-    transform: scale(1.1);
-}
-
-.program:hover .layer{
-    height: 100%;
+.program-description a:hover{
+    background: #646b89;
 }
 
 
@@ -736,7 +781,7 @@ nav .social-media ul li:hover a{
 /*------------------------contact-----------------------*/
 
 #contact{
-    padding: 6600px 0 20px 0;
+    padding: 6800px 0 20px 0;
     background-color: #221d34;
 
 }

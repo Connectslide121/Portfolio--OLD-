@@ -149,7 +149,7 @@ let scrollSection = document.getElementById("my-work")
 
 function setupGSAPAnimation() {
     tl = gsap.timeline();
-    tl.to(scrollSection, { x: -scrollSection.offsetWidth * 2.45, ease: "none" });
+    tl.to(scrollSection, { x: -scrollSection.offsetWidth * 2.47, ease: "power1.inOut" });
 
     ScrollTrigger.create({
         animation: tl,
@@ -185,7 +185,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Floating circles
 const numberOfCircles = 8;
 const circles = [];
-const cursorRadius = 20; // Adjust this value for the effective radius of the cursor
+const cursorRadius = 25; // Adjust this value for the effective radius of the cursor
 
 function getRandomPosition() {
     const x = Math.random() * window.innerWidth;
