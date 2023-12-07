@@ -159,28 +159,6 @@ nav .social-media ul li:hover a{
     z-index: -100;
 }
 
-.blobfixed{
-    position: fixed;
-    z-index: -20;
-}
-
-.blobs{
-    position: absolute;
-    transform: translateX(-50%) translateY(10%);
-}
-
-.blobs::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('images/noise.png');
-    opacity: 0.2;
-    pointer-events: none;
-}
-
 .home-logo{
     width: 40%;
     margin-top: 25%;
@@ -262,7 +240,6 @@ nav .social-media ul li:hover a{
     position: relative;
     width: 80%;
     height: auto;
-    border-radius: 20px;    
 }
 
 .about-col-2{
@@ -793,6 +770,10 @@ nav .social-media ul li:hover a{
     padding: 3% 5% 5% 5%;
 }
 
+#contact h1{
+    margin-bottom: 30px;
+}
+
 .contact-left{
     flex-basis: 35%;
     padding-left: 6%;
@@ -1030,6 +1011,15 @@ nav .fas{
     .navbar-link.active-link i{
         color: #221d34;
     }
+
+    .row{
+        flex-direction: column;
+    }
+
+    .about-col-1 img{
+        margin: 10% 0 10% 10%;
+    }
+
         
     #my-work{
         flex-direction: column;
@@ -1037,13 +1027,18 @@ nav .fas{
     }
 
     .website-list, .game-list, .program-list{
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-        grid-gap: 40px;   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .website, .game, .program{
+        width: 500px;
     }
 
     #websites .container, #games .container, #programs .container{
         height: 100%;
+        width: 100%;
     }
     
     #websites .container img, #programs .container img{
@@ -1051,9 +1046,8 @@ nav .fas{
         height: auto;
     }
 
-    .game{
-        max-width: 100%;
-        height: auto;
+    #games{
+        border: none;
     }
 
 }
@@ -1097,15 +1091,10 @@ nav .fas{
     }
 
     body img{
-        padding-right: 20px;
         max-width: 100%;
         height: auto;
     }
 
-    .website .layer, .program .layer{
-        max-width: 95%;
-    }
-        
     .about-col-1, .about-col-2{
         flex-basis: 100%;
     }
@@ -1136,50 +1125,24 @@ nav .fas{
     .contact-right form{
         margin: 0;
     }
-
-    .website:hover img, .game:hover img, .program:hover img{
-        transform: scale(1);
-    }
     
     .skillcard img{
         padding-right: 0;
     }
 
-    #my-work{
-        width: 100vw;
+    .website, .game, .program{
+        width: 350px;
+        height: 400px
     }
 
-    .game{
-        width: 380px;
+    .website-description, .game-description, .program-description{
+        width: 320px;
     }
 
     .game video{
         width: 100%;
+        height: auto;
     }
 
-    .game .layer{
-        width: 100%;
-    }
-
-    .game .layer h2{
-        margin-top: 12px;
-        font-size: 16px;
-    }
-
-    .game .layer p{
-        font-size: 14px;
-    }
-
-    .game .layer h3{
-        font-size: 14px;
-    }
-
-
-    .game .layer .buttons a{
-        font-size: 18px;
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-    }
 
 }
