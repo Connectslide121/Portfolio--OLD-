@@ -22,7 +22,6 @@ body h1{
     font-weight: 550;
     font-size: 72px;
     color: #221d34;
-    margin: 0 0 20px 0;
 }
 
 #home{
@@ -236,8 +235,12 @@ nav .social-media ul li:hover a{
 #about{
     padding: 80px 0;
     height: 100%;
-    background-color: #d47636;
+    background-color: #e6e6f3;
     z-index: 10;
+}
+
+#about h1{
+    margin-bottom: 20px;
 }
 
 .row{
@@ -288,21 +291,48 @@ nav .social-media ul li:hover a{
     padding: 5px 10px;
     border: 3px solid transparent;
     border-radius: 25px;
-
 }
 
-.tab-links:hover{
-    color: #221d34;
-    border: 3px solid #221d34;
-    border-radius: 25px;
+.skills-link{
+    border: 3px solid #d47636;
 }
 
-.tab-links.active-link{
+.skills-link:hover{
+    background: #d47636;
+}
+
+.skills-link.active-link{
     color: #e6e6f3;
-    border: 3px solid #221d34;
-    border-radius: 25px;
-    background-color: #221d34;
-    font-weight: 520;
+    border: 3px solid #d47636;
+    background-color: #d47636;
+}
+
+.education-link{
+    border: 3px solid #c6aed2;
+}
+
+.education-link:hover{
+    background: #c6aed2;
+}
+
+.education-link.active-link{
+    color: #e6e6f3;
+    border: 3px solid #c6aed2;
+    background-color: #c6aed2;
+}
+
+.experience-link{
+    border: 3px solid #80c3b3;
+}
+
+.experience-link:hover{
+    background: #80c3b3;
+}
+
+.experience-link.active-link{
+    color: #e6e6f3;
+    border: 3px solid #80c3b3;
+    background-color: #80c3b3;
 }
 
 .tab-contents.skills.active-tab{
@@ -358,7 +388,7 @@ nav .social-media ul li:hover a{
 #services{
     padding: 100px 0;
     height: 100vh;    
-    background-color: #c6aed2;
+    background-color: #221d34;
     z-index: 10;
 }
 
@@ -366,6 +396,10 @@ nav .social-media ul li:hover a{
     padding: 3% 5% 5% 5%;
 }
 
+#services h1{
+    color: #e6e6f3;
+    margin-bottom: 80px;
+}
 
 .services-list{
     display: grid;
@@ -374,8 +408,31 @@ nav .social-media ul li:hover a{
     color: #e6e6f3;
 }
 
+.service1{
+    background: #d47636;
+}
+
+.service1 a{
+    color: #d47636;
+}
+
+.service2{
+    background: #c6aed2;
+}
+
+.service2 a{
+    color: #c6aed2;
+}
+
+.service3{
+    background: #80c3b3;
+}
+
+.service3 a{
+    color: #80c3b3;
+}
+
 .services-list div{
-    background: #221d34;
     padding: 40px;
     font-size: 18px;
     font-weight: 550;
@@ -395,16 +452,18 @@ nav .social-media ul li:hover a{
 
 .services-list div a{
     text-decoration: none;
-    color: #e6e6f3;
     font-size: 15px;
     margin-top: 20px;
     display: inline-block;
 }
 
 .services-list div:hover{
-    background-color: #6e78a5;
-    box-shadow: 3px 3px 5px 5px #5b637a;
-    transform: scale(1.02);
+    box-shadow: 0px 0px 5px 5px #e6e6f3;
+    transform: scale(1.03);
+}
+
+.services-list div:hover a{
+    color: #e6e6f3;
 }
 
 /*------------------------websites-----------------------*/
@@ -416,13 +475,13 @@ nav .social-media ul li:hover a{
 #websites{
     padding: 100px 0;
     height: 100vh;
-    background-color: #80c3b3;
+    background-color: #e6e6f3;
 
 }
 
 #websites .container{
     height: 700px;
-    width: 100%;
+    width: 2200px;
     padding: 3% 5% 5% 5%;
 }
 
@@ -505,13 +564,19 @@ nav .social-media ul li:hover a{
 #games{
     padding: 100px 0;
     height: 100vh;
-    background-color: #d47636;
+    background-color: #e6e6f3;
+    border-right: solid 10px #221d34;
+    border-left: solid 10px #221d34;
 }
 
 #games .container{
     height: 700px;
-    width: 100%;
+    width: 2200px;
     padding: 3% 5% 5% 5%;
+}
+
+#games h1{
+    color: #221d34;
 }
 
 .game-list{
@@ -591,12 +656,12 @@ nav .social-media ul li:hover a{
 #programs{
     padding: 100px 0;
     height: 100vh;
-    background-color: #c6aed2;
+    background-color: #e6e6f3;
 }
 
 #programs .container{
     height: 700px;
-    width: 100%;
+    width: 2200px;
     padding: 3% 5% 5% 5%;
 }
 
@@ -671,7 +736,7 @@ nav .social-media ul li:hover a{
 /*------------------------contact-----------------------*/
 
 #contact{
-    padding: 8100px 0 20px 0;
+    padding: 6600px 0 20px 0;
     background-color: #221d34;
 
 }

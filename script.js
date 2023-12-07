@@ -145,17 +145,18 @@ document.addEventListener("DOMContentLoaded", function () {
 gsap.registerPlugin(ScrollTrigger, EasePack);
 
 let tl;
+let scrollSection = document.getElementById("my-work")
 
 function setupGSAPAnimation() {
     tl = gsap.timeline();
-    tl.to("#my-work", 5, { x: -window.innerWidth * 2.5, ease: "none" });
+    tl.to(scrollSection, { x: -scrollSection.offsetWidth * 2.45, ease: "none" });
 
     ScrollTrigger.create({
         animation: tl,
-        trigger: "#my-work",
+        trigger: scrollSection,
         start: "center center",
-        end: "+=8000",
-        scrub: 1.6,
+        end: "+=6600",
+        scrub: 1,
         pin: true
     });
 }
