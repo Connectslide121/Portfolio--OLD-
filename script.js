@@ -86,17 +86,18 @@ let scrollSection = document.getElementById("my-work")
 
 function setupGSAPAnimation() {
     tl = gsap.timeline();
-    tl.to(scrollSection, { x: -5350, ease: "power1.inOut" });
-    
+    tl.to(scrollSection, {
+        x: -7300 + window.innerWidth,
+        ease: 'power1.inOut',
+        scrollTrigger: { 
+          trigger: scrollSection,
+          start: "bottom bottom",
+          end: "bottom bottom-=8200",
+          scrub: 1,
+          pin: true
 
-    ScrollTrigger.create({
-        animation: tl,
-        trigger: scrollSection,
-        start: "left left",
-        end: "+=8000",
-        scrub: 1,
-        pin: true
-    });
+        }
+      });
 }
 
 function destroyGSAPAnimation() {
@@ -142,8 +143,8 @@ gsap.to(websitesProgressBar, {
       ease: 'none',
       scrollTrigger: { 
         trigger: triggerGamesProgressBar[0],
-        start: "bottom center-=3000px",
-        end: "bottom center-=4500px",
+        start: "bottom center-=2900px",
+        end: "bottom center-=4600px",
         scrub: 0.3 
       }
     });
