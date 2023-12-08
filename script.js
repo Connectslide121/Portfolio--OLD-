@@ -106,12 +106,12 @@ function destroyGSAPAnimation() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth > 1450) {
+    if (window.innerWidth > 1400) {
         setupGSAPAnimation();
     }
 
     window.addEventListener("resize", function () {
-        if (window.innerWidth > 1450) {
+        if (window.innerWidth > 1400) {
             setupGSAPAnimation();
         } else {
             destroyGSAPAnimation();
