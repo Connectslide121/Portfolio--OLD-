@@ -86,13 +86,13 @@ let scrollSection = document.getElementById("my-work")
 
 function setupGSAPAnimation() {
     tl = gsap.timeline();
-    tl.to(scrollSection, { x: -5250, ease: "power1.inOut" });
+    tl.to(scrollSection, { x: -5350, ease: "power1.inOut" });
 
     ScrollTrigger.create({
         animation: tl,
         trigger: scrollSection,
         start: "left left",
-        end: "+=6600",
+        end: "+=8000",
         scrub: 1,
         pin: true
     });
@@ -118,6 +118,49 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
+var websitesProgressBar = document.getElementById("websitesProgressBar");
+var triggerWebsitesProgressBar = document.getElementsByClassName("websitesDates");
+
+gsap.to(websitesProgressBar, {
+    width: 1340,
+    ease: 'none',
+    scrollTrigger: { 
+      trigger: triggerWebsitesProgressBar[0],
+      start: "bottom center",
+      end: "right center-=1500px",
+      scrub: 0.3 
+    }
+  });
+
+  var gamesProgressBar = document.getElementById("gamesProgressBar");
+  var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
+  
+  gsap.to(gamesProgressBar, {
+      width: 2012,
+      ease: 'none',
+      scrollTrigger: { 
+        trigger: triggerGamesProgressBar[0],
+        start: "bottom center-=3000px",
+        end: "bottom center-=4500px",
+        scrub: 0.3 
+      }
+    });
+  
+    var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
+    var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
+    
+    gsap.to(scrollProgramsProgressBar, {
+        width: 1340,
+        ease: 'none',
+        scrollTrigger: { 
+          trigger: triggerProgramsProgressBar[0],
+          start: "bottom center-=5600px",
+          end: "bottom center-=7000px",
+          scrub: 0.3 
+        }
+      });
+
 
 // Floating circles
 const numberOfCircles = 8;
@@ -212,47 +255,6 @@ setInterval(() => {
 
 rotateLogos()
 
-var websitesProgressBar = document.getElementById("websitesProgressBar");
-var triggerWebsitesProgressBar = document.getElementsByClassName("websitesDates");
-
-gsap.to(websitesProgressBar, {
-    width: 1340,
-    ease: 'none',
-    scrollTrigger: { 
-      trigger: triggerWebsitesProgressBar[0],
-      start: "bottom center",
-      end: "right center-=1400px",
-      scrub: 0.3 
-    }
-  });
-
-  var gamesProgressBar = document.getElementById("gamesProgressBar");
-  var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
-  
-  gsap.to(gamesProgressBar, {
-      width: 2012,
-      ease: 'none',
-      scrollTrigger: { 
-        trigger: triggerGamesProgressBar[0],
-        start: "bottom center-=2200px",
-        end: "bottom center-=3750px",
-        scrub: 0.3 
-      }
-    });
-  
-    var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
-    var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
-    
-    gsap.to(scrollProgramsProgressBar, {
-        width: 1340,
-        ease: 'none',
-        scrollTrigger: { 
-          trigger: triggerProgramsProgressBar[0],
-          start: "bottom center-=4200px",
-          end: "bottom center-=6050px",
-          scrub: 0.3 
-        }
-      });
     
       
 document.addEventListener('mousemove', updateCircles);
