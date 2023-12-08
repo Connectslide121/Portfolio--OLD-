@@ -212,7 +212,49 @@ setInterval(() => {
 
 rotateLogos()
 
+var websitesProgressBar = document.getElementById("websitesProgressBar");
+var triggerWebsitesProgressBar = document.getElementsByClassName("websitesDates");
 
+gsap.to(websitesProgressBar, {
+    width: 1340,
+    ease: 'none',
+    scrollTrigger: { 
+      trigger: triggerWebsitesProgressBar[0],
+      start: "bottom center",
+      end: "right center-=1400px",
+      scrub: 0.3 
+    }
+  });
+
+  var gamesProgressBar = document.getElementById("gamesProgressBar");
+  var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
+  
+  gsap.to(gamesProgressBar, {
+      width: 2012,
+      ease: 'none',
+      scrollTrigger: { 
+        trigger: triggerGamesProgressBar[0],
+        start: "bottom center-=2200px",
+        end: "bottom center-=3750px",
+        scrub: 0.3 
+      }
+    });
+  
+    var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
+    var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
+    
+    gsap.to(scrollProgramsProgressBar, {
+        width: 1340,
+        ease: 'none',
+        scrollTrigger: { 
+          trigger: triggerProgramsProgressBar[0],
+          start: "bottom center-=4200px",
+          end: "bottom center-=6050px",
+          scrub: 0.3 
+        }
+      });
+    
+      
 document.addEventListener('mousemove', updateCircles);
 
 

@@ -560,6 +560,35 @@ nav .social-media ul li:hover a{
     background: #646b89;
 }
 
+.websitesDates{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.websitesDates h3{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.websiteDate1, .websiteDate2, .websiteDate3{
+    min-width: 510px;
+    margin-right: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#websitesProgressBar{
+    display: inline-block;
+    position: absolute;
+    bottom: 148px;
+    left: 365px;
+    height: 3px;
+    width: 0;
+    background-color: #e6e6f3;
+}
 
 
 /*------------------------games-----------------------*/
@@ -668,6 +697,36 @@ nav .social-media ul li:hover a{
     background: #646b89;
 }
 
+.gamesDates{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.gamesDates h3{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.gameDate1, .gameDate2, .gameDate3, .gameDate4{
+    min-width: 510px;
+    margin-right: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#gamesProgressBar{
+    position: absolute;
+    bottom: 148px;
+    left: 2602px;
+    height: 3px;
+    width: 0;
+    background-color: #e6e6f3;
+}
+
+
 
 /*------------------------programs-----------------------*/
 
@@ -763,6 +822,34 @@ nav .social-media ul li:hover a{
 
 .program-description a:hover{
     background: #646b89;
+}
+
+.programsDates{
+    display: flex;
+    flex-direction: row;
+    margin-top: 30px;
+    font-size: 28px;
+}
+
+.programsDates h3{
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.programDate1, .programDate2, .programDate3{
+    min-width: 510px;
+    margin-right: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#programsProgressBar{
+    position: absolute;
+    bottom: 148px;
+    left: 5471px;
+    height: 3px;
+    background-color: #e6e6f3;
 }
 
 
