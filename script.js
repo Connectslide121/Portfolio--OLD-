@@ -87,6 +87,7 @@ let scrollSection = document.getElementById("my-work")
 function setupGSAPAnimation() {
     tl = gsap.timeline();
     tl.to(scrollSection, { x: -5350, ease: "power1.inOut" });
+    
 
     ScrollTrigger.create({
         animation: tl,

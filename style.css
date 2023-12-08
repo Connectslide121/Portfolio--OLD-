@@ -560,30 +560,33 @@ nav .social-media ul li:hover a{
     background: #646b89;
 }
 
-.websitesDates{
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-    font-size: 28px;
-}
-
 .websitesDates h3{
     font-size: 20px;
     margin-top: 10px;
 }
 
 .websiteDate1, .websiteDate2, .websiteDate3{
+    position: absolute;
+    bottom: 69px;
     min-width: 510px;
-    margin-right: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 28px;
+}
+
+.websiteDate2{
+    left: 785px;
+}
+
+.websiteDate3{
+    left: 1450px;
 }
 
 #websitesProgressBar{
     display: inline-block;
     position: absolute;
-    bottom: 148px;
+    bottom: 120px;
     left: 365px;
     height: 3px;
     width: 0;
@@ -709,7 +712,6 @@ nav .social-media ul li:hover a{
 .gamesDates{
     display: flex;
     flex-direction: row;
-    margin-top: 30px;
     font-size: 28px;
 }
 
@@ -719,16 +721,31 @@ nav .social-media ul li:hover a{
 }
 
 .gameDate1, .gameDate2, .gameDate3, .gameDate4{
+    position: absolute;
+    bottom: 69px;
     min-width: 510px;
-    margin-right: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 28px;
 }
+
+.gameDate2{
+    left: 3020px;
+}
+
+.gameDate3{
+    left: 3695px;
+}
+
+.gameDate4{
+    left: 4359px;
+}
+
 
 #gamesProgressBar{
     position: absolute;
-    bottom: 148px;
+    bottom: 120px;
     left: 2602px;
     height: 3px;
     width: 0;
@@ -842,29 +859,32 @@ nav .social-media ul li:hover a{
     background: #646b89;
 }
 
-.programsDates{
-    display: flex;
-    flex-direction: row;
-    margin-top: 30px;
-    font-size: 28px;
-}
-
 .programsDates h3{
     font-size: 20px;
     margin-top: 10px;
 }
 
 .programDate1, .programDate2, .programDate3{
+    position: absolute;
+    bottom: 69px;
     min-width: 510px;
-    margin-right: 160px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-size: 28px;
+}
+
+.programDate2{
+    left: 5890px;
+}
+
+.programDate3{
+    left: 6556px;
 }
 
 #programsProgressBar{
     position: absolute;
-    bottom: 148px;
+    bottom: 120px;
     left: 5471px;
     height: 3px;
     background: #e2e2f8;
