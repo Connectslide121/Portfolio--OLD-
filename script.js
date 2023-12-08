@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+var websitesTitle = document.getElementById("websitesTitle")
 var websitesProgressBar = document.getElementById("websitesProgressBar");
 var triggerWebsitesProgressBar = document.getElementsByClassName("websitesDates");
 
@@ -135,33 +136,71 @@ gsap.to(websitesProgressBar, {
     }
   });
 
-  var gamesProgressBar = document.getElementById("gamesProgressBar");
-  var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
-  
-  gsap.to(gamesProgressBar, {
-      width: 2012,
-      ease: 'none',
-      scrollTrigger: { 
+gsap.to(websitesTitle, {
+    x: 1550,
+    ease: 'none',
+    scrollTrigger: { 
+      trigger: triggerWebsitesProgressBar[0],
+      start: "bottom center",
+      end: "right center-=1500px",
+      scrub: 0.3 
+    }
+ 
+  })
+
+
+var gamesTitle = document.getElementById("gamesTitle")
+var gamesProgressBar = document.getElementById("gamesProgressBar");
+var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
+
+gsap.to(gamesProgressBar, {
+    width: 2012,
+    ease: 'none',
+    scrollTrigger: { 
+    trigger: triggerGamesProgressBar[0],
+    start: "bottom center-=2900px",
+    end: "bottom center-=4600px",
+    scrub: 0.3 
+    }
+});
+
+gsap.to(gamesTitle, {
+    x: 2250,
+    ease: 'none',
+    scrollTrigger: { 
         trigger: triggerGamesProgressBar[0],
         start: "bottom center-=2900px",
         end: "bottom center-=4600px",
         scrub: 0.3 
-      }
+    }
     });
-  
-    var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
-    var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
+
+var programsTitle = document.getElementById("programsTitle")
+var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
+var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
+
+gsap.to(scrollProgramsProgressBar, {
+    width: 1340,
+    ease: 'none',
+    scrollTrigger: { 
+        trigger: triggerProgramsProgressBar[0],
+        start: "bottom center-=5600px",
+        end: "bottom center-=7000px",
+        scrub: 0.3 
+    }
+    });
+
+gsap.to(programsTitle, {
+    x: 1510,
+    ease: 'none',
+    scrollTrigger: { 
+        trigger: triggerProgramsProgressBar[0],
+        start: "bottom center-=5600px",
+        end: "bottom center-=7000px",
+        scrub: 0.3 
+    }
+    });
     
-    gsap.to(scrollProgramsProgressBar, {
-        width: 1340,
-        ease: 'none',
-        scrollTrigger: { 
-          trigger: triggerProgramsProgressBar[0],
-          start: "bottom center-=5600px",
-          end: "bottom center-=7000px",
-          scrub: 0.3 
-        }
-      });
 
 
 // Floating circles

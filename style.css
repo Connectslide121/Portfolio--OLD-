@@ -24,6 +24,11 @@ body h1{
     color: #e2e2f8;
 }
 
+body h1 span{
+    font-size: 40px;
+    padding-right: 25px;
+}
+
 #home{
     display: flex;
     flex-direction: column;
