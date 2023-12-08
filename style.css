@@ -102,20 +102,6 @@ nav .nav-links ul li{
 
 }
 
-.navbar-link.active-link {
-    border-radius: 25px;
-    background: #e6e6f3;
-    color: #1b1729;
-}
-
-.navbar-link.active-link:hover {
-    color: #6e78a5;
-}
-
-.navbar-link.active-link span{
-    color: #1b1729;
-}
-
 nav .social-media{
     padding: 0;
     background: #e6e6f3;
