@@ -1248,8 +1248,8 @@ nav .fas{
 
     .contact-left, .contact-right{
         flex-basis: 100%;
-        margin-left: 15px;
-        padding-left: 0;
+        margin-bottom: 35px;
+        margin-left: 0;
     }
 
     .contact-right form{
