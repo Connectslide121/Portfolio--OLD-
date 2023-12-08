@@ -1162,6 +1162,7 @@ nav .fas{
         display: flex;
         flex-direction: column;
         align-items: center;
+        grid-gap: 60px;
     }
 
     .website, .game, .program{
