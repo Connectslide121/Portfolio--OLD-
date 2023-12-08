@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function parallaxScrollEffect () {
 });
 
 // GSAP Animation
-gsap.registerPlugin(ScrollTrigger, EasePack);
+gsap.registerPlugin(ScrollTrigger, EasePack, ScrollToPlugin);
 
 let tl;
 let scrollSection = document.getElementById("my-work")
@@ -121,6 +121,9 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 
+
+// Websites progress bar animation
+
 var websitesTitle = document.getElementById("websitesTitle")
 var websitesProgressBar = document.getElementById("websitesProgressBar");
 var triggerWebsitesProgressBar = document.getElementsByClassName("websitesDates");
@@ -149,6 +152,9 @@ gsap.to(websitesTitle, {
   })
 
 
+  // Games progress bar animation
+
+
 var gamesTitle = document.getElementById("gamesTitle")
 var gamesProgressBar = document.getElementById("gamesProgressBar");
 var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
@@ -175,6 +181,10 @@ gsap.to(gamesTitle, {
     }
     });
 
+
+
+// Programs progress bar animation
+
 var programsTitle = document.getElementById("programsTitle")
 var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
 var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
@@ -200,10 +210,41 @@ gsap.to(programsTitle, {
         scrub: 0.3 
     }
     });
+
     
+// Links fix
+
+const contactNavLinks = document.getElementsByClassName("contactNavLink");
+const myWorkNavLink = document.getElementById("myWork")
+
+Array.from(contactNavLinks).forEach(element => {
+    element.addEventListener('click', (e) => {
+        e.preventDefault();
+    
+        gsap.to(window, {
+            scrollTo: {
+                y: 15000,
+                ease: "none"
+            },
+        });
+    });
+});
+
+myWork.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    gsap.to(window, {
+        scrollTo: {
+            y: 4200,
+            ease: "none"
+        },
+    });
+});
+
 
 
 // Floating circles
+
 const numberOfCircles = 8;
 const circles = [];
 const cursorRadius = 25; // Adjust this value for the effective radius of the cursor
