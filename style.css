@@ -212,9 +212,6 @@ nav .social-media ul li:hover a{
 
 #about .container{
     height: 100%;
-    display: flex;
-    justify-content: center;
-
 }
 
 #about h1{
@@ -223,6 +220,7 @@ nav .social-media ul li:hover a{
 
 .row{
     display: flex;
+    flex-direction: row;
     align-items: center;
     flex-wrap: wrap;
 }
@@ -1150,6 +1148,7 @@ nav .fas{
 
     .website, .game, .program{
         width: 500px;
+        height: 500px;
     }
 
     #websites .container, #games .container, #programs .container{
