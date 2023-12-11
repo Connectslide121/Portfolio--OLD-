@@ -86,18 +86,18 @@ gsap.to(textLeft, {
     } 
 })
 
-gsap.to(mainLogo, {
-    y: 1200,
-    scrollTrigger:{
-        trigger: homeScrollSection,
-        start: "top top",
-        scrub: 0,
-    } 
-})
+// gsap.to(mainLogo, {
+//     y: 1200,
+//     scrollTrigger:{
+//         trigger: homeScrollSection,
+//         start: "top top",
+//         scrub: 0,
+//     } 
+// })
 
 rings.forEach(ring => {
     gsap.to(ring, {
-        scale: 8,
+        scale: 1,
         scrollTrigger:{
             trigger: homeScrollSection,
             start: "top top",
@@ -123,18 +123,19 @@ const horizontalScrollSection = document.querySelector("#my-work")
 const scrollInnerSections = document.querySelectorAll("#websites, #games, #programs")
 const scrollLimit = scrollInnerSections[0].offsetWidth + scrollInnerSections[1].offsetWidth + scrollInnerSections[2].offsetWidth
 
-
-gsap.to(horizontalScrollSection, {
-    x: -scrollLimit + window.innerWidth,
-    ease: 'power1.inOut',
-    scrollTrigger: { 
-        trigger: horizontalScrollSection,
-        start: "bottom bottom",
-        end: "bottom bottom-=8300",
-        scrub: 1,
-        pin: true
-    }
-});
+if (window.innerWidth > 1400){
+    gsap.to(horizontalScrollSection, {
+        x: -scrollLimit + window.innerWidth,
+        ease: 'power1.inOut',
+        scrollTrigger: { 
+            trigger: horizontalScrollSection,
+            start: "bottom bottom",
+            end: "bottom bottom-=8300",
+            scrub: 1,
+            pin: true
+        }
+    });    
+}
 
 
 // Websites progress bar animation
