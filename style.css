@@ -208,12 +208,13 @@ nav .social-media ul li:hover a{
     height: 110vh;
     background: #1b1729;
     z-index: 10;
-    display: flex;
-    justify-content: center;
 }
 
 #about .container{
-    height: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+
 }
 
 #about h1{
@@ -222,23 +223,18 @@ nav .social-media ul li:hover a{
 
 .row{
     display: flex;
-    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    height: auto;
 }
 
 .about-col-1{
     flex-basis: 40%;
-    position: relative;
-    height: auto;
 }
 
 .about-col-1 img{
     margin: 10% 0 10% 15%;
     position: relative;
     width: 80%;
-    height: auto;
 }
 
 .about-col-2{
@@ -371,6 +367,10 @@ nav .social-media ul li:hover a{
 
 #services .container{
     padding: 6% 5% 5% 5%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 #services h1{
