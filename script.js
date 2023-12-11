@@ -215,7 +215,7 @@ gsap.to(programsTitle, {
 // Links fix
 
 const contactNavLinks = document.getElementsByClassName("contactNavLink");
-const myWorkNavLink = document.getElementById("myWork")
+const myWorkNavLink = document.getElementById("myWorkNavLink")
 
 Array.from(contactNavLinks).forEach(element => {
     element.addEventListener('click', (e) => {
@@ -230,7 +230,7 @@ Array.from(contactNavLinks).forEach(element => {
     });
 });
 
-myWork.addEventListener('click', (e) => {
+myWorkNavLink.addEventListener('click', (e) => {
     e.preventDefault();
 
     gsap.to(window, {
