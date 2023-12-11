@@ -71,8 +71,8 @@ document.addEventListener("DOMContentLoaded", function parallaxScrollEffect () {
 
         if (scrollPosition >= aboutSection.offsetTop) {
             const limitedTranslation = Math.min(scrollPosition - aboutSection.offsetTop, scrollLimit - aboutSection.offsetTop);
-            parallaxLeft.style.transform = `translateX(-${limitedTranslation}px) translateY(${limitedTranslation * 1.1}px)`;
-            parallaxRight.style.transform = `translateX(${limitedTranslation}px) translateY(${limitedTranslation * 1.1}px)`;
+            parallaxLeft.style.transform = `translateX(-${limitedTranslation}px) translateY(${limitedTranslation * 1}px)`;
+            parallaxRight.style.transform = `translateX(${limitedTranslation}px) translateY(${limitedTranslation * 1}px)`;
             parallaxLogo.style.transform = `translateX(0) translateY(-${limitedTranslation * 0.3}px)`;
         }
     });

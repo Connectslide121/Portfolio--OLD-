@@ -155,7 +155,7 @@ nav .social-media ul li:hover a{
     width: 40%;
     margin-top: 25%;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
 }
 
 .home-logo img {
@@ -204,10 +204,16 @@ nav .social-media ul li:hover a{
 /*------------------------about-----------------------*/
 
 #about{
-    padding: 80px 0;
+    padding: 2% 0;
     height: 110vh;
     background: #1b1729;
     z-index: 10;
+    display: flex;
+    justify-content: center;
+}
+
+#about .container{
+    height: 80%;
 }
 
 #about h1{
@@ -451,7 +457,8 @@ nav .social-media ul li:hover a{
 
 #websites .container{
     width: 2200px;
-    padding: 50px 5% 5% 5%;
+    height: 100%;
+    padding: 50px 5%;
 }
 
 #websites h1{
@@ -462,6 +469,7 @@ nav .social-media ul li:hover a{
     display: flex;
     grid-gap: 200px;
     margin-left: 20px;
+    height:75%;
 }
 
 .website{
@@ -472,7 +480,7 @@ nav .social-media ul li:hover a{
     align-items: center;
     padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 520px;
+    height: 100%;
 }
 
 .website:hover{
@@ -495,7 +503,7 @@ nav .social-media ul li:hover a{
 
 .website img{
     width: 450px;
-    min-height: 250px;
+    height: 250px;
     display: block;
     border-top: solid 1px #1b1729;
     border-right: solid 1px #1b1729;
@@ -506,7 +514,7 @@ nav .social-media ul li:hover a{
     width: 450px;
     height: 100%;
     padding: 20px;
-    overflow: hidden;
+    overflow: wrap;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -523,14 +531,9 @@ nav .social-media ul li:hover a{
     margin: 3% 0;
 }
 
-.website-description h3{
-    font-weight: 400;
-    margin-top: 3%;
-}
-
 .website-description .buttons{
     position: absolute;
-    bottom: 50px;
+    bottom: 5%;
     display: flex;
 }
 
@@ -596,7 +599,8 @@ nav .social-media ul li:hover a{
 
 #games .container{
     width: 2900px;
-    padding: 50px 5% 5% 5%;
+    height: 100%;
+    padding: 50px 5%;
 }
 
 #games h1{
@@ -607,6 +611,7 @@ nav .social-media ul li:hover a{
     display: flex;
     grid-gap: 200px;
     margin-left: 20px;
+    height: 75%;
 }
 
 .game{
@@ -617,7 +622,7 @@ nav .social-media ul li:hover a{
     align-items: center;
     padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 520px;
+    height: 100%;
 }
 
 .game:hover{
@@ -654,7 +659,7 @@ nav .social-media ul li:hover a{
     width: 450px;
     height: 100%;
     padding: 20px;
-    overflow: hidden;
+    overflow: wrap;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -672,14 +677,9 @@ nav .social-media ul li:hover a{
     margin: 3% 0;
 }
 
-.game-description h3{
-    font-weight: 400;
-    margin-top: 3%;
-}
-
 .game-description .buttons{
     position: absolute;
-    bottom: 50px;
+    bottom: 5%;
     display: flex;
 }
 
@@ -755,7 +755,8 @@ nav .social-media ul li:hover a{
 
 #programs .container{
     width: 2200px;
-    padding: 50px 5% 5% 5%;
+    height: 100%;
+    padding: 50px 5%;
 }
 
 #programs h1{
@@ -766,6 +767,7 @@ nav .social-media ul li:hover a{
     display: flex;
     grid-gap: 200px;
     margin-left: 20px;
+    height: 75%;
 }
 
 .program{
@@ -776,7 +778,7 @@ nav .social-media ul li:hover a{
     align-items: center;
     padding: 10px;
     transition: transform 0.3s, box-shadow 0.3s;
-    height: 520px;
+    height: 100%;
 }
 
 .program:hover{
@@ -810,7 +812,7 @@ nav .social-media ul li:hover a{
     width: 450px;
     height: 100%;
     padding: 20px;
-    overflow: hidden;
+    overflow: wrap;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -827,14 +829,9 @@ nav .social-media ul li:hover a{
     margin: 3% 0;
 }
 
-.program-description h3{
-    font-weight: 400;
-    margin-top: 3%;
-}
-
 .program-description a{
     position: absolute;
-    bottom: 50px;
+    bottom: 5%;
     color: #1b1729;
     text-decoration: none;
     font-size: 32px;
