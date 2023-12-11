@@ -212,6 +212,7 @@ nav .social-media ul li:hover a{
 
 #about .container{
     height: 100%;
+    display: flex;
 }
 
 #about h1{
@@ -1120,6 +1121,10 @@ nav .fas{
         color: #1b1729;
     }
 
+    #about .container{
+        flex-direction: column;
+    }    
+
     .row{
         flex-direction: column;
     }
@@ -1166,6 +1171,13 @@ nav .fas{
     .websitesDates, .gamesDates, .programsDates, #websitesProgressBar, #gamesProgressBar, #programsProgressBar{
         display: none;
     }
+
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+        margin-bottom: 35px;
+        margin-left: 0;
+    }
+
 
 }
 
@@ -1226,12 +1238,6 @@ nav .fas{
 
     .services-list div{
         max-width: 100%;
-    }
-
-    .contact-left, .contact-right{
-        flex-basis: 100%;
-        margin-bottom: 35px;
-        margin-left: 0;
     }
 
     .contact-right form{
