@@ -1,6 +1,6 @@
 // Tab functionality
-var tablinks = document.getElementsByClassName("tab-links");
-var tabcontents = document.getElementsByClassName("tab-contents");
+var tablinks = document.querySelectorAll(".tab-links");
+var tabcontents = document.querySelectorAll(".tab-contents");
 
 function opentab(tabname) {
     for (tablink of tablinks) {
@@ -13,8 +13,9 @@ function opentab(tabname) {
     document.getElementById(tabname).classList.add("active-tab");
 }
 
+
 // Side menu
-var sidemenu = document.getElementById("sidemenu");
+var sidemenu = document.querySelector("#sidemenu");
 
 function openmenu() {
     console.log("Opening menu");
@@ -28,105 +29,118 @@ function closemenu() {
 };
 
 
-// Logo rotation
 
-function rotateLogos() {
-    const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
-    logos.forEach((logo) => {
-        rotateLogo(logo);
-    });
-}
+gsap.registerPlugin(ScrollTrigger, EasePack, ScrollToPlugin);
 
-function rotateLogo(logo) {
-    const duration = Math.floor(Math.random() * (8000 - 2000 + 1)) + 2000;
+//Logo rotation
+
+const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
+
+logos.forEach((logo) => {
+    rotateLogo(logo);
+})
+
+function rotateLogo(logo){
     const angle = Math.random() * 360;
     const direction = Math.random() < 0.5 ? -1 : 1;
 
-    logo.style.transition = 'none';
-    logo.style.transformOrigin = 'center center';
-    logo.style.transform = 'rotate(0deg)';
-
-    logo.style.transition = `transform ${duration}ms ease-in-out`;
-    logo.style.transform = `rotate(${direction * angle}deg)`;
-
-    setTimeout(() => {
-        logo.style.transition = 'none';
-        logo.style.transformOrigin = 'initial';
-        logo.style.transform = 'none';
-        rotateLogo(logo);
-    }, duration);
+    gsap.to(logo, {
+        rotation : angle * direction,
+        duration: Math.random() * 8,
+        ease:Linear.easeNone,
+        onComplete: () => rotateLogo(logo)  
+    })
 }
 
-// Parallax scrolling effect
-document.addEventListener("DOMContentLoaded", function parallaxScrollEffect () {
-    const parallaxLeft = document.querySelector(".parallax-left");
-    const parallaxRight = document.querySelector(".parallax-right");
-    const parallaxLogo = document.querySelector(".home-logo");
-    const aboutSection = document.getElementById("my-work");
 
-    const scrollLimit = aboutSection.offsetTop + aboutSection.offsetHeight;
 
-    window.addEventListener("scroll", function () {
-        const scrollPosition = window.scrollY;
 
-        if (scrollPosition >= aboutSection.offsetTop) {
-            const limitedTranslation = Math.min(scrollPosition - aboutSection.offsetTop, scrollLimit - aboutSection.offsetTop);
-            parallaxLeft.style.transform = `translateX(-${limitedTranslation}px) translateY(${limitedTranslation * 1}px)`;
-            parallaxRight.style.transform = `translateX(${limitedTranslation}px) translateY(${limitedTranslation * 1}px)`;
-            parallaxLogo.style.transform = `translateX(0) translateY(-${limitedTranslation * 0.3}px)`;
-        }
-    });
-});
+// Home scroll animation
 
-// GSAP Animation
-gsap.registerPlugin(ScrollTrigger, EasePack, ScrollToPlugin);
+const mainLogo = document.querySelector(".home-logo")
+// const innerRing = document.querySelectorAll(".animate-logo2, .animate-logo3")
+// const outerRing = document.querySelectorAll(".animate-logo4, .animate-logo5, .animate-logo6")
+const rings = document.querySelectorAll(".animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6")
+const homeScrollSection = document.querySelector("#home")
+const textRight = document.querySelector(".text-right")
+const textLeft = document.querySelector(".text-left")
 
-let tl;
-let scrollSection = document.getElementById("my-work")
 
-function setupGSAPAnimation() {
-    tl = gsap.timeline();
-    tl.to(scrollSection, {
-        x: -7300 + window.innerWidth,
-        ease: 'power1.inOut',
-        scrollTrigger: { 
-          trigger: scrollSection,
-          start: "bottom bottom",
-          end: "bottom bottom-=8200",
-          scrub: 1,
-          pin: true
+gsap.to(textRight, {
+    x: 1500,
+    scrollTrigger:{
+        trigger: homeScrollSection,
+        start: "top top",
+        scrub: 0,
+    } 
+})
 
-        }
-      });
-}
+gsap.to(textLeft, {
+    x: -1500,
+    scrollTrigger:{
+        trigger: homeScrollSection,
+        start: "top top",
+        end: "bottom top",
+        scrub: 0,
+        ease: "none"
+    } 
+})
 
-function destroyGSAPAnimation() {
-    if (tl) {
-        tl.kill();
-        tl = null;
+gsap.to(mainLogo, {
+    y: 1200,
+    scrollTrigger:{
+        trigger: homeScrollSection,
+        start: "top top",
+        scrub: 0,
+    } 
+})
+
+rings.forEach(ring => {
+    gsap.to(ring, {
+        scale: 8,
+        scrollTrigger:{
+            trigger: homeScrollSection,
+            start: "top top",
+            end: "bottom top",
+            scrub: 0,
+        } 
+    })
+})
+
+// gsap.to(outerRing, {
+//     scale: 1.2,
+//     scrollTrigger:{
+//         trigger: homeScrollSection,
+//         start: "top top",
+//         end: "bottom top",
+//         scrub: 0,
+//     } 
+// })
+
+
+// Horizontal scroll animation
+const horizontalScrollSection = document.querySelector("#my-work")
+const scrollInnerSections = document.querySelectorAll("#websites, #games, #programs")
+const scrollLimit = scrollInnerSections[0].offsetWidth + scrollInnerSections[1].offsetWidth + scrollInnerSections[2].offsetWidth
+
+
+gsap.to(horizontalScrollSection, {
+    x: -scrollLimit + window.innerWidth,
+    ease: 'power1.inOut',
+    scrollTrigger: { 
+        trigger: horizontalScrollSection,
+        start: "bottom bottom",
+        end: "bottom bottom-=8300",
+        scrub: 1,
+        pin: true
     }
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    if (window.innerWidth > 1400) {
-        setupGSAPAnimation();
-    }
-
-    window.addEventListener("resize", function () {
-        if (window.innerWidth > 1400) {
-            setupGSAPAnimation();
-        } else {
-            destroyGSAPAnimation();
-        }
-    });
 });
 
 
 // Websites progress bar animation
-
-var websitesTitle = document.getElementById("websitesTitle")
-var websitesProgressBar = document.getElementById("websitesProgressBar");
-var triggerWebsitesProgressBar = document.getElementsByClassName("websitesDates");
+var websitesTitle = document.querySelector("#websitesTitle")
+var websitesProgressBar = document.querySelector("#websitesProgressBar");
+var triggerWebsitesProgressBar = document.querySelectorAll(".websitesDates");
 
 gsap.to(websitesProgressBar, {
     width: 1340,
@@ -135,7 +149,7 @@ gsap.to(websitesProgressBar, {
       trigger: triggerWebsitesProgressBar[0],
       start: "bottom center",
       end: "right center-=1800px",
-      scrub: 0.3 
+      scrub: 1 
     }
   });
 
@@ -146,18 +160,15 @@ gsap.to(websitesTitle, {
       trigger: triggerWebsitesProgressBar[0],
       start: "bottom center",
       end: "right center-=1800px",
-      scrub: 0.3 
+      scrub: 1
     }
- 
   })
 
 
-  // Games progress bar animation
-
-
-var gamesTitle = document.getElementById("gamesTitle")
-var gamesProgressBar = document.getElementById("gamesProgressBar");
-var triggerGamesProgressBar = document.getElementsByClassName("gamesDates");
+// Games progress bar animation
+var gamesTitle = document.querySelector("#gamesTitle")
+var gamesProgressBar = document.querySelector("#gamesProgressBar");
+var triggerGamesProgressBar = document.querySelectorAll(".gamesDates");
 
 gsap.to(gamesProgressBar, {
     width: 2012,
@@ -166,7 +177,7 @@ gsap.to(gamesProgressBar, {
     trigger: triggerGamesProgressBar[0],
     start: "bottom center-=2900px",
     end: "bottom center-=4600px",
-    scrub: 0.3 
+    scrub: 1 
     }
 });
 
@@ -177,17 +188,15 @@ gsap.to(gamesTitle, {
         trigger: triggerGamesProgressBar[0],
         start: "bottom center-=2900px",
         end: "bottom center-=4600px",
-        scrub: 0.3 
+        scrub: 1
     }
-    });
-
+});
 
 
 // Programs progress bar animation
-
-var programsTitle = document.getElementById("programsTitle")
-var scrollProgramsProgressBar = document.getElementById("programsProgressBar");
-var triggerProgramsProgressBar = document.getElementsByClassName("programsDates");
+var programsTitle = document.querySelector("#programsTitle")
+var scrollProgramsProgressBar = document.querySelector("#programsProgressBar");
+var triggerProgramsProgressBar = document.querySelectorAll(".programsDates");
 
 gsap.to(scrollProgramsProgressBar, {
     width: 1340,
@@ -196,7 +205,7 @@ gsap.to(scrollProgramsProgressBar, {
         trigger: triggerProgramsProgressBar[0],
         start: "bottom center-=5600px",
         end: "bottom center-=7000px",
-        scrub: 0.3 
+        scrub: 1
     }
     });
 
@@ -207,44 +216,44 @@ gsap.to(programsTitle, {
         trigger: triggerProgramsProgressBar[0],
         start: "bottom center-=5600px",
         end: "bottom center-=7000px",
-        scrub: 0.3 
+        scrub: 1
     }
-    });
+});
 
     
 // Links fix
-
-const contactNavLinks = document.getElementsByClassName("contactNavLink");
-const myWorkNavLink = document.getElementById("myWorkNavLink")
+const contactNavLinks = document.querySelectorAll(".contactNavLink");
+const myWorkNavLink = document.querySelector("#myWorkNavLink")
+const sections = document.querySelectorAll("#home, #about, #services, #my-work, #contact")
+const scrollToMyWork = sections[0].offsetHeight + sections[1].offsetHeight + sections[2].offsetHeight + sections[3].offsetHeight - window.innerHeight
+const scrollToContact = sections[0].offsetHeight + sections[1].offsetHeight + sections[2].offsetHeight + sections[3].offsetHeight +sections[4].offsetHeight  - window.innerHeight
 
 Array.from(contactNavLinks).forEach(element => {
-    element.addEventListener('click', (e) => {
+    element.addEventListener('mousedown', (e) => {
         e.preventDefault();
     
         gsap.to(window, {
             scrollTo: {
-                y: 15000,
+                y: scrollToContact,
                 ease: "none"
             },
         });
     });
 });
 
-myWorkNavLink.addEventListener('click', (e) => {
+myWorkNavLink.addEventListener('mousedown', (e) => {
     e.preventDefault();
 
     gsap.to(window, {
         scrollTo: {
-            y: 4200,
+            y: scrollToMyWork,
             ease: "none"
         },
     });
 });
 
 
-
 // Floating circles
-
 const numberOfCircles = 8;
 const circles = [];
 const cursorRadius = 25; // Adjust this value for the effective radius of the cursor
@@ -258,7 +267,7 @@ function getRandomPosition() {
 function createCircle() {
     const circle = document.createElement('div');
     circle.className = 'floating-circle';
-    document.getElementById('circle-container').appendChild(circle);
+    document.querySelector("#circle-container").appendChild(circle);
 
     const { x, y } = getRandomPosition();
     circle.style.transform = `translate(${x}px, ${y}px)`;
@@ -333,9 +342,6 @@ for (let i = 0; i < numberOfCircles; i++) {
 setInterval(() => {
     requestAnimationFrame(() => updateCircles({ clientX: 0, clientY: 0 }));
 }, 1000 / 60);
-
-
-rotateLogos()
 
     
       
