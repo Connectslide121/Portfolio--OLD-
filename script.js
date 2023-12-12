@@ -57,9 +57,22 @@ const homeScrollSection = document.querySelector("#home")
 const textRight = document.querySelector(".text-right")
 const textLeft = document.querySelector(".text-left")
 
+var ringScale = 10
+var homeTextMove = 1500
+
+if (window.innerWidth < 1300){
+    ringScale = 8
+    homeTextMove = 1000
+}
+
+if (window.innerWidth < 768){
+    ringScale = 3.5
+    homeTextMove = 600
+}
+
 
 gsap.to(textRight, {
-    x: 1500,
+    x: homeTextMove,
     scrollTrigger:{
         trigger: homeScrollSection,
         start: "top top",
@@ -68,7 +81,7 @@ gsap.to(textRight, {
 })
 
 gsap.to(textLeft, {
-    x: -1500,
+    x: -homeTextMove,
     scrollTrigger:{
         trigger: homeScrollSection,
         start: "top top",
@@ -80,7 +93,7 @@ gsap.to(textLeft, {
 
 rings.forEach(ring => {
     gsap.to(ring, {
-        scale: 10,
+        scale: ringScale,
         scrollTrigger:{
             trigger: homeScrollSection,
             start: "top top",
@@ -104,8 +117,8 @@ if (window.innerWidth > 1300){
             trigger: aboutTrigger,
             start: "top center",
             end: "top top-=100",
-            scrub: 0.6,
-            ease: "none",
+            scrub: 0.1,
+            ease: "power2.inOut",
         } 
     })
 
@@ -115,7 +128,7 @@ if (window.innerWidth > 1300){
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top top-=100",
-            scrub: 0.6,
+            scrub: 0.1,
             ease: "power2.inOut",
         } 
     })
@@ -126,7 +139,7 @@ if (window.innerWidth > 1300){
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top top",
-            scrub: 0.6,
+            scrub: 0.1,
             ease: "power2.inOut",
             pin: true
         } 
@@ -147,7 +160,7 @@ if (window.innerWidth > 1300){
             trigger: horizontalScrollSection,
             start: "bottom bottom",
             end: "bottom bottom-=8300",
-            scrub: 1,
+            scrub: 0.6,
             pin: true
         }
     });    
@@ -166,7 +179,7 @@ gsap.to(websitesProgressBar, {
       trigger: triggerWebsitesProgressBar[0],
       start: "bottom center",
       end: "right center-=1800px",
-      scrub: 1 
+      scrub: 0.6 
     }
   });
 
@@ -177,7 +190,7 @@ gsap.to(websitesTitle, {
       trigger: triggerWebsitesProgressBar[0],
       start: "bottom center",
       end: "right center-=1800px",
-      scrub: 1
+      scrub: 0.6
     }
   })
 
@@ -194,7 +207,7 @@ gsap.to(gamesProgressBar, {
     trigger: triggerGamesProgressBar[0],
     start: "bottom center-=2900px",
     end: "bottom center-=4600px",
-    scrub: 1 
+    scrub: 0.6 
     }
 });
 
@@ -205,7 +218,7 @@ gsap.to(gamesTitle, {
         trigger: triggerGamesProgressBar[0],
         start: "bottom center-=2900px",
         end: "bottom center-=4600px",
-        scrub: 1
+        scrub: 0.6
     }
 });
 
@@ -222,7 +235,7 @@ gsap.to(scrollProgramsProgressBar, {
         trigger: triggerProgramsProgressBar[0],
         start: "bottom center-=5600px",
         end: "bottom center-=7000px",
-        scrub: 1
+        scrub: 0.6
     }
     });
 
@@ -233,7 +246,7 @@ gsap.to(programsTitle, {
         trigger: triggerProgramsProgressBar[0],
         start: "bottom center-=5600px",
         end: "bottom center-=7000px",
-        scrub: 1
+        scrub: 0.6
     }
 });
 
