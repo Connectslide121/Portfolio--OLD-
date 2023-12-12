@@ -243,6 +243,12 @@ if(window.innerWidth < 768){
     numberOfCircles = 8;
 }
 
+var collisionRadius = 75;
+
+if(window.innerWidth < 768){
+    collisionRadius = 40;
+}
+
 const circles = [];
 const cursorRadius = 25; // Adjust this value for the effective radius of the cursor
 
@@ -267,7 +273,7 @@ function createCircle() {
         element: circle,
         x,
         y,
-        radius: 75,
+        radius: collisionRadius,
         vx,
         vy,
     });

@@ -1326,4 +1326,10 @@ nav .fas{
         height: 40px;
     }
 
+    .floating-circle {
+        width: 80px;
+        height: 80px;
+        border: 6px solid #d3dcdf;
+    }
+    
 }
