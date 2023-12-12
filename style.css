@@ -244,16 +244,9 @@ nav .social-media ul li:hover a{
     flex-wrap: wrap;
 }
 
-.aboutContainer{
-    transform: translateX(25%);
-}
-
-.about-col-2{
-    transform: translateX(1000px);
-}
-
 .about-col-1{
     flex-basis: 40%;
+    transform: scale(1.4) translateY(300px) translateX(48%);
 }
 
 .about-col-1 img{
@@ -265,6 +258,7 @@ nav .social-media ul li:hover a{
 .about-col-2{
     flex-basis: 50%;
     margin: 5%;
+    transform: translateX(2000px);
 }
 
 .about-col-2 p{
@@ -1156,15 +1150,13 @@ nav .fas{
         flex-direction: column;
     }
 
-    .aboutContainer{
-        transform: translateX(0);
+    .about-col-1{
+        transform: scale(1) translateY(0) translateX(0);
     }
     
     .about-col-2{
         transform: translateX(0);
     }
-    
-    
 
     .about-col-1 img{
         margin: 10% 0 10% 10%;

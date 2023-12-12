@@ -92,12 +92,26 @@ rings.forEach(ring => {
 
 
 // About me scroll animation
-const aboutSection = document.querySelector(".aboutContainer")
+const aboutLeft = document.querySelector(".about-col-1")
+const aboutRight = document.querySelector(".about-col-2")
 const aboutTrigger = document.querySelector("#about")
 
 if (window.innerWidth > 1300){
-    gsap.to(aboutSection, {
+   
+    gsap.to(aboutLeft, {
+        y: 0,
+        scrollTrigger:{
+            trigger: aboutTrigger,
+            start: "top center",
+            end: "top top-=100",
+            scrub: 0.6,
+            ease: "none",
+        } 
+    })
+
+    gsap.to(aboutLeft, {
         x: 0,
+        scale: 1,
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top top-=100",
@@ -106,7 +120,6 @@ if (window.innerWidth > 1300){
         } 
     })
     
-    const aboutRight = document.querySelector(".about-col-2")
     
     gsap.to(aboutRight, {
         x: 0,
