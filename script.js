@@ -116,7 +116,7 @@ if (window.innerWidth > 1300){
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top center",
-            end: "top top-=100",
+            end: "top top-=300",
             scrub: 0.1,
             ease: "power2.inOut",
         } 
@@ -127,7 +127,7 @@ if (window.innerWidth > 1300){
         scale: 1,
         scrollTrigger:{
             trigger: aboutTrigger,
-            start: "top top-=100",
+            start: "top top-=200",
             scrub: 0.1,
             ease: "power2.inOut",
         } 

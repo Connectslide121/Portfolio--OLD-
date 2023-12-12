@@ -246,7 +246,7 @@ nav .social-media ul li:hover a{
 
 .about-col-1{
     flex-basis: 40%;
-    transform: scale(1.4) translateY(900px) translateX(48%);
+    transform: scale(1.4) translateY(400px) translateX(48%);
 }
 
 .about-col-1 img{
@@ -258,7 +258,7 @@ nav .social-media ul li:hover a{
 .about-col-2{
     flex-basis: 50%;
     margin: 5%;
-    transform: translateX(2000px);
+    transform: translateX(3000px);
 }
 
 .about-col-2 p{
