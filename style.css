@@ -154,7 +154,7 @@ nav .social-media ul li:hover a{
     width: 40%;
     margin-top: 25%;
     position: fixed;
-    z-index: 1;
+    z-index: 0;
 }
 
 .home-logo img {
@@ -1144,7 +1144,6 @@ nav .fas{
     .services-list{
         display: flex;
         flex-direction: column;
-        color: #1b1729;
     }    
         
     #my-work{
@@ -1251,6 +1250,14 @@ nav .fas{
 
     .services-list div{
         max-width: 100%;
+    }
+
+    .contact-left{
+        padding: 30px;
+    }
+
+    .contact-left h1 span{
+        padding-right: 10px;
     }
 
     .contact-right form{
