@@ -236,7 +236,13 @@ myWorkNavLink.addEventListener('mousedown', (e) => {
 
 
 // Floating circles
-const numberOfCircles = 8;
+
+var numberOfCircles = 12;
+
+if(window.innerWidth < 768){
+    numberOfCircles = 8;
+}
+
 const circles = [];
 const cursorRadius = 25; // Adjust this value for the effective radius of the cursor
 
