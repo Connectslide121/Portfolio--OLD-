@@ -907,7 +907,8 @@ nav .social-media ul li:hover a{
     padding: 60px;
     z-index: 100;
     border: solid 10px #d47636;
-
+    display: flex;
+    flex-direction: column;
 }
 
 .contact-left h1{
@@ -936,7 +937,7 @@ nav .social-media ul li:hover a{
 
 .contact-left p i{
     color: #1b1729;
-    margin-right: 5%;
+    margin-right: 12px;
     font-size: 25px;
 }
 
