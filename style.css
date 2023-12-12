@@ -246,7 +246,7 @@ nav .social-media ul li:hover a{
 
 .about-col-1{
     flex-basis: 40%;
-    transform: scale(1.4) translateY(300px) translateX(48%);
+    transform: scale(1.4) translateY(900px) translateX(48%);
 }
 
 .about-col-1 img{
