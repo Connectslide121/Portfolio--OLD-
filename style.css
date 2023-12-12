@@ -1085,10 +1085,14 @@ nav .fas{
     }
 
     nav .fa-bars{
-        color: #80c3b3;
+        color: #1b1729;
         position: absolute;
-        top: 25px;
-        right: 25px;;
+        top: 20px;
+        right: 25px;
+        font-size: 30px;
+        background: #e6e6f3;
+        padding: 5px;
+        border-radius: 20%;
     }
 
     .nav-links ul{
