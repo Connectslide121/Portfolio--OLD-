@@ -32,34 +32,26 @@ function closemenu() {
 
 gsap.registerPlugin(ScrollTrigger, EasePack, ScrollToPlugin);
 
-//Logo rotation
+// //Logo rotation
+// const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
 
-const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
+// logos.forEach((logo) => {
+//     rotateLogo(logo);
+// })
 
-logos.forEach((logo) => {
-    rotateLogo(logo);
-})
+// function rotateLogo(logo){
+//     const angle = Math.random() * 360;
+//     const direction = Math.random() < 0.5 ? -1 : 1;
 
-function rotateLogo(logo){
-    const angle = Math.random() * 360;
-    const direction = Math.random() < 0.5 ? -1 : 1;
-
-    gsap.to(logo, {
-        rotation : angle * direction,
-        duration: Math.random() * 8,
-        ease:Linear.easeNone,
-        onComplete: () => rotateLogo(logo)  
-    })
-}
-
-
-
+//     gsap.to(logo, {
+//         rotation : angle * direction,
+//         duration: Math.random() * 8,
+//         ease:Linear.easeNone,
+//         onComplete: () => rotateLogo(logo)  
+//     })
+// }
 
 // Home scroll animation
-
-const mainLogo = document.querySelector(".main-logo")
-// const innerRing = document.querySelectorAll(".animate-logo2, .animate-logo3")
-// const outerRing = document.querySelectorAll(".animate-logo4, .animate-logo5, .animate-logo6")
 const rings = document.querySelectorAll(".segment")
 const homeScrollSection = document.querySelector("#home")
 const textRight = document.querySelector(".text-right")
@@ -97,6 +89,36 @@ rings.forEach(ring => {
         } 
     })
 })
+
+
+// About me scroll animation
+const aboutSection = document.querySelector(".aboutContainer")
+const aboutTrigger = document.querySelector("#about")
+
+if (window.innerWidth > 1300){
+    gsap.to(aboutSection, {
+        x: 0,
+        scrollTrigger:{
+            trigger: aboutTrigger,
+            start: "top top-=100",
+            scrub: 0.6,
+            ease: "power2.inOut",
+        } 
+    })
+    
+    const aboutRight = document.querySelector(".about-col-2")
+    
+    gsap.to(aboutRight, {
+        x: 0,
+        scrollTrigger:{
+            trigger: aboutTrigger,
+            start: "top top",
+            scrub: 0.6,
+            ease: "power2.inOut",
+            pin: true
+        } 
+    })    
+}
 
 
 // Horizontal scroll animation
@@ -203,12 +225,44 @@ gsap.to(programsTitle, {
 });
 
     
-// Links fix
-const contactNavLinks = document.querySelectorAll(".contactNavLink");
-const myWorkNavLink = document.querySelector("#myWorkNavLink")
+// Nav Links fix
+const aboutNavLink = document.querySelector(".aboutNavLink")
+const servicesNavLink = document.querySelector(".servicesNavLink")
+const contactNavLinks = document.querySelectorAll(".contactNavLink")
+const myWorkNavLink = document.querySelector(".myWorkNavLink")
 const sections = document.querySelectorAll("#home, #about, #services, #my-work, #contact")
+
+const scrollToAbout = sections[0].offsetHeight + sections[1].offsetHeight - window.innerHeight
+
+const scrollToServices = sections[0].offsetHeight + sections[1].offsetHeight + sections[2].offsetHeight - window.innerHeight
+
 const scrollToMyWork = sections[0].offsetHeight + sections[1].offsetHeight + sections[2].offsetHeight + sections[3].offsetHeight - window.innerHeight
+
 const scrollToContact = sections[0].offsetHeight + sections[1].offsetHeight + sections[2].offsetHeight + sections[3].offsetHeight +sections[4].offsetHeight  - window.innerHeight
+
+
+aboutNavLink.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+
+    gsap.to(window, {
+        scrollTo: {
+            y: scrollToAbout,
+            ease: "none"
+        },
+    });
+});
+
+servicesNavLink.addEventListener('mousedown', (e) => {
+    e.preventDefault();
+
+    gsap.to(window, {
+        scrollTo: {
+            y: scrollToServices,
+            ease: "none"
+        },
+    });
+});
+
 
 Array.from(contactNavLinks).forEach(element => {
     element.addEventListener('mousedown', (e) => {
@@ -236,7 +290,6 @@ myWorkNavLink.addEventListener('mousedown', (e) => {
 
 
 // Floating circles
-
 var numberOfCircles = 12;
 
 if(window.innerWidth < 768){

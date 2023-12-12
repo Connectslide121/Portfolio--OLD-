@@ -223,7 +223,7 @@ nav .social-media ul li:hover a{
 /*------------------------about-----------------------*/
 
 #about{
-    padding: 2% 0;
+    padding: 2% 0 ;
     height: 110vh;
     background: #1b1729;
     z-index: 10;
@@ -242,6 +242,14 @@ nav .social-media ul li:hover a{
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+}
+
+.aboutContainer{
+    transform: translateX(25%);
+}
+
+.about-col-2{
+    transform: translateX(1000px);
 }
 
 .about-col-1{
@@ -376,7 +384,7 @@ nav .social-media ul li:hover a{
 /*------------------------services-----------------------*/
 
 #services{
-    padding: 100px 0;
+    padding: 1200px 0 900px 0;
     height: 110vh;    
     background: #e6e6f3;
 }
@@ -429,7 +437,7 @@ nav .social-media ul li:hover a{
     font-weight: 550;
     transition: transform 0.3s, box-shadow 0.3s;
     z-index: 100;
-    border: solid 2px #1b1729;
+    border: solid 2px #e6e6f3;
 
 }
 
@@ -930,7 +938,7 @@ nav .social-media ul li:hover a{
     background: #e2e2f8;
     padding: 60px;
     z-index: 100;
-    border: solid 2px #1b1729;
+    border: solid 2px #d3dcdf;
     display: flex;
     flex-direction: column;
 }
@@ -941,7 +949,7 @@ nav .social-media ul li:hover a{
 
 .contact-right{
     background: #e2e2f8;
-    border: solid 2px #1b1729;
+    border: solid 2px #d3dcdf;
     flex-basis: 60%;
 }
 
@@ -1081,24 +1089,6 @@ nav .fas{
         padding-top: 50px
     }
 
-    /* #circle-container {
-        display: none;
-    }
- */
-
-    /* .hero-image, .home-logo, .home-text{
-        display: none;
-    }
- */
-    /* .hero-mobile{
-        display: block;
-        width: 100%;
-    } */
-
-    /* .hero-mobile img{
-        width: 100%;
-    }
- */
     .home{
         margin-bottom: 200px;
     }
@@ -1166,6 +1156,16 @@ nav .fas{
         flex-direction: column;
     }
 
+    .aboutContainer{
+        transform: translateX(0);
+    }
+    
+    .about-col-2{
+        transform: translateX(0);
+    }
+    
+    
+
     .about-col-1 img{
         margin: 10% 0 10% 10%;
     }
@@ -1228,33 +1228,9 @@ nav .fas{
         overflow-x: hidden;
     }
 
-    /* .home{
-        background-position: center;
-        background-repeat: no-repeat;
-        background-size: cover;
-        margin-bottom: 0;
-    }
- */
-    /* .home-text{
-        display: none;
-    }
-
-    .hero-image{
-        display: none;
-    }
-
-    .hero-mobile{
-        display: block;
-        width: 100vb;
-    } */
-
     .home-text h1{
         font-size: 20px;
     }
-
-    /* .home-logo{
-        display: none;
-    } */
 
     body h1{
         font-size: 40px;
