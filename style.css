@@ -16,6 +16,7 @@ body{
     overflow-x: hidden;
     display: flex;
     flex-direction: column;
+    background: #e6e6f3;
 }
 
 body h1{
@@ -203,7 +204,6 @@ nav .social-media ul li:hover a{
 .home-text{
     font-size: 20px;
     color: #1b1729;
-    z-index: 100;
     margin-top: 70vh;
     position: fixed;
 }
@@ -389,7 +389,6 @@ nav .social-media ul li:hover a{
 #services h1{
     color: #1b1729;
     margin-bottom: 80px;
-    background: #e6e6f3;
 }
 
 .services-list{
@@ -1035,8 +1034,8 @@ form textarea{
 
 .copyright{
     text-align: center;
-    padding: 50px 0;
-    background: #6e78a5;
+    padding: 40px 0;
+    background: #1b1729;
     z-index: 0;
 }
 
@@ -1082,24 +1081,24 @@ nav .fas{
         padding-top: 50px
     }
 
-    #circle-container {
+    /* #circle-container {
         display: none;
     }
+ */
 
-
-    .hero-image, .home-logo, .home-text{
+    /* .hero-image, .home-logo, .home-text{
         display: none;
     }
-
-    .hero-mobile{
+ */
+    /* .hero-mobile{
         display: block;
         width: 100%;
-    }
+    } */
 
-    .hero-mobile img{
+    /* .hero-mobile img{
         width: 100%;
     }
-
+ */
     .home{
         margin-bottom: 200px;
     }
@@ -1229,14 +1228,14 @@ nav .fas{
         overflow-x: hidden;
     }
 
-    .home{
+    /* .home{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
         margin-bottom: 0;
     }
-
-    .home-text{
+ */
+    /* .home-text{
         display: none;
     }
 
@@ -1247,15 +1246,15 @@ nav .fas{
     .hero-mobile{
         display: block;
         width: 100vb;
-    }
+    } */
 
     .home-text h1{
         font-size: 20px;
     }
 
-    .home-logo{
+    /* .home-logo{
         display: none;
-    }
+    } */
 
     body h1{
         font-size: 40px;
@@ -1296,6 +1295,10 @@ nav .fas{
     
     .skillcard img{
         padding-right: 0;
+    }
+
+    #my-work{
+        z-index: 10;
     }
 
     .website, .game, .program{
