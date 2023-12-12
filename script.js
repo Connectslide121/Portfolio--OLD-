@@ -57,10 +57,10 @@ function rotateLogo(logo){
 
 // Home scroll animation
 
-const mainLogo = document.querySelector(".home-logo")
+const mainLogo = document.querySelector(".main-logo")
 // const innerRing = document.querySelectorAll(".animate-logo2, .animate-logo3")
 // const outerRing = document.querySelectorAll(".animate-logo4, .animate-logo5, .animate-logo6")
-const rings = document.querySelectorAll(".animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6")
+const rings = document.querySelectorAll(".segment")
 const homeScrollSection = document.querySelector("#home")
 const textRight = document.querySelector(".text-right")
 const textLeft = document.querySelector(".text-left")
@@ -86,18 +86,9 @@ gsap.to(textLeft, {
     } 
 })
 
-// gsap.to(mainLogo, {
-//     y: 1200,
-//     scrollTrigger:{
-//         trigger: homeScrollSection,
-//         start: "top top",
-//         scrub: 0,
-//     } 
-// })
-
 rings.forEach(ring => {
     gsap.to(ring, {
-        scale: 1,
+        scale: 10,
         scrollTrigger:{
             trigger: homeScrollSection,
             start: "top top",
@@ -107,23 +98,13 @@ rings.forEach(ring => {
     })
 })
 
-// gsap.to(outerRing, {
-//     scale: 1.2,
-//     scrollTrigger:{
-//         trigger: homeScrollSection,
-//         start: "top top",
-//         end: "bottom top",
-//         scrub: 0,
-//     } 
-// })
-
 
 // Horizontal scroll animation
 const horizontalScrollSection = document.querySelector("#my-work")
 const scrollInnerSections = document.querySelectorAll("#websites, #games, #programs")
 const scrollLimit = scrollInnerSections[0].offsetWidth + scrollInnerSections[1].offsetWidth + scrollInnerSections[2].offsetWidth
 
-if (window.innerWidth > 1400){
+if (window.innerWidth > 1300){
     gsap.to(horizontalScrollSection, {
         x: -scrollLimit + window.innerWidth,
         ease: 'power1.inOut',
@@ -255,7 +236,7 @@ myWorkNavLink.addEventListener('mousedown', (e) => {
 
 
 // Floating circles
-const numberOfCircles = 8;
+const numberOfCircles = 12;
 const circles = [];
 const cursorRadius = 25; // Adjust this value for the effective radius of the cursor
 

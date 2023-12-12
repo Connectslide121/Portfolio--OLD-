@@ -29,18 +29,6 @@ body h1 span{
     padding-right: 25px;
 }
 
-#home{
-    display: flex;
-    flex-direction: column;
-    background: #e6e6f3;
-
-}
-
-.mobile-background{
-    display: none;
-    position: fixed;
-    z-index: -1000000;
-}
 
 .floating-circle {
     width: 150px;
@@ -130,60 +118,94 @@ nav .social-media ul li:hover a{
 
 /*--------------------------home----------------------*/
 
-
 .home{
-    height: 100vh;
     width: 100%;
+    padding-bottom: 2000px;
+    background: #e6e6f3;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 1200px;
 }
 
 .hero-mobile{
     display: none;
 }
 
-.background{
-    position: fixed;
-    top: -300px;
-    z-index: -100;
-}
-
 .home-logo{
-    width: 40%;
-    margin-top: 25%;
     position: fixed;
+    margin-top: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     z-index: 0;
+
 }
 
-.home-logo img {
-    width: 22%;
+.main-logo{
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    width: 160px;
+}
+
+.segment{
+    position: absolute;
+    display: block;
+    align-items: center;
+}
+
+.segment1{
+    width: 120px;
+    height: 120px;
+    border: solid 4px #d47636;
+    border-radius: 50%;
+
+}
+
+.segment2{
+    width: 160px;
+    height: 160px;
+    border: solid 2px #c6aed2;
+    border-radius: 50%;
+
+}
+
+.segment3{
+    width: 180px;
+    height: 180px;
+    border: solid 3px #1b1729;
+    border-radius: 50%;
+
+}
+
+.segment4{
+    width: 200px;
+    height: 200px;
+    border: solid 6px #80c3b3;
+    border-radius: 50%;
+
+}
+
+.segment5{
+    width: 240px;
+    height: 240px;
+    border: solid 4px #d47636;
+    border-radius: 50%;
+
+}
+
+.segment6{
+    width: 260px;
+    height: 260px;
+    border: solid 3px #1b1729;
+    border-radius: 50%;
+
 }
 
 .home-text{
-    position: fixed;
-    margin-top: 30%;
-    width: 100%;;
     font-size: 20px;
     color: #1b1729;
     z-index: 100;
-}
-
-.text-right{
-    position: absolute;
-    top: 0;
-    left: 41%;
-}
-
-.text-left{
-    position: absolute;
-    top: 100px;
-    left: 41%;
+    margin-top: 70vh;
+    position: fixed;
 }
 
 .home-text h1{
@@ -357,7 +379,6 @@ nav .social-media ul li:hover a{
     padding: 100px 0;
     height: 110vh;    
     background: #e6e6f3;
-    z-index: 10;
 }
 
 #services .container{
@@ -368,6 +389,7 @@ nav .social-media ul li:hover a{
 #services h1{
     color: #1b1729;
     margin-bottom: 80px;
+    background: #e6e6f3;
 }
 
 .services-list{
@@ -407,6 +429,9 @@ nav .social-media ul li:hover a{
     font-size: 18px;
     font-weight: 550;
     transition: transform 0.3s, box-shadow 0.3s;
+    z-index: 100;
+    border: solid 2px #1b1729;
+
 }
 
 .services-list div i{
@@ -906,7 +931,7 @@ nav .social-media ul li:hover a{
     background: #e2e2f8;
     padding: 60px;
     z-index: 100;
-    border: solid 10px #d47636;
+    border: solid 2px #1b1729;
     display: flex;
     flex-direction: column;
 }
@@ -917,7 +942,7 @@ nav .social-media ul li:hover a{
 
 .contact-right{
     background: #e2e2f8;
-    border: solid 10px #c6aed2;
+    border: solid 2px #1b1729;
     flex-basis: 60%;
 }
 
@@ -1011,7 +1036,7 @@ form textarea{
 .copyright{
     text-align: center;
     padding: 50px 0;
-    background: #80c3b3;
+    background: #6e78a5;
     z-index: 0;
 }
 
@@ -1038,7 +1063,7 @@ nav .fas{
 }
 
 
-@media screen and (max-width: 1400px){
+@media screen and (max-width: 1300px){
 
     body{
         width: 100%;
