@@ -128,10 +128,6 @@ nav .social-media ul li:hover a{
     align-items: center;
 }
 
-.hero-mobile{
-    display: none;
-}
-
 .home-logo{
     position: fixed;
     margin-top: 50vh;
@@ -1011,6 +1007,12 @@ nav .social-media ul li:hover a{
 
 .btn:hover{
     background: #d47636;
+    cursor: pointer;
+}
+
+.btn:active{
+    background: #e6e6f3;
+
 }
 
 .contact-right{

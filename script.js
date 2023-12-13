@@ -29,9 +29,6 @@ function closemenu() {
 };
 
 
-
-gsap.registerPlugin(ScrollTrigger, EasePack, ScrollToPlugin);
-
 // //Logo rotation
 // const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
 
