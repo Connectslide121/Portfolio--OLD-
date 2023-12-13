@@ -73,6 +73,7 @@ if (window.innerWidth < 768){
 
 gsap.to(textRight, {
     x: homeTextMove,
+    ease: "elastic.inOut",
     scrollTrigger:{
         trigger: homeScrollSection,
         start: "top top",
@@ -82,18 +83,19 @@ gsap.to(textRight, {
 
 gsap.to(textLeft, {
     x: -homeTextMove,
+    ease: "elastic.inOut",
     scrollTrigger:{
         trigger: homeScrollSection,
         start: "top top",
         end: "bottom top",
         scrub: 0,
-        ease: "none"
     } 
 })
 
 rings.forEach(ring => {
     gsap.to(ring, {
         scale: ringScale,
+        ease: "back.inOut",
         scrollTrigger:{
             trigger: homeScrollSection,
             start: "top top",
@@ -113,34 +115,36 @@ if (window.innerWidth > 1300){
    
     gsap.to(aboutLeft, {
         y: 0,
+        ease: "power4.out",
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top center",
             end: "top top-=300",
             scrub: 0.1,
-            ease: "power2.inOut",
         } 
     })
 
     gsap.to(aboutLeft, {
         x: 0,
         scale: 1,
+        ease: "power4.inOut",
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top top-=200",
             scrub: 0.1,
-            ease: "power2.inOut",
+            ease: "bounce.inOut",
         } 
     })
     
     
     gsap.to(aboutRight, {
         x: 0,
+        ease: "power4.inOut",
         scrollTrigger:{
             trigger: aboutTrigger,
             start: "top top",
             scrub: 0.1,
-            ease: "power2.inOut",
+            ease: "bounce.inOut",
             pin: true
         } 
     })    
