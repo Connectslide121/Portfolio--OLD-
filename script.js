@@ -175,23 +175,23 @@ var websitesProgressBar = document.querySelector("#websitesProgressBar");
 var triggerWebsitesProgressBar = document.querySelectorAll(".websitesDates");
 
 gsap.to(websitesProgressBar, {
-  width: 1340,
+  width: 2016,
   ease: "none",
   scrollTrigger: {
     trigger: triggerWebsitesProgressBar[0],
     start: "bottom center",
-    end: "right center-=1800px",
+    end: "right center-=2600px",
     scrub: 0.6
   }
 });
 
 gsap.to(websitesTitle, {
-  x: 1540,
+  x: 2240,
   ease: "none",
   scrollTrigger: {
     trigger: triggerWebsitesProgressBar[0],
     start: "bottom center",
-    end: "right center-=1800px",
+    end: "right center-=2600px",
     scrub: 0.6
   }
 });
@@ -206,19 +206,19 @@ gsap.to(gamesProgressBar, {
   ease: "none",
   scrollTrigger: {
     trigger: triggerGamesProgressBar[0],
-    start: "bottom center-=2900px",
-    end: "bottom center-=4600px",
+    start: "bottom center-=3300px",
+    end: "bottom center-=4860px",
     scrub: 0.6
   }
 });
 
 gsap.to(gamesTitle, {
-  x: 2250,
+  x: 2270,
   ease: "none",
   scrollTrigger: {
     trigger: triggerGamesProgressBar[0],
-    start: "bottom center-=2900px",
-    end: "bottom center-=4600px",
+    start: "bottom center-=3300px",
+    end: "bottom center-=4860px",
     scrub: 0.6
   }
 });
@@ -229,22 +229,22 @@ var scrollProgramsProgressBar = document.querySelector("#programsProgressBar");
 var triggerProgramsProgressBar = document.querySelectorAll(".programsDates");
 
 gsap.to(scrollProgramsProgressBar, {
-  width: 1340,
+  width: 1345,
   ease: "none",
   scrollTrigger: {
     trigger: triggerProgramsProgressBar[0],
-    start: "bottom center-=5600px",
+    start: "bottom center-=5800px",
     end: "bottom center-=7000px",
     scrub: 0.6
   }
 });
 
 gsap.to(programsTitle, {
-  x: 1510,
+  x: 1550,
   ease: "none",
   scrollTrigger: {
     trigger: triggerProgramsProgressBar[0],
-    start: "bottom center-=5600px",
+    start: "bottom center-=5800px",
     end: "bottom center-=7000px",
     scrub: 0.6
   }
