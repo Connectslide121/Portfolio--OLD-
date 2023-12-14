@@ -2,4 +2,6 @@
 
 # Portfolio
 
-[My personal portfolio website](https://connectslide121.github.io/Portfolio/)
+My personal portfolio website
+
+Visit [here](https://connectslide121.github.io/Portfolio/)
