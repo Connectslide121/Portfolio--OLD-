@@ -180,7 +180,7 @@ gsap.to(websitesProgressBar, {
   scrollTrigger: {
     trigger: triggerWebsitesProgressBar[0],
     start: "bottom center",
-    end: "right center-=2600px",
+    end: "right center-=2500px",
     scrub: 0.6
   }
 });
@@ -191,7 +191,7 @@ gsap.to(websitesTitle, {
   scrollTrigger: {
     trigger: triggerWebsitesProgressBar[0],
     start: "bottom center",
-    end: "right center-=2600px",
+    end: "right center-=2500px",
     scrub: 0.6
   }
 });
