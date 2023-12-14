@@ -233,7 +233,7 @@ gsap.to(scrollProgramsProgressBar, {
   ease: "none",
   scrollTrigger: {
     trigger: triggerProgramsProgressBar[0],
-    start: "bottom center-=5800px",
+    start: "bottom center-=6000px",
     end: "bottom center-=7000px",
     scrub: 0.6
   }
@@ -244,7 +244,7 @@ gsap.to(programsTitle, {
   ease: "none",
   scrollTrigger: {
     trigger: triggerProgramsProgressBar[0],
-    start: "bottom center-=5800px",
+    start: "bottom center-=6000px",
     end: "bottom center-=7000px",
     scrub: 0.6
   }
