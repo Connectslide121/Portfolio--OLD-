@@ -102,6 +102,18 @@ rings.forEach((ring) => {
   });
 });
 
+rings.forEach((ring) => {
+  gsap.to(ring, {
+    scale: 1,
+    ease: "nonet",
+    scrollTrigger: {
+      trigger: homeScrollSection,
+      start: "bottom top",
+      scrub: 0
+    }
+  });
+});
+
 // About me scroll animation
 const aboutLeft = document.querySelector(".about-col-1");
 const aboutRight = document.querySelector(".about-col-2");

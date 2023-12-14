@@ -414,7 +414,7 @@ nav .social-media ul li:hover a {
   font-weight: 550;
   transition: transform 0.3s, box-shadow 0.3s;
   z-index: 0;
-  border: solid 2px #e6e6f3;
+  box-shadow: 0 0 10px #333;
 }
 
 .services-list div i {
