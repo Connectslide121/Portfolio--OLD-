@@ -48,6 +48,7 @@ function closemenu() {
 //     })
 // }
 
+
 // Home scroll animation
 const rings = document.querySelectorAll(".segment")
 const homeScrollSection = document.querySelector("#home")
@@ -111,6 +112,7 @@ const aboutTrigger = document.querySelector("#about")
 if (window.innerWidth > 1300){
    
     gsap.to(aboutLeft, {
+        scale: 1.5,
         y: 0,
         ease: "power4.out",
         scrollTrigger:{
@@ -121,9 +123,10 @@ if (window.innerWidth > 1300){
         } 
     })
 
+
     gsap.to(aboutLeft, {
-        x: 0,
         scale: 1,
+        x: 0,
         ease: "power4.inOut",
         scrollTrigger:{
             trigger: aboutTrigger,
