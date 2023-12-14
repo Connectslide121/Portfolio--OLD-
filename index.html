@@ -1,396 +1,693 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jon Mendizabal - Portfolio</title>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="./images/jonfavicon.png?">
-    <link rel="stylesheet" href="style.css">
-
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="icon" type="image/png" href="./images/jonfavicon.png?" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <section id="home">
-        <nav id="navbar">
-            <a href="#home"><img src="images/NavLogo.png" title="Jon Mendizabal" class="nav-logo" alt="logo"></a>
-            <div class="social-media">
-                <ul>
-                    <li><a href="https://www.linkedin.com/in/jon-mendizabal" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/Connectslide121" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                    <li><a href="https://connect-slide-121.itch.io/" title="Itch-io" target="_blank"><i class="fa-brands fa-itch-io"></i></a></li>
-                </ul>
-            </div>
-            <div class="nav-links">
-                <ul id="sidemenu">
-                    <li><a class="navbar-link" href="#home"><span><i class="fa-solid fa-house"></i></span> Home</a></li>
-                    <li><a class="navbar-link aboutNavLink" href="#about"><span><i class="fa-solid fa-address-card"></i></span> About me</a></li>
-                    <li><a class="navbar-link servicesNavLink" href="#services"><span><i class="fa-solid fa-bell-concierge"></i></span> Services</a></li>
-                    <li><a class="navbar-link myWorkNavLink" href="#my-work"><span><i class="fa-solid fa-briefcase"></i></span> My work</a></li>
-                    <li><a class="navbar-link contactNavLink" href="#contact"><span><i class="fa-solid fa-envelope"></i></span> Contact</a></li>
-                    <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
-            </div>
-        </nav>
-
-        <div class="container">
-            <div class="home">
-                <div class="home-logo">
-                    <img class="main-logo" src="images/logo1.png" alt="logo">
-                        <div class="segment"><div class="segment1"></div></div>
-                        <div class="segment"><div class="segment2"></div></div>
-                        <div class="segment"><div class="segment3"></div></div>
-                        <div class="segment"><div class="segment4"></div></div>
-                        <div class="segment"><div class="segment5"></div></div>
-                        <div class="segment"><div class="segment6"></div></div>    
-                </div>
-                <div class="home-text">
-                    <div class="text-right">
-                        <h1>Hi, I'm <span>Jon</span></h1>
-                    </div>
-                    <div class="text-left">
-                        <p>FULL-STACK DEVELOPER</p>
-                        <p>GAME DEVELOPER</p>
-                    </div>
-                </div>
-            </div>
+      <nav id="navbar">
+        <a href="#home"
+          ><img
+            src="images/NavLogo.png"
+            title="Jon Mendizabal"
+            class="nav-logo"
+            alt="logo"
+        /></a>
+        <div class="social-media">
+          <ul>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/jon-mendizabal"
+                title="LinkedIn"
+                target="_blank"
+                ><i class="fa-brands fa-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://github.com/Connectslide121"
+                title="GitHub"
+                target="_blank"
+                ><i class="fa-brands fa-github"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://connect-slide-121.itch.io/"
+                title="Itch-io"
+                target="_blank"
+                ><i class="fa-brands fa-itch-io"></i
+              ></a>
+            </li>
+          </ul>
         </div>
-        <div id="circle-container"></div>
+        <div class="nav-links">
+          <ul id="sidemenu">
+            <li>
+              <a class="navbar-link" href="#home"
+                ><span><i class="fa-solid fa-house"></i></span> Home</a
+              >
+            </li>
+            <li>
+              <a class="navbar-link aboutNavLink" href="#about"
+                ><span><i class="fa-solid fa-address-card"></i></span> About
+                me</a
+              >
+            </li>
+            <li>
+              <a class="navbar-link servicesNavLink" href="#services"
+                ><span><i class="fa-solid fa-bell-concierge"></i></span>
+                Services</a
+              >
+            </li>
+            <li>
+              <a class="navbar-link myWorkNavLink" href="#my-work"
+                ><span><i class="fa-solid fa-briefcase"></i></span> My work</a
+              >
+            </li>
+            <li>
+              <a class="navbar-link contactNavLink" href="#contact"
+                ><span><i class="fa-solid fa-envelope"></i></span> Contact</a
+              >
+            </li>
+            <i class="fas fa-solid fa-xmark" onclick="closemenu()"></i>
+          </ul>
+          <i class="fas fa-solid fa-bars" onclick="openmenu()"></i>
+        </div>
+      </nav>
+
+      <div class="container">
+        <div class="home">
+          <div class="home-logo">
+            <img class="main-logo" src="images/logo1.png" alt="logo" />
+            <div class="segment"><div class="segment1"></div></div>
+            <div class="segment"><div class="segment2"></div></div>
+            <div class="segment"><div class="segment3"></div></div>
+            <div class="segment"><div class="segment4"></div></div>
+            <div class="segment"><div class="segment5"></div></div>
+            <div class="segment"><div class="segment6"></div></div>
+          </div>
+          <div class="home-text">
+            <div class="text-right">
+              <h1>Hi, I'm <span>Jon</span></h1>
+            </div>
+            <div class="text-left">
+              <p>FULL-STACK DEVELOPER</p>
+              <p>GAME DEVELOPER</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="circle-container"></div>
     </section>
     <!----------------about------------------>
     <section id="about">
-        <div class="container aboutContainer">
-            <div class="row">
-                <div class="about-col-1">
-                    <!-- <canvas id="canvas3d"></canvas> -->
-                    <img src="images/aboutme2.png" alt="aboutme">    
-                </div>
-                <div class="about-col-2">
-                    <h1><span><i class="fa-solid fa-address-card"></i></span> About me</h1>
+      <div class="container aboutContainer">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="images/aboutme2.png" alt="aboutme" />
+          </div>
+          <div class="about-col-2">
+            <h1>
+              <span><i class="fa-solid fa-address-card"></i></span> About me
+            </h1>
 
-                    <p>I am an aspiring web developer with a strong foundation in .NET development. I am passionate about coding and always eager to learn. In addition to my formal education, I have independently crafted video games using Unity, which has helped me sharpen my problem-solving skills and provided me with hands-on software development experience.<br><br>Beyond the world of programming, I am also deeply passionate about music and can often be found playing my guitar. My journey in this field is just beginning and I am excited to take on new challenges, collaborate with like-minded individuals and continue expanding my skill set.</p>
+            <p>
+              I am an aspiring web developer with a strong foundation in .NET
+              development. I am passionate about coding and always eager to
+              learn. In addition to my formal education, I have independently
+              crafted video games using Unity, which has helped me sharpen my
+              problem-solving skills and provided me with hands-on software
+              development experience.<br /><br />Beyond the world of
+              programming, I am also deeply passionate about music and can often
+              be found playing my guitar. My journey in this field is just
+              beginning and I am excited to take on new challenges, collaborate
+              with like-minded individuals and continue expanding my skill set.
+            </p>
 
-                    <div class="tab-titles">
-                        <h2 class="tab-links skills-link active-link" onclick="opentab('skills')">Skills</h2>
-                        <h2 class="tab-links education-link" onclick="opentab('education')">Education</h2>
-                        <h2 class="tab-links experience-link" onclick="opentab('experience')">Experience</h2>
-                    </div>
-                    <div class="tab-contents skills active-tab" id="skills">
-                        <div class="skillcard">
-                            <img src="images/skill1.png" alt="html">
-                            <h3>HTML</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill2.png" alt="html">
-                            <h3>CSS</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill3.png" alt="html">
-                            <h3>JavaScript</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill4.png" alt="html">
-                            <h3>React.js</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill5.png" alt="html">
-                            <h3>C#</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill6.png" alt="html">
-                            <h3>SQL</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill12.png" alt="html">
-                            <h3>Dapper</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill13.png" alt="html">
-                            <h3>Entity FW</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill7.png" alt="html">
-                            <h3>Unity</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill8.png" alt="html">
-                            <h3>Git</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill9.png" alt="html">
-                            <h3>GitHub</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill10.png" alt="html">
-                            <h3>NX</h3>
-                        </div>
-                        <div class="skillcard">
-                            <img src="images/skill11.png" alt="html">
-                            <h3>QuikCAST</h3>
-                        </div>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2023 - 2024</span><br>.NET Full-stack developer course at Lexicon Växjö (Sweden)</li>
-                            <li><span>2008 - 2010</span><br>HNC of Casting manufacturing &#38; powder metallurgy at Lea-Artibai (Spain)</li>
-                            <li><span>2005 - 2008</span><br>Polymers Engineering at London Metropolitan University (Spain)</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>2011 - 2023</span><br>Plant Manager/Product designer at AML SA (Spain)</li>
-                            <p>Managed production at a sand casting steel foundry. Daily &#38; weekly MTO production planning, pattern designing, 3D drawing and process simulation have been part of my main responsibilities.</p>
-                            <li><span>2017 - 2017</span><br>Plant Manager/Product designer at ATPL PL (India)</li><p>Started up the production line in a newly opened foundry, designed workflow, taught employees and led the production team.</p>
-                        </ul>
-                    </div>
-                </div>
+            <div class="tab-titles">
+              <h2
+                class="tab-links skills-link active-link"
+                onclick="opentab('skills')"
+              >
+                Skills
+              </h2>
+              <h2
+                class="tab-links education-link"
+                onclick="opentab('education')"
+              >
+                Education
+              </h2>
+              <h2
+                class="tab-links experience-link"
+                onclick="opentab('experience')"
+              >
+                Experience
+              </h2>
             </div>
+            <div class="tab-contents skills active-tab" id="skills">
+              <div class="skillcard">
+                <img src="images/skill1.png" alt="html" />
+                <h3>HTML</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill2.png" alt="html" />
+                <h3>CSS</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill3.png" alt="html" />
+                <h3>JavaScript</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill4.png" alt="html" />
+                <h3>React.js</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill5.png" alt="html" />
+                <h3>C#</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill6.png" alt="html" />
+                <h3>SQL</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill12.png" alt="html" />
+                <h3>Dapper</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill13.png" alt="html" />
+                <h3>Entity FW</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill7.png" alt="html" />
+                <h3>Unity</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill8.png" alt="html" />
+                <h3>Git</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill9.png" alt="html" />
+                <h3>GitHub</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill10.png" alt="html" />
+                <h3>NX</h3>
+              </div>
+              <div class="skillcard">
+                <img src="images/skill11.png" alt="html" />
+                <h3>QuikCAST</h3>
+              </div>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2023 - 2024</span><br />.NET Full-stack developer course
+                  at Lexicon Växjö (Sweden)
+                </li>
+                <li>
+                  <span>2008 - 2010</span><br />HNC of Casting manufacturing
+                  &#38; powder metallurgy at Lea-Artibai (Spain)
+                </li>
+                <li>
+                  <span>2005 - 2008</span><br />Polymers Engineering at London
+                  Metropolitan University (Spain)
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li>
+                  <span>2011 - 2023</span><br />Plant Manager/Product designer
+                  at AML SA (Spain)
+                </li>
+                <p>
+                  Managed production at a sand casting steel foundry. Daily
+                  &#38; weekly MTO production planning, pattern designing, 3D
+                  drawing and process simulation have been part of my main
+                  responsibilities.
+                </p>
+                <li>
+                  <span>2017 - 2017</span><br />Plant Manager/Product designer
+                  at ATPL PL (India)
+                </li>
+                <p>
+                  Started up the production line in a newly opened foundry,
+                  designed workflow, taught employees and led the production
+                  team.
+                </p>
+              </ul>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
-       <!----------------services------------------>
+    <!----------------services------------------>
     <section id="services">
-        <div class="container">
-            <h1><span><i class="fa-solid fa-bell-concierge"></i></span> Services</h1>
-            <div class="services-list">
-                <div class="service1">
-                    <i class="fa-solid fa-code"></i>
-                    <h2>Web Design</h2>
-                    <p>Elevate your digital experience and captivate your audience with a website that sets you apart.</p>
-                    <a class="contactNavLink" href="#contact">Contact me</a>
-                </div>
-                <div class="service2">
-                    <i class="fa-solid fa-server"></i>
-                    <h2>Backend Solutions</h2>
-                    <p>Empower your digital infrastructure with robust backend programming solutions.</p>
-                    <a class="contactNavLink" href="#contact">Contact me</a>
-                </div>
-                <div class="service3">
-                    <i class="fa-solid fa-ghost"></i>
-                    <h2>Game Development</h2>
-                    <p>Gaming experiences that push boundaries and keep players coming back for more.</p>
-                    <a class="contactNavLink" href="#contact">Contact me</a>
-                </div>
-            </div>
+      <div class="container">
+        <h1>
+          <span><i class="fa-solid fa-bell-concierge"></i></span> Services
+        </h1>
+        <div class="services-list">
+          <div class="service1">
+            <i class="fa-solid fa-code"></i>
+            <h2>Web Design</h2>
+            <p>
+              Elevate your digital experience and captivate your audience with a
+              website that sets you apart.
+            </p>
+            <a class="contactNavLink" href="#contact">Contact me</a>
+          </div>
+          <div class="service2">
+            <i class="fa-solid fa-server"></i>
+            <h2>Backend Solutions</h2>
+            <p>
+              Empower your digital infrastructure with robust backend
+              programming solutions.
+            </p>
+            <a class="contactNavLink" href="#contact">Contact me</a>
+          </div>
+          <div class="service3">
+            <i class="fa-solid fa-ghost"></i>
+            <h2>Game Development</h2>
+            <p>
+              Gaming experiences that push boundaries and keep players coming
+              back for more.
+            </p>
+            <a class="contactNavLink" href="#contact">Contact me</a>
+          </div>
         </div>
+      </div>
     </section>
     <section id="my-work">
-        <!----------------websites------------------>
-        <div id="websites">
-            <div class="container work">
-                <h1 id="websitesTitle"><span><i class="fa-solid fa-globe"></i></span> Websites</h1>
-                    <div class="website-list">
-                        <div class="website website1">
-                            <img src="images/PatisserieLente.png" alt="Spotify clone">
-                            <div class="website-description">
-                                <h2>Pattiserie Lente</h2>
-                                <p>My first ever website. A site for a made-up pastry business.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Patisserie-Lente" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connectslide121.github.io/Patisserie-Lente/" title="Visit site" target="_blank"><i class="fa-solid fa-link"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="website website2">
-                            <img src="images/Spotify.png" alt="Spotify clone">
-                            <div class="website-description">
-                                <h2>Spotify clone</h2>
-                                <p>A Spotify clone I made for practicing HTML and CSS.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Spotify-clone" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connectslide121.github.io/Spotify-clone/" title="Visit site" target="_blank"><i class="fa-solid fa-link"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="website website3">
-                            <img src="images/Portfolio.png" alt="My Portfolio">
-                            <div class="website-description">
-                                <h2>My portfolio website</h2>
-                                <p>My personal portfolio website.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Portfolio" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connectslide121.github.io/Portfolio/" title="Visit site" target="_blank"><i class="fa-solid fa-link"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                    </div>   
-                    <div class="websitesDates">
-                        <div class="websiteDate1">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>September 2023</h3>
-                        </div>
-                        <div class="websiteDate2">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>November 2023</h3>
-                        </div>
-                        <div class="websiteDate3">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>November 2023 - WIP</h3>
-                        </div>
-                    </div>
-                <div id="websitesProgressBar"></div>
+      <!----------------websites------------------>
+      <div id="websites">
+        <div class="container work">
+          <h1 id="websitesTitle">
+            <span><i class="fa-solid fa-globe"></i></span> Websites
+          </h1>
+          <div class="website-list">
+            <div class="website website1">
+              <img src="images/PatisserieLente.png" alt="Spotify clone" />
+              <div class="website-description">
+                <h2>Pattiserie Lente</h2>
+                <p>
+                  My first ever website. A site for a made-up pastry business.
+                </p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Patisserie-Lente"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connectslide121.github.io/Patisserie-Lente/"
+                    title="Visit site"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
             </div>
-        </div>
-        <!----------------games------------------>
-        <div id="games">
-            <div class="container work">
-                <h1 id="gamesTitle"><span><i class="fa-solid fa-gamepad"></i></span> Games</h1>
-                    <div class="game-list">
-                        <div class="game game1">
-                            <video src="images/FlapryBlirb.mp4" type="video/mp4" autoplay muted controls></video>
-                            <div class="game-description">
-                                <h2>Flapry Blirb</h2>
-                                <p>My first ever game. A “flappy bird” style game made with Unity.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Flapry-Birb" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connect-slide-121.itch.io/flapry-blirb" title="Play game" target="_blank"><i class="fa-solid fa-gamepad"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="game game2">
-                            <video src="images/SlidingPuzzles.mp4" type="video/mp4" autoplay muted controls></video>
-                            <div class="game-description">
-                                <h2>Sliding puzzles</h2>
-                                <p>Sliding puzzle game with 5 difficulties. Images generated by DALL-E.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Sliding-puzzle" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connect-slide-121.itch.io/sliding-puzzle" title="Play game" target="_blank"><i class="fa-solid fa-gamepad"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="game game3">
-                            <video src="images/PlasticSlurg.mp4" type="video/mp4" autoplay muted controls></video>
-                            <div class="game-description">
-                                <h2>Plastic Slurg</h2>
-                                <p>2D shooter platformer. A “metal slug” style game made with Unity.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Plastic-Slurg" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connect-slide-121.itch.io/plastic-slurg" title="Play game" target="_blank"><i class="fa-solid fa-gamepad"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                        <div class="game game4">
-                            <video src="images/Sokoban.mp4" type="video/mp4" autoplay muted controls></video>
-                            <div class="game-description">
-                                <h2>Sokoban</h2>
-                                <p>A sokoban game with a built-in map converter made with JavaScript. 30 maps and christmas edition available in-game.</p>
-                                <div class="buttons">
-                                    <a href="https://github.com/Connectslide121/Sokoban" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                                    <a href="https://connectslide121.github.io/Sokoban/" title="Play game" target="_blank"><i class="fa-solid fa-gamepad"></i></a>    
-                                </div>
-                            </div>
-                        </div>
-                    </div>  
-                    <div class="gamesDates">
-                        <div class="gameDate1">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>October 2023</h3>
-                        </div>
-                        <div class="gameDate2">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>November 2023</h3>
-                        </div>
-                        <div class="gameDate3">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>November 2023</h3>
-                        </div>
-                        <div class="gameDate4">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>December 2023</h3>
-                        </div>
-                    </div>
-                <div id="gamesProgressBar"></div>
+            <div class="website website2">
+              <img src="images/Spotify.png" alt="Spotify clone" />
+              <div class="website-description">
+                <h2>Spotify clone</h2>
+                <p>A Spotify clone I made for practicing HTML and CSS.</p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Spotify-clone"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connectslide121.github.io/Spotify-clone/"
+                    title="Visit site"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
             </div>
-        </div>
-        <!----------------programs------------------>
-        <div id="programs">
-            <div class="container work">
-                <h1 id="programsTitle"><span><i class="fa-solid fa-laptop-code"></i></span> Programs</h1>
-                    <div class="program-list">
-                        <div class="program program1">
-                            <img src="images/lawnmowers.jpg" alt="Lawnmowers">
-                            <div class="program-description">
-                                <h2>Lawn mower rental app</h2>
-                                <p>A console app for managing a lawn mower rental business.</p>
-                                    <a href="https://github.com/Lexicon-Group-4/Lawn-Mower-Rental-App" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="program program2">
-                            <img src="images/vendingmachines.jpg" alt="Vending machines">
-                            <div class="program-description">
-                                <h2>Vending machine</h2>
-                                <p>A console app for managing vending machine operations.</p>
-                                    <a href="https://github.com/Connectslide121/Vending-Machine" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                        <div class="program program3">
-                            <img src="images/Community.png" alt="Vending machines">
-                            <div class="program-description">
-                                <h2>Community portal</h2>
-                                <p>The backend of a community portal site. An API project with a connection to an SQL database using Entity Framework. Frontend coming soon.</p>
-                                    <a href="https://github.com/Lexicon-group-4-Community-portal/CommunityPortal" title="Repository" target="_blank"><i class="fa-brands fa-github"></i></a>
-                            </div>
-                        </div>
-                    </div>   
-                    <div class="programsDates">
-                        <div class="programDate1">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>October 2023</h3>
-                        </div>
-                        <div class="programDate2">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>November 2023</h3>
-                        </div>
-                        <div class="programDate3">
-                            <i class="fa-regular fa-circle"></i>
-                            <h3>December 2023 - WIP</h3>
-                        </div>
-                    </div>
-                <div id="programsProgressBar"></div>
+            <div class="website website3">
+              <img src="images/Portfolio.png" alt="My Portfolio" />
+              <div class="website-description">
+                <h2>My portfolio website</h2>
+                <p>My personal portfolio website.</p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Portfolio"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connectslide121.github.io/Portfolio/"
+                    title="Visit site"
+                    target="_blank"
+                    ><i class="fa-solid fa-link"></i
+                  ></a>
+                </div>
+              </div>
             </div>
+          </div>
+          <div class="websitesDates">
+            <div class="websiteDate1">
+              <i class="fa-regular fa-circle"></i>
+              <h3>September 2023</h3>
+            </div>
+            <div class="websiteDate2">
+              <i class="fa-regular fa-circle"></i>
+              <h3>November 2023</h3>
+            </div>
+            <div class="websiteDate3">
+              <i class="fa-regular fa-circle"></i>
+              <h3>November 2023 - WIP</h3>
+            </div>
+          </div>
+          <div id="websitesProgressBar"></div>
         </div>
+      </div>
+      <!----------------games------------------>
+      <div id="games">
+        <div class="container work">
+          <h1 id="gamesTitle">
+            <span><i class="fa-solid fa-gamepad"></i></span> Games
+          </h1>
+          <div class="game-list">
+            <div class="game game1">
+              <video
+                src="images/FlapryBlirb.mp4"
+                type="video/mp4"
+                autoplay
+                muted
+                controls
+              ></video>
+              <div class="game-description">
+                <h2>Flapry Blirb</h2>
+                <p>
+                  My first ever game. A “flappy bird” style game made with
+                  Unity.
+                </p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Flapry-Birb"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connect-slide-121.itch.io/flapry-blirb"
+                    title="Play game"
+                    target="_blank"
+                    ><i class="fa-solid fa-gamepad"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="game game2">
+              <video
+                src="images/SlidingPuzzles.mp4"
+                type="video/mp4"
+                autoplay
+                muted
+                controls
+              ></video>
+              <div class="game-description">
+                <h2>Sliding puzzles</h2>
+                <p>
+                  Sliding puzzle game with 5 difficulties. Images generated by
+                  DALL-E.
+                </p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Sliding-puzzle"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connect-slide-121.itch.io/sliding-puzzle"
+                    title="Play game"
+                    target="_blank"
+                    ><i class="fa-solid fa-gamepad"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="game game3">
+              <video
+                src="images/PlasticSlurg.mp4"
+                type="video/mp4"
+                autoplay
+                muted
+                controls
+              ></video>
+              <div class="game-description">
+                <h2>Plastic Slurg</h2>
+                <p>
+                  2D shooter platformer. A “metal slug” style game made with
+                  Unity.
+                </p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Plastic-Slurg"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connect-slide-121.itch.io/plastic-slurg"
+                    title="Play game"
+                    target="_blank"
+                    ><i class="fa-solid fa-gamepad"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+            <div class="game game4">
+              <video
+                src="images/Sokoban.mp4"
+                type="video/mp4"
+                autoplay
+                muted
+                controls
+              ></video>
+              <div class="game-description">
+                <h2>Sokoban</h2>
+                <p>
+                  A sokoban game with a built-in map converter made with
+                  JavaScript. 30 maps and christmas edition available in-game.
+                </p>
+                <div class="buttons">
+                  <a
+                    href="https://github.com/Connectslide121/Sokoban"
+                    title="Repository"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                  <a
+                    href="https://connectslide121.github.io/Sokoban/"
+                    title="Play game"
+                    target="_blank"
+                    ><i class="fa-solid fa-gamepad"></i
+                  ></a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="gamesDates">
+            <div class="gameDate1">
+              <i class="fa-regular fa-circle"></i>
+              <h3>October 2023</h3>
+            </div>
+            <div class="gameDate2">
+              <i class="fa-regular fa-circle"></i>
+              <h3>November 2023</h3>
+            </div>
+            <div class="gameDate3">
+              <i class="fa-regular fa-circle"></i>
+              <h3>November 2023</h3>
+            </div>
+            <div class="gameDate4">
+              <i class="fa-regular fa-circle"></i>
+              <h3>December 2023</h3>
+            </div>
+          </div>
+          <div id="gamesProgressBar"></div>
+        </div>
+      </div>
+      <!----------------programs------------------>
+      <div id="programs">
+        <div class="container work">
+          <h1 id="programsTitle">
+            <span><i class="fa-solid fa-laptop-code"></i></span> Programs
+          </h1>
+          <div class="program-list">
+            <div class="program program1">
+              <img src="images/lawnmowers.jpg" alt="Lawnmowers" />
+              <div class="program-description">
+                <h2>Lawn mower rental app</h2>
+                <p>A console app for managing a lawn mower rental business.</p>
+                <a
+                  href="https://github.com/Lexicon-Group-4/Lawn-Mower-Rental-App"
+                  title="Repository"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="program program2">
+              <img src="images/vendingmachines.jpg" alt="Vending machines" />
+              <div class="program-description">
+                <h2>Vending machine</h2>
+                <p>A console app for managing vending machine operations.</p>
+                <a
+                  href="https://github.com/Connectslide121/Vending-Machine"
+                  title="Repository"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+            <div class="program program3">
+              <img src="images/Community.png" alt="Vending machines" />
+              <div class="program-description">
+                <h2>Community portal</h2>
+                <p>
+                  The backend of a community portal site. An API project with a
+                  connection to an SQL database using Entity Framework. Frontend
+                  coming soon.
+                </p>
+                <a
+                  href="https://github.com/Lexicon-group-4-Community-portal/CommunityPortal"
+                  title="Repository"
+                  target="_blank"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+          <div class="programsDates">
+            <div class="programDate1">
+              <i class="fa-regular fa-circle"></i>
+              <h3>October 2023</h3>
+            </div>
+            <div class="programDate2">
+              <i class="fa-regular fa-circle"></i>
+              <h3>November 2023</h3>
+            </div>
+            <div class="programDate3">
+              <i class="fa-regular fa-circle"></i>
+              <h3>December 2023 - WIP</h3>
+            </div>
+          </div>
+          <div id="programsProgressBar"></div>
+        </div>
+      </div>
     </section>
     <section id="horizontalScroll"></section>
-       <!----------------contact------------------>
+    <!----------------contact------------------>
     <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1><span><i class="fa-solid fa-envelope"></i></span> Contact</h1>
-                    <h2>JON MENDIZABAL</h2>
-                    <p><i class="fa-solid fa-paper-plane"></i> <a href="mailto:jonmendi@gmail.com">jonmendi@gmail.com</a></p>
-                    <p><i class="fa-solid fa-square-phone"></i> +46 79-354 10 60</p>
-                    <div class="social-media">
-                        <ul>
-                            <li><a href="https://www.linkedin.com/in/jon-mendizabal" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a></li>
-                            <li><a href="https://github.com/Connectslide121" title="GitHub" target="_blank"><i class="fa-brands fa-github"></i></a></li>
-                            <li><a href="https://connect-slide-121.itch.io/" title="Itch-io" target="_blank"><i class="fa-brands fa-itch-io"></i></a></li>
-                                </ul>
-                    </div>
-                    <a href="images/Jon Mendizabal - Resume.pdf" download class="btn">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form action="https://formsubmit.co/053f54e99d64b408f63e62d96b5df0fe " method="POST">
-                        <input type="text" name="Name" placeholder="Name" required autocomplete="name" >
-                        <input type="email" name="Email" placeholder="Email" required autocomplete ="email">
-                        <textarea name="Message"  rows="6" placeholder="Your message"></textarea>
-                        <button type="submit" class="btn">Submit</button>
-                    </form>
-                </div>
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1>
+              <span><i class="fa-solid fa-envelope"></i></span> Contact
+            </h1>
+            <h2>JON MENDIZABAL</h2>
+            <p>
+              <i class="fa-solid fa-paper-plane"></i>
+              <a href="mailto:jonmendi@gmail.com">jonmendi@gmail.com</a>
+            </p>
+            <p><i class="fa-solid fa-square-phone"></i> +46 79-354 10 60</p>
+            <div class="social-media">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/jon-mendizabal"
+                    title="LinkedIn"
+                    target="_blank"
+                    ><i class="fa-brands fa-linkedin"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://github.com/Connectslide121"
+                    title="GitHub"
+                    target="_blank"
+                    ><i class="fa-brands fa-github"></i
+                  ></a>
+                </li>
+                <li>
+                  <a
+                    href="https://connect-slide-121.itch.io/"
+                    title="Itch-io"
+                    target="_blank"
+                    ><i class="fa-brands fa-itch-io"></i
+                  ></a>
+                </li>
+              </ul>
             </div>
-            <div class="copyright">
-                <p>Copyright <i class="fa-regular fa-copyright"></i> 2023 Jon Mendizabal</p>
-            </div>
-        
-
+            <a href="images/Jon Mendizabal - Resume.pdf" download class="btn"
+              >Download CV</a
+            >
+          </div>
+          <div class="contact-right">
+            <form
+              action="https://formsubmit.co/053f54e99d64b408f63e62d96b5df0fe "
+              method="POST"
+            >
+              <input
+                type="text"
+                name="Name"
+                placeholder="Name"
+                required
+                autocomplete="name"
+              />
+              <input
+                type="email"
+                name="Email"
+                placeholder="Email"
+                required
+                autocomplete="email"
+              />
+              <textarea
+                name="Message"
+                rows="6"
+                placeholder="Your message"
+              ></textarea>
+              <button type="submit" class="btn">Submit</button>
+            </form>
+          </div>
         </div>
-        
+        <div class="copyright">
+          <p>
+            Copyright <i class="fa-regular fa-copyright"></i> 2023 Jon
+            Mendizabal
+          </p>
+        </div>
+      </div>
     </section>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollToPlugin.min.js"></script>
-    <script src="https://kit.fontawesome.com/05049b2b78.js" crossorigin="anonymous"></script>
-    <script type="module" src="script.js"></script>
-</body>
+    <script
+      src="https://kit.fontawesome.com/05049b2b78.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="script.js"></script>
+  </body>
 </html>
