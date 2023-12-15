@@ -7,11 +7,11 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
   color: #e2e2f8;
-  overflow-x: clip;
   display: flex;
   flex-direction: column;
   background: #e6e6f3;
@@ -385,6 +385,7 @@ nav .social-media ul li:hover a {
 
 .service1 {
   background: #d47636;
+  transform: translateY(-1000px);
 }
 
 .service1 a {
@@ -393,6 +394,7 @@ nav .social-media ul li:hover a {
 
 .service2 {
   background: #c6aed2;
+  transform: translateY(-1000px);
 }
 
 .service2 a {
@@ -401,6 +403,7 @@ nav .social-media ul li:hover a {
 
 .service3 {
   background: #80c3b3;
+  transform: translateY(-1000px);
 }
 
 .service3 a {
@@ -1166,7 +1169,7 @@ nav .fas {
   }
 
   .about-col-1 {
-    transform: scale(1) translateY(0) translateX(0);
+    transform: scale(0) translateY(0) translateX(0);
   }
 
   .about-col-2 {
@@ -1174,12 +1177,19 @@ nav .fas {
   }
 
   .about-col-1 img {
-    margin: 10% 0 10% 10%;
+    margin: 10% 0;
   }
 
   .services-list {
     display: flex;
     flex-direction: column;
+  }
+
+  .service1,
+  .service2,
+  .service3 {
+    transform: translateY(0);
+    transform: translateX(-1500px);
   }
 
   #my-work {

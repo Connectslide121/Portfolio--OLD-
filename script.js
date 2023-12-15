@@ -139,8 +139,7 @@ if (window.innerWidth > 1300) {
     scrollTrigger: {
       trigger: aboutTrigger,
       start: "top top-=200",
-      scrub: 0.1,
-      ease: "bounce.inOut"
+      scrub: 0.1
     }
   });
 
@@ -151,8 +150,97 @@ if (window.innerWidth > 1300) {
       trigger: aboutTrigger,
       start: "top top",
       scrub: 0.1,
-      ease: "bounce.inOut",
       pin: true
+    }
+  });
+}
+
+if (window.innerWidth <= 1300) {
+  gsap.to(aboutLeft, {
+    scale: 1,
+    ease: "power4.out",
+    scrollTrigger: {
+      trigger: aboutTrigger,
+      start: "top center+=200",
+      end: "top top-=300",
+      scrub: 0.1
+    }
+  });
+}
+
+// Services scroll animation
+
+const service1 = document.querySelector(".service1");
+const service2 = document.querySelector(".service2");
+const service3 = document.querySelector(".service3");
+const servicesTrigger = document.querySelector("#services");
+
+if (window.innerWidth > 1300) {
+  gsap.to(service1, {
+    y: 0,
+    ease: "power4.inOut",
+    scrollTrigger: {
+      trigger: servicesTrigger,
+      start: "top top-=600",
+      end: "bottom bottom+=600",
+      scrub: 0
+    }
+  });
+
+  gsap.to(service2, {
+    y: 0,
+    ease: "power4.inOut",
+    scrollTrigger: {
+      trigger: servicesTrigger,
+      start: "top top-=700",
+      end: "bottom bottom+=4500",
+      scrub: 0
+    }
+  });
+
+  gsap.to(service3, {
+    y: 0,
+    ease: "power4.inOut",
+    scrollTrigger: {
+      trigger: servicesTrigger,
+      start: "top top-=800",
+      end: "bottom bottom+=300",
+      scrub: 0
+    }
+  });
+}
+
+if (window.innerWidth <= 1300) {
+  gsap.to(service1, {
+    x: 0,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: servicesTrigger,
+      start: "top center+=400",
+      end: "bottom bottom+=800",
+      scrub: 0
+    }
+  });
+
+  gsap.to(service2, {
+    x: 0,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: servicesTrigger,
+      start: "top center",
+      end: "bottom bottom+=400",
+      scrub: 0
+    }
+  });
+
+  gsap.to(service3, {
+    x: 0,
+    ease: "power2.inOut",
+    scrollTrigger: {
+      trigger: servicesTrigger,
+      start: "top center-=400",
+      end: "bottom bottom",
+      scrub: 0
     }
   });
 }
