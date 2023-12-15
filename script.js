@@ -213,7 +213,7 @@ if (window.innerWidth > 1300) {
 if (window.innerWidth <= 1300) {
   gsap.to(service1, {
     x: 0,
-    ease: "power2.inOut",
+    ease: "power4.inOut",
     scrollTrigger: {
       trigger: servicesTrigger,
       start: "top center+=400",
@@ -224,7 +224,7 @@ if (window.innerWidth <= 1300) {
 
   gsap.to(service2, {
     x: 0,
-    ease: "power2.inOut",
+    ease: "power4.inOut",
     scrollTrigger: {
       trigger: servicesTrigger,
       start: "top center",
@@ -235,7 +235,7 @@ if (window.innerWidth <= 1300) {
 
   gsap.to(service3, {
     x: 0,
-    ease: "power2.inOut",
+    ease: "power4.inOut",
     scrollTrigger: {
       trigger: servicesTrigger,
       start: "top center-=400",
