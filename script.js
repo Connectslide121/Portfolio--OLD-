@@ -128,7 +128,7 @@ if (window.innerWidth > 1300) {
       trigger: aboutTrigger,
       start: "top center",
       end: "top top-=300",
-      scrub: 0.1
+      scrub: 0.6
     }
   });
 
@@ -139,7 +139,7 @@ if (window.innerWidth > 1300) {
     scrollTrigger: {
       trigger: aboutTrigger,
       start: "top top-=200",
-      scrub: 0.1
+      scrub: 0.5
     }
   });
 
@@ -149,7 +149,7 @@ if (window.innerWidth > 1300) {
     scrollTrigger: {
       trigger: aboutTrigger,
       start: "top top",
-      scrub: 0.1,
+      scrub: 0.5,
       pin: true
     }
   });
@@ -183,7 +183,7 @@ if (window.innerWidth > 1300) {
       trigger: servicesTrigger,
       start: "top top-=600",
       end: "bottom bottom+=600",
-      scrub: 0
+      scrub: 0.3
     }
   });
 
@@ -194,7 +194,7 @@ if (window.innerWidth > 1300) {
       trigger: servicesTrigger,
       start: "top top-=700",
       end: "bottom bottom+=4500",
-      scrub: 0
+      scrub: 0.3
     }
   });
 
@@ -205,7 +205,7 @@ if (window.innerWidth > 1300) {
       trigger: servicesTrigger,
       start: "top top-=800",
       end: "bottom bottom+=300",
-      scrub: 0
+      scrub: 0.3
     }
   });
 }
@@ -218,7 +218,7 @@ if (window.innerWidth <= 1300) {
       trigger: servicesTrigger,
       start: "top center+=400",
       end: "bottom bottom+=800",
-      scrub: 0
+      scrub: 0.3
     }
   });
 
@@ -229,7 +229,7 @@ if (window.innerWidth <= 1300) {
       trigger: servicesTrigger,
       start: "top center",
       end: "bottom bottom+=400",
-      scrub: 0
+      scrub: 0.3
     }
   });
 
@@ -240,7 +240,7 @@ if (window.innerWidth <= 1300) {
       trigger: servicesTrigger,
       start: "top center-=400",
       end: "bottom bottom",
-      scrub: 0
+      scrub: 0.3
     }
   });
 }
