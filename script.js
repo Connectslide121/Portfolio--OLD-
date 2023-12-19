@@ -90,7 +90,7 @@ rings.forEach((ring) => {
     scrollTrigger: {
       trigger: homeScrollSection,
       start: "bottom top",
-      scrub: 1
+      scrub: 0.6
     }
   });
 });
@@ -239,6 +239,32 @@ function displayProject(event) {
   const displayFrame = document.querySelector(".work-displayed");
   displayFrame.innerHTML = workToDisplay.innerHTML;
 }
+
+// My projects filter handler
+
+document.addEventListener("DOMContentLoaded", function () {
+  var filterItems = document.querySelectorAll(".filter");
+
+  var projectContainers = document.querySelectorAll(".work");
+
+  filterItems.forEach(function (filterItem) {
+    filterItem.addEventListener("click", function () {
+      filterItems.forEach(function (item) {
+        item.classList.remove("active-filter");
+      });
+
+      filterItem.classList.add("active-filter");
+
+      var filterValue = filterItem.textContent.toLowerCase().trim();
+
+      projectContainers.forEach(function (projectContainer) {
+        var hasFilter = projectContainer.classList.contains(filterValue);
+
+        projectContainer.style.display = hasFilter ? "block" : "none";
+      });
+    });
+  });
+});
 
 // Nav Links fix
 const aboutNavLink = document.querySelector(".aboutNavLink");
