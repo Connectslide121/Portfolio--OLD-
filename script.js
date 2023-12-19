@@ -235,7 +235,13 @@ Array.from(projects).forEach((project) => {
 });
 
 function displayProject(event) {
+  projects.forEach((project) => {
+    project.classList.remove("active-work");
+  });
+
   const workToDisplay = event.target.closest(".work");
+  workToDisplay.classList.add("active-work");
+
   const displayFrame = document.querySelector(".work-displayed");
   displayFrame.innerHTML = workToDisplay.innerHTML;
 }
@@ -287,13 +293,16 @@ const scrollToServices =
 const scrollToMyWork =
   sections[0].offsetHeight +
   sections[1].offsetHeight +
-  sections[2].offsetHeight;
+  sections[2].offsetHeight +
+  sections[3].offsetHeight -
+  window.innerHeight;
 
 const scrollToContact =
   sections[0].offsetHeight +
   sections[1].offsetHeight +
   sections[2].offsetHeight +
   sections[3].offsetHeight +
+  sections[4].offsetHeight -
   window.innerHeight;
 
 aboutNavLink.addEventListener("mousedown", (e) => {
@@ -341,6 +350,33 @@ myWorkNavLink.addEventListener("mousedown", (e) => {
     }
   });
 });
+
+function setActiveNavLink(sectionId) {
+  document.querySelectorAll(".navbar-link").forEach((link) => {
+    link.classList.remove("active-navbar-link");
+  });
+
+  document
+    .querySelector(`.${sectionId}NavLink`)
+    .classList.add("active-navbar-link");
+}
+
+// Function to check which section is in the viewport
+function getActiveSection() {
+  const scrollPosition = window.scrollY;
+
+  if (scrollPosition < scrollToAbout - window.innerHeight / 3) {
+    setActiveNavLink("home");
+  } else if (scrollPosition < scrollToServices - window.innerHeight / 3) {
+    setActiveNavLink("about");
+  } else if (scrollPosition < scrollToMyWork - window.innerHeight / 3) {
+    setActiveNavLink("services");
+  } else if (scrollPosition < scrollToContact - window.innerHeight / 3) {
+    setActiveNavLink("myWork");
+  } else {
+    setActiveNavLink("contact");
+  }
+}
 
 // Floating circles
 var numberOfCircles = 12;
@@ -451,4 +487,6 @@ setInterval(() => {
   requestAnimationFrame(() => updateCircles({ clientX: 0, clientY: 0 }));
 }, 1000 / 60);
 
+document.addEventListener("DOMContentLoaded", getActiveSection);
 document.addEventListener("mousemove", updateCircles);
+window.addEventListener("scroll", getActiveSection);

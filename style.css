@@ -11,17 +11,19 @@ html {
 }
 
 body {
-  --color1: #;
-  color: #e6e6f3;
+  --mainColor1: #e6e6f3;
+  --mainColor2: #1b1729;
+  --accentColor: #646b89;
+  --hoverColor: #37374e;
+  color: var(--mainColor1);
   display: flex;
   flex-direction: column;
-  background: #e6e6f3;
 }
 
 body h1 {
   font-weight: 550;
   font-size: 42px;
-  color: #e6e6f3;
+  color: var(--mainColor1);
 }
 
 body h1 span {
@@ -56,7 +58,7 @@ nav {
 
 .nav-logo {
   width: 80px;
-  background: #e6e6f3;
+  background: var(--mainColor1);
   padding: 10px;
   border-radius: 40px;
 }
@@ -68,26 +70,31 @@ nav .nav-links ul li {
 }
 
 .navbar-link {
-  color: #1b1729;
+  color: var(--mainColor2);
   text-decoration: none;
   font-size: 18px;
   position: relative;
   padding: 5px 10px;
   border-radius: 25px;
-  background: #e6e6f3;
+  background: var(--mainColor1);
+  transition: background 0.15s ease-in-out;
 }
 
 .navbar-link span {
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .navbar-link:hover {
-  color: #6e78a5;
+  background: var(--accentColor);
+}
+
+.active-navbar-link {
+  background: var(--accentColor);
 }
 
 nav .social-media {
   padding: 0;
-  background: #e6e6f3;
+  background: var(--mainColor1);
   border-radius: 15px;
 }
 
@@ -100,7 +107,7 @@ nav .social-media ul li {
 }
 
 nav .social-media ul li a {
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 nav .social-media ul li:hover {
@@ -108,7 +115,7 @@ nav .social-media ul li:hover {
 }
 
 nav .social-media ul li:hover a {
-  color: #6e78a5;
+  color: var(--accentColor);
 }
 
 /*--------------------------home----------------------*/
@@ -116,7 +123,7 @@ nav .social-media ul li:hover a {
 .home {
   width: 100%;
   padding-bottom: 2000px;
-  background: #e6e6f3;
+  background: var(--mainColor1);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -160,7 +167,7 @@ nav .social-media ul li:hover a {
 .segment3 {
   width: 180px;
   height: 180px;
-  border: solid 3px #1b1729;
+  border: solid 3px var(--mainColor2);
   border-radius: 50%;
 }
 
@@ -181,25 +188,25 @@ nav .social-media ul li:hover a {
 .segment6 {
   width: 260px;
   height: 260px;
-  border: solid 3px #1b1729;
+  border: solid 3px var(--mainColor2);
   border-radius: 50%;
 }
 
 .home-text {
   font-size: 20px;
-  color: #1b1729;
+  color: var(--mainColor2);
   margin-top: 70vh;
   position: fixed;
 }
 
 .home-text h1 {
   font-size: 60px;
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .home-text h1 span {
   font-size: 72px;
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 /*------------------------about-----------------------*/
@@ -207,7 +214,7 @@ nav .social-media ul li:hover a {
 #about {
   padding: 2% 0;
   height: 110vh;
-  background: #1b1729;
+  background: var(--mainColor2);
   z-index: 10;
 }
 
@@ -258,20 +265,20 @@ nav .social-media ul li:hover a {
   margin-right: 80px;
   font-size: 20px;
   font-weight: 500;
-  color: #e6e6f3;
+  color: var(--mainColor1);
   cursor: pointer;
   position: relative;
   padding: 15px 15px;
   border-radius: 8px;
-  background: #646b89;
+  background: var(--accentColor);
 }
 
 .tab-links:hover {
-  background: #37374e;
+  background: var(--hoverColor);
 }
 
 .tab-links.active-link {
-  background: #37374e;
+  background: var(--hoverColor);
 }
 
 .tab-contents.skills.active-tab {
@@ -292,7 +299,7 @@ nav .social-media ul li:hover a {
   width: 60px;
   height: 60px;
   border-radius: 50%;
-  background: #646b89;
+  background: var(--accentColor);
   box-shadow: 0px 0px 3px 3px #6e78a5;
 }
 
@@ -309,7 +316,7 @@ nav .social-media ul li:hover a {
 }
 
 .tab-contents ul li span {
-  color: #e6e6f3;
+  color: var(--mainColor1);
   font-weight: 500;
   font-size: 20px;
   font-weight: 580;
@@ -328,7 +335,7 @@ nav .social-media ul li:hover a {
 #services {
   padding: 1200px 0 900px 0;
   height: 110vh;
-  background: #e6e6f3;
+  background: var(--mainColor1);
 }
 
 #services .container {
@@ -338,7 +345,7 @@ nav .social-media ul li:hover a {
 
 #services h1 {
   position: relative;
-  color: #1b1729;
+  color: var(--mainColor2);
   margin-bottom: 80px;
   z-index: 0;
 }
@@ -347,7 +354,7 @@ nav .social-media ul li:hover a {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 40px;
-  color: #e6e6f3;
+  color: var(--mainColor1);
   margin: 10% 0;
 }
 
@@ -370,7 +377,7 @@ nav .social-media ul li:hover a {
   transition: box-shadow 0.3s;
   z-index: 0;
   box-shadow: 6px 6px 10px #333;
-  background: #646b89;
+  background: var(--accentColor);
   border-radius: 5px;
   transition: background 0.2s ease-in-out;
 }
@@ -390,15 +397,15 @@ nav .social-media ul li:hover a {
   font-size: 15px;
   margin-top: 20px;
   display: inline-block;
-  color: #646b89;
+  color: var(--accentColor);
 }
 
 .services-list div:hover {
-  background: #37374e;
+  background: var(--hoverColor);
 }
 
 .services-list div:hover a {
-  color: #e6e6f3;
+  color: var(--mainColor1);
 }
 
 /*------------------------my projects-----------------------*/
@@ -407,7 +414,7 @@ nav .social-media ul li:hover a {
   z-index: 10;
   height: 100vh;
   width: 100vw;
-  background: #1b1729;
+  background: var(--mainColor2);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -436,7 +443,7 @@ nav .social-media ul li:hover a {
 .work-displayed .media {
   height: 80%;
   width: auto;
-  border: solid 10px #646b89;
+  border: solid 10px var(--accentColor);
   border-radius: 5px;
 }
 
@@ -466,8 +473,8 @@ nav .social-media ul li:hover a {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #646b89;
-  color: #e6e6f3;
+  background: var(--accentColor);
+  color: var(--mainColor1);
   font-size: 16px;
   width: 48%;
   height: 50px;
@@ -476,7 +483,7 @@ nav .social-media ul li:hover a {
 }
 
 .work-displayed .work-description .buttons a:hover {
-  background: #37374e;
+  background: var(--hoverColor);
 }
 
 .work-displayed .work-description .buttons i {
@@ -501,7 +508,7 @@ nav .social-media ul li:hover a {
 }
 
 .filter {
-  background: #646b89;
+  background: var(--accentColor);
   border-radius: 2px;
   margin: 2px;
   padding: 5px;
@@ -510,11 +517,11 @@ nav .social-media ul li:hover a {
 }
 
 .filter:hover {
-  background: #37374e;
+  background: var(--hoverColor);
 }
 
 .active-filter {
-  background: #37374e;
+  background: var(--hoverColor);
 }
 
 .work-scroller {
@@ -523,18 +530,17 @@ nav .social-media ul li:hover a {
   grid-auto-flow: column;
   grid-auto-columns: 13%;
   overflow-x: scroll;
-  background: #1b1729;
+  background: var(--mainColor2);
   padding: 10px 20px 10px 10px;
   margin-bottom: 1%;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
-  scroll-padding-inline: var(--_spacer, 1rem);
 }
 
 .work {
   padding: 10px;
-  background: #646b89;
-  color: #e6e6f3;
+  background: var(--accentColor);
+  color: var(--mainColor1);
   transition: transform 0.2s ease-in-out, background 0.15s ease-in-out;
   border-radius: 3px;
   scroll-snap-align: start;
@@ -542,7 +548,11 @@ nav .social-media ul li:hover a {
 
 .work:hover {
   cursor: pointer;
-  background: #37374e;
+  background: var(--hoverColor);
+}
+
+.active-work {
+  background: var(--hoverColor);
 }
 
 .media {
@@ -575,7 +585,7 @@ nav .social-media ul li:hover a {
 /*------------------------contact-----------------------*/
 
 #contact {
-  background: #e6e6f3;
+  background: var(--mainColor1);
 }
 
 #contact .container {
@@ -600,7 +610,7 @@ nav .social-media ul li:hover a {
 
 .contact-left {
   flex-basis: 30%;
-  background: #e6e6f3;
+  background: var(--mainColor1);
   padding: 60px;
   z-index: 100;
   border: solid 2px #d3dcdf;
@@ -609,31 +619,31 @@ nav .social-media ul li:hover a {
 }
 
 .contact-left h1 {
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .contact-right {
-  background: #e6e6f3;
+  background: var(--mainColor1);
   border: solid 2px #d3dcdf;
   flex-basis: 60%;
 }
 
 .contact-left h2 {
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .contact-left p {
   margin-top: 5%;
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .contact-left p a {
   text-decoration: none;
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .contact-left p i {
-  color: #1b1729;
+  color: var(--mainColor2);
   margin-right: 12px;
   font-size: 25px;
 }
@@ -651,7 +661,7 @@ nav .social-media ul li:hover a {
 }
 
 .contact-left .social-media ul li a {
-  color: #1b1729;
+  color: var(--mainColor2);
 }
 
 .contact-left .social-media ul li:hover {
@@ -665,23 +675,23 @@ nav .social-media ul li:hover a {
 .btn {
   display: block;
   width: fit-content;
-  background: #646b89;
-  border: 1px solid #646b89;
+  background: var(--accentColor);
+  border: 1px solid var(--accentColor);
   padding: 14px 50px;
   border-radius: 6px;
   text-decoration: none;
-  color: #e6e6f3;
+  color: var(--mainColor1);
   transition: background 0.3s;
   font-size: 16px;
 }
 
 .btn:hover {
-  background: #37374e;
+  background: var(--hoverColor);
   cursor: pointer;
 }
 
 .btn:active {
-  background: #e6e6f3;
+  background: var(--mainColor1);
 }
 
 .contact-right {
@@ -695,12 +705,12 @@ nav .social-media ul li:hover a {
 form input,
 form textarea {
   width: 100%;
-  border: 1px solid #646b89;
+  border: 1px solid var(--accentColor);
   outline: none;
   background: #f0f0ffc4;
   padding: 15px;
   margin: 15px 0;
-  color: #646b89;
+  color: var(--accentColor);
   font-size: 18px;
   border-radius: 6px;
   resize: none;
@@ -713,7 +723,7 @@ form textarea {
 .copyright {
   text-align: center;
   padding: 40px 0;
-  background: #1b1729;
+  background: var(--mainColor2);
   z-index: 0;
 }
 
@@ -777,18 +787,18 @@ nav .fas {
   }
 
   nav .fa-bars {
-    color: #1b1729;
+    color: var(--mainColor2);
     position: absolute;
     top: 20px;
     right: 25px;
     font-size: 30px;
-    background: #e6e6f3;
+    background: var(--mainColor1);
     padding: 5px;
     border-radius: 20%;
   }
 
   .nav-links ul {
-    background: #646b89;
+    background: var(--accentColor);
     position: fixed;
     top: 0;
     right: -200px;
@@ -809,20 +819,20 @@ nav .fas {
   .navbar-link {
     display: block;
     margin: 10px 0px 10px 20px;
-    color: #1b1729;
+    color: var(--mainColor2);
   }
 
   .navbar-link i {
-    color: #1b1729;
+    color: var(--mainColor2);
   }
 
   .navbar-link.active-link {
     background: #80c3b3;
-    color: #1b1729;
+    color: var(--mainColor2);
   }
 
   .navbar-link.active-link i {
-    color: #1b1729;
+    color: var(--mainColor2);
   }
 
   #about .container {
