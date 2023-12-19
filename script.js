@@ -30,25 +30,6 @@ function closemenu() {
 
 gsap.registerPlugin(ScrollTrigger, EasePack, ScrollToPlugin);
 
-// //Logo rotation
-// const logos = document.querySelectorAll('.animate-logo2, .animate-logo3, .animate-logo4, .animate-logo5, .animate-logo6');
-
-// logos.forEach((logo) => {
-//     rotateLogo(logo);
-// })
-
-// function rotateLogo(logo){
-//     const angle = Math.random() * 360;
-//     const direction = Math.random() < 0.5 ? -1 : 1;
-
-//     gsap.to(logo, {
-//         rotation : angle * direction,
-//         duration: Math.random() * 8,
-//         ease:Linear.easeNone,
-//         onComplete: () => rotateLogo(logo)
-//     })
-// }
-
 // Home scroll animation
 const rings = document.querySelectorAll(".segment");
 const homeScrollSection = document.querySelector("#home");
@@ -74,7 +55,7 @@ gsap.to(textRight, {
   scrollTrigger: {
     trigger: homeScrollSection,
     start: "top top",
-    scrub: 0
+    scrub: 1
   }
 });
 
@@ -85,7 +66,7 @@ gsap.to(textLeft, {
     trigger: homeScrollSection,
     start: "top top",
     end: "bottom top",
-    scrub: 0
+    scrub: 1
   }
 });
 
@@ -97,7 +78,7 @@ rings.forEach((ring) => {
       trigger: homeScrollSection,
       start: "top top",
       end: "bottom top",
-      scrub: 0
+      scrub: 1
     }
   });
 });
@@ -105,7 +86,7 @@ rings.forEach((ring) => {
 rings.forEach((ring) => {
   gsap.to(ring, {
     scale: 1,
-    ease: "nonet",
+    ease: "none",
     scrollTrigger: {
       trigger: homeScrollSection,
       start: "bottom top",
@@ -128,7 +109,7 @@ if (window.innerWidth > 1300) {
       trigger: aboutTrigger,
       start: "top center",
       end: "top top-=300",
-      scrub: 0.6
+      scrub: 1
     }
   });
 
@@ -182,8 +163,8 @@ if (window.innerWidth > 1300) {
     scrollTrigger: {
       trigger: servicesTrigger,
       start: "top top-=600",
-      end: "bottom bottom+=600",
-      scrub: 0.3
+      end: "bottom bottom+=200",
+      scrub: 0.5
     }
   });
 
@@ -193,8 +174,8 @@ if (window.innerWidth > 1300) {
     scrollTrigger: {
       trigger: servicesTrigger,
       start: "top top-=700",
-      end: "bottom bottom+=4500",
-      scrub: 0.3
+      end: "bottom bottom+=100",
+      scrub: 0.5
     }
   });
 
@@ -204,8 +185,8 @@ if (window.innerWidth > 1300) {
     scrollTrigger: {
       trigger: servicesTrigger,
       start: "top top-=800",
-      end: "bottom bottom+=300",
-      scrub: 0.3
+      end: "bottom bottom",
+      scrub: 0.5
     }
   });
 }
@@ -245,110 +226,19 @@ if (window.innerWidth <= 1300) {
   });
 }
 
-// Horizontal scroll animation
-const horizontalScrollSection = document.querySelector("#my-work");
-const scrollInnerSections = document.querySelectorAll(
-  "#websites, #games, #programs"
-);
-const scrollLimit =
-  scrollInnerSections[0].offsetWidth +
-  scrollInnerSections[1].offsetWidth +
-  scrollInnerSections[2].offsetWidth;
+// My projects display selector
 
-if (window.innerWidth > 1300) {
-  gsap.to(horizontalScrollSection, {
-    x: -scrollLimit + window.innerWidth,
-    ease: "power1.inOut",
-    scrollTrigger: {
-      trigger: horizontalScrollSection,
-      start: "bottom bottom",
-      end: "bottom bottom-=8300",
-      scrub: 0.6,
-      pin: true
-    }
-  });
+const projects = document.querySelectorAll(".work");
+
+Array.from(projects).forEach((project) => {
+  project.addEventListener("click", displayProject);
+});
+
+function displayProject(event) {
+  const workToDisplay = event.target.closest(".work");
+  const displayFrame = document.querySelector(".work-displayed");
+  displayFrame.innerHTML = workToDisplay.innerHTML;
 }
-
-// Websites progress bar animation
-var websitesTitle = document.querySelector("#websitesTitle");
-var websitesProgressBar = document.querySelector("#websitesProgressBar");
-var triggerWebsitesProgressBar = document.querySelectorAll(".websitesDates");
-
-gsap.to(websitesProgressBar, {
-  width: 2016,
-  ease: "none",
-  scrollTrigger: {
-    trigger: triggerWebsitesProgressBar[0],
-    start: "bottom center",
-    end: "right center-=2500px",
-    scrub: 0.6
-  }
-});
-
-gsap.to(websitesTitle, {
-  x: 2055,
-  ease: "none",
-  scrollTrigger: {
-    trigger: triggerWebsitesProgressBar[0],
-    start: "bottom center",
-    end: "right center-=2500px",
-    scrub: 0.6
-  }
-});
-
-// Games progress bar animation
-var gamesTitle = document.querySelector("#gamesTitle");
-var gamesProgressBar = document.querySelector("#gamesProgressBar");
-var triggerGamesProgressBar = document.querySelectorAll(".gamesDates");
-
-gsap.to(gamesProgressBar, {
-  width: 2012,
-  ease: "none",
-  scrollTrigger: {
-    trigger: triggerGamesProgressBar[0],
-    start: "bottom center-=3300px",
-    end: "bottom center-=4860px",
-    scrub: 0.6
-  }
-});
-
-gsap.to(gamesTitle, {
-  x: 2270,
-  ease: "none",
-  scrollTrigger: {
-    trigger: triggerGamesProgressBar[0],
-    start: "bottom center-=3300px",
-    end: "bottom center-=4860px",
-    scrub: 0.6
-  }
-});
-
-// Programs progress bar animation
-var programsTitle = document.querySelector("#programsTitle");
-var scrollProgramsProgressBar = document.querySelector("#programsProgressBar");
-var triggerProgramsProgressBar = document.querySelectorAll(".programsDates");
-
-gsap.to(scrollProgramsProgressBar, {
-  width: 1345,
-  ease: "none",
-  scrollTrigger: {
-    trigger: triggerProgramsProgressBar[0],
-    start: "bottom center-=5900px",
-    end: "bottom center-=7500px",
-    scrub: 0.6
-  }
-});
-
-gsap.to(programsTitle, {
-  x: 1380,
-  ease: "none",
-  scrollTrigger: {
-    trigger: triggerProgramsProgressBar[0],
-    start: "bottom center-=5900px",
-    end: "bottom center-=7500px",
-    scrub: 0.6
-  }
-});
 
 // Nav Links fix
 const aboutNavLink = document.querySelector(".aboutNavLink");
@@ -371,16 +261,13 @@ const scrollToServices =
 const scrollToMyWork =
   sections[0].offsetHeight +
   sections[1].offsetHeight +
-  sections[2].offsetHeight +
-  sections[3].offsetHeight -
-  window.innerHeight;
+  sections[2].offsetHeight;
 
 const scrollToContact =
   sections[0].offsetHeight +
   sections[1].offsetHeight +
   sections[2].offsetHeight +
   sections[3].offsetHeight +
-  sections[4].offsetHeight -
   window.innerHeight;
 
 aboutNavLink.addEventListener("mousedown", (e) => {
