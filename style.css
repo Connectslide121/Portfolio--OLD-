@@ -255,56 +255,22 @@ nav .social-media ul li:hover a {
 
 .tab-links {
   margin-right: 80px;
-  font-size: 24px;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 500;
   color: #e2e2f8;
   cursor: pointer;
   position: relative;
-  padding: 5px 10px;
-  border: 3px solid transparent;
-  border-radius: 25px;
+  padding: 15px 15px;
+  border-radius: 10px;
+  background: #646b89;
 }
 
-.skills-link {
-  border: 3px solid #d47636;
+.tab-links:hover {
+  background: #646b8962;
 }
 
-.skills-link:hover {
-  background: #d47636;
-}
-
-.skills-link.active-link {
-  color: #1b1729;
-  border: 3px solid #d47636;
-  background: #d47636;
-}
-
-.education-link {
-  border: 3px solid #c6aed2;
-}
-
-.education-link:hover {
-  background: #c6aed2;
-}
-
-.education-link.active-link {
-  color: #1b1729;
-  border: 3px solid #c6aed2;
-  background: #c6aed2;
-}
-
-.experience-link {
-  border: 3px solid #80c3b3;
-}
-
-.experience-link:hover {
-  background: #80c3b3;
-}
-
-.experience-link.active-link {
-  color: #1b1729;
-  border: 3px solid #80c3b3;
-  background: #80c3b3;
+.tab-links.active-link {
+  background: #646b8962;
 }
 
 .tab-contents.skills.active-tab {
@@ -449,9 +415,12 @@ nav .social-media ul li:hover a {
 
 #my-work {
   z-index: 10;
-  height: 110vh;
+  height: 100vh;
   width: 100vw;
   background: #1b1729;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #my-work h1 {
@@ -461,9 +430,7 @@ nav .social-media ul li:hover a {
 .work-display {
   height: 55vh;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin: auto;
 }
 
 .work-displayed {
@@ -513,7 +480,6 @@ nav .social-media ul li:hover a {
   font-size: 16px;
   width: 48%;
   height: 50px;
-  text-align: center;
   border-radius: 10px;
   transition: background 0.15s ease-in-out;
 }
@@ -557,37 +523,35 @@ nav .social-media ul li:hover a {
 }
 
 .work-scroller {
-  height: 25%;
-  display: flex;
+  display: grid;
+  gap: 10px;
+  grid-auto-flow: column;
+  grid-auto-columns: 11%;
   overflow-x: scroll;
   background: #1b1729;
   padding: 10px 20px 10px 10px;
+  margin-bottom: 1%;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
   scroll-padding-inline: var(--_spacer, 1rem);
 }
 
 .work {
-  margin: 0 20px 5px 0;
   padding: 10px;
   background: #646b89;
   color: #e6e6f3;
-  box-shadow: 0 0 3px 3px #6e78a5;
-  transition: transform 0.3s ease-in-out, background 0.15s ease-in-out,
-    box-shadow 0.15s ease-in-out;
+  transition: transform 0.2s ease-in-out, background 0.15s ease-in-out;
   border-radius: 3px;
   scroll-snap-align: start;
 }
 
 .work:hover {
   cursor: pointer;
-  transform: translateY(-5px);
   background: #646b8962;
-  box-shadow: 0 0 3px 3px #6e78a567;
 }
 
 .media {
-  height: 75%;
+  inline-size: 100%;
 }
 
 .work-description {

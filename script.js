@@ -78,7 +78,7 @@ rings.forEach((ring) => {
       trigger: homeScrollSection,
       start: "top top",
       end: "bottom top",
-      scrub: 1
+      scrub: 0.6
     }
   });
 });
@@ -90,7 +90,7 @@ rings.forEach((ring) => {
     scrollTrigger: {
       trigger: homeScrollSection,
       start: "bottom top",
-      scrub: 0
+      scrub: 1
     }
   });
 });
