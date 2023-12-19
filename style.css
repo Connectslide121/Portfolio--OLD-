@@ -549,7 +549,7 @@ nav .social-media ul li:hover a {
   border-radius: 12px;
   margin: 2px;
   cursor: pointer;
-  transition: background 0.15s ease-in-out;
+  transition: background 0.1s ease-in-out;
 }
 
 .filter ul li:hover {
