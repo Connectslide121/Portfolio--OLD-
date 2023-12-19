@@ -286,7 +286,7 @@ gsap.to(websitesProgressBar, {
 });
 
 gsap.to(websitesTitle, {
-  x: 2240,
+  x: 2055,
   ease: "none",
   scrollTrigger: {
     trigger: triggerWebsitesProgressBar[0],
@@ -340,7 +340,7 @@ gsap.to(scrollProgramsProgressBar, {
 });
 
 gsap.to(programsTitle, {
-  x: 1550,
+  x: 1380,
   ease: "none",
   scrollTrigger: {
     trigger: triggerProgramsProgressBar[0],
