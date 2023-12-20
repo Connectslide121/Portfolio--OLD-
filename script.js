@@ -83,17 +83,17 @@ rings.forEach((ring) => {
   });
 });
 
-rings.forEach((ring) => {
-  gsap.to(ring, {
-    scale: 1,
-    ease: "none",
-    scrollTrigger: {
-      trigger: homeScrollSection,
-      start: "bottom top",
-      scrub: 0.6
-    }
-  });
-});
+// rings.forEach((ring) => {
+//   gsap.to(ring, {
+//     scale: 1,
+//     ease: "none",
+//     scrollTrigger: {
+//       trigger: homeScrollSection,
+//       start: "bottom top",
+//       scrub: 0.6
+//     }
+//   });
+// });
 
 // About me scroll animation
 const aboutLeft = document.querySelector(".about-col-1");
@@ -246,7 +246,7 @@ function displayProject(event) {
   displayFrame.innerHTML = workToDisplay.innerHTML;
 }
 
-// My projects filter handler
+// My projects filter selector
 
 document.addEventListener("DOMContentLoaded", function () {
   var filterItems = document.querySelectorAll(".filter");
