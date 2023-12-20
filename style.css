@@ -272,6 +272,7 @@ nav .social-media ul li:hover a {
   padding: 15px 15px;
   border-radius: 8px;
   background: var(--accentColor);
+  transition: background 0.15s ease-in-out;
 }
 
 .tab-links:hover {
@@ -413,7 +414,7 @@ nav .social-media ul li:hover a {
 
 #my-work {
   z-index: 10;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   background: var(--mainColor2);
   display: flex;
