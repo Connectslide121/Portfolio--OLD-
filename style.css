@@ -16,6 +16,7 @@ body {
   --accentColor: #646b89;
   --hoverColor: #37374e;
   color: var(--mainColor1);
+  background: var(--mainColor1);
   display: flex;
   flex-direction: column;
 }
@@ -441,8 +442,8 @@ nav .social-media ul li:hover a {
 }
 
 .work-displayed .media {
-  height: 80%;
-  width: auto;
+  width: 45%;
+  height: auto;
   border: solid 10px var(--accentColor);
   border-radius: 5px;
 }
@@ -488,7 +489,7 @@ nav .social-media ul li:hover a {
 
 .work-displayed .work-description .buttons i {
   font-size: 32px;
-  margin: 0 10px;
+  margin: 0 10px 0 0;
 }
 
 .work-displayed .work-date {
@@ -756,18 +757,12 @@ nav .fas {
   #home,
   #services,
   #about,
-  #websites,
-  #games,
-  #programs,
   #contact {
     height: 100%;
   }
 
   #services,
   #about,
-  #websites,
-  #games,
-  #programs,
   #contact {
     padding: 0;
   }
@@ -867,50 +862,59 @@ nav .fas {
     transform: translateX(-1500px);
   }
 
-  #my-work {
+  #my-work h1 {
+    margin: 0 0 20px 50px;
+  }
+
+  .work-display {
+    height: 65vh;
+  }
+
+  .work-displayed {
+    flex-basis: 85%;
     flex-direction: column;
-    flex-wrap: wrap;
   }
 
-  .website-list,
-  .game-list,
-  .program-list {
-    display: flex;
+  .work-displayed .media {
+    width: 70%;
+    margin-top: 5%;
+  }
+
+  .work-displayed .work-description {
+    width: 80%;
     flex-direction: column;
-    align-items: center;
-    grid-gap: 60px;
-    margin-left: 0;
+    margin-bottom: 5%;
   }
 
-  .website,
-  .game,
-  .program {
-    width: 470px;
-    height: 500px;
+  .work-displayed .work-description h2 {
+    font-size: 28px;
   }
 
-  #websites .container,
-  #games .container,
-  #programs .container {
-    width: 100%;
+  .work-displayed .work-description p {
+    font-size: 20px;
+    margin: 20px 0;
   }
 
-  #websites .container img,
-  #programs .container img {
-    max-width: 100%;
+  .work-displayed .work-description .buttons a {
+    font-size: 16px;
   }
 
-  #games {
-    border: none;
+  .work-displayed .work-description .buttons i {
+    font-size: 20px;
   }
 
-  .websitesDates,
-  .gamesDates,
-  .programsDates,
-  #websitesProgressBar,
-  #gamesProgressBar,
-  #programsProgressBar {
-    display: none;
+  .work-displayed .work-date {
+    font-size: 16px;
+  }
+
+  .filters {
+    flex-basis: 10%;
+    font-size: 15px;
+    margin-left: 2%;
+  }
+
+  .work-scroller {
+    grid-auto-columns: 27%;
   }
 
   #contact .container {
@@ -960,6 +964,75 @@ nav .fas {
     max-width: 100%;
   }
 
+  #my-work h1 {
+    margin: 0 0 20px 50px;
+  }
+
+  .work-display {
+    height: 65vh;
+    flex-direction: column;
+  }
+
+  .work-displayed {
+    margin-right: 0;
+  }
+
+  .work-displayed .media {
+    width: 90%;
+  }
+
+  .work-displayed .work-description {
+    width: 80%;
+    flex-direction: column;
+    margin-bottom: 5%;
+  }
+
+  .work-displayed .work-description h2 {
+    font-size: 20px;
+  }
+
+  .work-displayed .work-description p {
+    font-size: 16px;
+    margin: 14px 0;
+  }
+
+  .work-displayed .work-description .buttons a {
+    font-size: 14px;
+  }
+
+  .work-displayed .work-description .buttons i {
+    font-size: 20px;
+  }
+
+  .work-displayed .work-date {
+    font-size: 14px;
+  }
+
+  .filters {
+    width: 90%;
+  }
+
+  .filters ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .work-scroller {
+    grid-auto-columns: 30%;
+  }
+
+  .work {
+    padding: 5px;
+  }
+
+  .work h2 {
+    font-size: 14px;
+  }
+
+  .work h3 {
+    font-size: 12px;
+  }
+
   .contact-left {
     padding: 30px;
   }
@@ -974,44 +1047,6 @@ nav .fas {
 
   .skillcard img {
     padding-right: 0;
-  }
-
-  .website,
-  .game,
-  .program {
-    width: 350px;
-    height: 440px;
-  }
-
-  .website-description,
-  .game-description,
-  .program-description {
-    width: 330px;
-  }
-
-  .game video {
-    width: 330px;
-  }
-
-  .website img,
-  .program img {
-    min-height: 200px;
-  }
-
-  .website-description .buttons,
-  .game-description .buttons,
-  .program-description a {
-    bottom: 20px;
-  }
-
-  .website-description .buttons a,
-  .game-description .buttons a,
-  .program-description a {
-    margin: 0 20px;
-    font-size: 24px;
-    line-height: 40px;
-    width: 40px;
-    height: 40px;
   }
 
   .floating-circle {
