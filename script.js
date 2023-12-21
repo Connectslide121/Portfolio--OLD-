@@ -293,17 +293,13 @@ const scrollToServices =
 const scrollToMyWork =
   sections[0].offsetHeight +
   sections[1].offsetHeight +
-  sections[2].offsetHeight +
-  sections[3].offsetHeight -
-  window.innerHeight;
+  sections[2].offsetHeight;
 
 const scrollToContact =
   sections[0].offsetHeight +
   sections[1].offsetHeight +
   sections[2].offsetHeight +
-  sections[3].offsetHeight +
-  sections[4].offsetHeight -
-  window.innerHeight;
+  sections[3].offsetHeight;
 
 aboutNavLink.addEventListener("mousedown", (e) => {
   e.preventDefault();

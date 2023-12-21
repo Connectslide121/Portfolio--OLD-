@@ -530,13 +530,50 @@ nav .social-media ul li:hover a {
   display: grid;
   gap: 10px;
   grid-auto-flow: column;
-  grid-auto-columns: 13%;
+  grid-auto-columns: 15%;
   overflow-x: scroll;
-  background: var(--mainColor2);
-  padding: 10px 20px 10px 10px;
-  margin-bottom: 1%;
+  padding: 10px 20px 30px 10px;
+  margin: 0 5% 5%;
   overscroll-behavior-inline: contain;
   scroll-snap-type: inline mandatory;
+}
+
+.work-scroller-wrapper {
+  position: relative;
+}
+
+.work-scroller-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 20%;
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0),
+    var(--mainColor2)
+  );
+  pointer-events: none;
+}
+.work-scroller::-webkit-scrollbar {
+  height: 20px;
+}
+
+.work-scroller::-webkit-scrollbar-track {
+  background: var(--mainColor1);
+  margin: 0 500px;
+  border-radius: 100vh;
+}
+
+.work-scroller::-webkit-scrollbar-thumb {
+  background: var(--accentColor);
+  border-radius: 100vh;
+  border: solid 2px var(--mainColor1);
+}
+
+.work-scroller::-webkit-scrollbar-thumb:hover {
+  background: var(--hoverColor);
 }
 
 .work {
