@@ -104,7 +104,7 @@ nav .social-media ul li {
   margin: 0 15px;
   font-size: 30px;
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: transform 0.15s;
 }
 
 nav .social-media ul li a {
@@ -266,21 +266,21 @@ nav .social-media ul li:hover a {
   margin-right: 80px;
   font-size: 20px;
   font-weight: 500;
-  color: var(--mainColor1);
+  color: var(--mainColor2);
   cursor: pointer;
   position: relative;
-  padding: 15px 15px;
-  border-radius: 8px;
-  background: var(--accentColor);
+  padding: 5px 15px;
+  border-radius: 100vh;
+  background: var(--mainColor1);
   transition: background 0.15s ease-in-out;
 }
 
 .tab-links:hover {
-  background: var(--hoverColor);
+  background: var(--accentColor);
 }
 
 .tab-links.active-link {
-  background: var(--hoverColor);
+  background: var(--accentColor);
 }
 
 .tab-contents.skills.active-tab {
@@ -376,12 +376,11 @@ nav .social-media ul li:hover a {
   padding: 40px;
   font-size: 18px;
   font-weight: 550;
-  transition: box-shadow 0.3s;
   z-index: 0;
   box-shadow: 6px 6px 10px #333;
   background: var(--accentColor);
   border-radius: 5px;
-  transition: background 0.2s ease-in-out;
+  transition: background 0.15s ease-in-out;
 }
 
 .services-list div i {
@@ -414,44 +413,68 @@ nav .social-media ul li:hover a {
 
 #my-work {
   z-index: 10;
-  min-height: 100vh;
-  width: 100vw;
+  min-height: 110vh;
   background: var(--mainColor2);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }
 
 #my-work h1 {
-  margin: 100px 0 0 100px;
+  margin: 80px 0 20px 100px;
 }
 
 .work-display {
-  height: 55vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
+.filters {
+  font-size: 18px;
+  text-align: center;
+}
+
+.filters ul {
+  list-style: none;
+  display: flex;
+}
+
+.filter {
+  background: var(--mainColor1);
+  color: var(--mainColor2);
+  border-radius: 20px;
+  margin: 0 4px 10px;
+  padding: 5px 25px;
+  cursor: pointer;
+  transition: background 0.15s ease-in-out;
+}
+
+.filter:hover {
+  background: var(--accentColor);
+}
+
+.active-filter {
+  background: var(--accentColor);
+}
+
 .work-displayed {
-  flex-basis: 85%;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 5%;
   height: 100%;
-  margin-right: 5%;
+  width: 70%;
 }
 
 .work-displayed .media {
-  width: 45%;
+  width: 50%;
   height: auto;
   border: solid 10px var(--accentColor);
   border-radius: 5px;
+  margin: 2% 0;
 }
 
 .work-displayed .work-description {
   height: 80%;
-  width: 25%;
+  width: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -498,71 +521,40 @@ nav .social-media ul li:hover a {
   margin-top: 20px;
 }
 
-.filters {
-  flex-basis: 8%;
-  font-size: 18px;
-  text-align: center;
-  margin-left: 5%;
-}
-
-.filters ul {
-  list-style: none;
-}
-
-.filter {
-  background: var(--accentColor);
-  border-radius: 2px;
-  margin: 2px;
-  padding: 5px;
-  cursor: pointer;
-  transition: background 0.1s ease-in-out;
-}
-
-.filter:hover {
-  background: var(--hoverColor);
-}
-
-.active-filter {
-  background: var(--hoverColor);
+.work-list {
+  width: 70%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px 0 50px;
+  gap: 15px;
+  overscroll-behavior-inline: contain;
+  scroll-snap-type: both mandatory;
 }
 
 .work-scroller {
   display: grid;
   gap: 10px;
   grid-auto-flow: column;
-  grid-auto-columns: 15%;
-  overflow-x: scroll;
   padding: 10px 20px 30px 10px;
-  margin: 0 5% 5%;
+  overflow-x: scroll;
+  margin: 0 15% 5%;
   overscroll-behavior-inline: contain;
-  scroll-snap-type: inline mandatory;
+  scroll-snap-type: both mandatory;
 }
 
 .work-scroller-wrapper {
   position: relative;
+  display: flex;
+  justify-content: center;
 }
 
-.work-scroller-wrapper::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: 20%;
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 0),
-    var(--mainColor2)
-  );
-  pointer-events: none;
-}
 .work-scroller::-webkit-scrollbar {
-  height: 20px;
+  height: 16px;
 }
 
 .work-scroller::-webkit-scrollbar-track {
   background: var(--mainColor1);
-  margin: 0 500px;
+  margin: 0 300px;
   border-radius: 100vh;
 }
 
@@ -577,10 +569,11 @@ nav .social-media ul li:hover a {
 }
 
 .work {
+  width: 250px;
   padding: 10px;
   background: var(--accentColor);
   color: var(--mainColor1);
-  transition: transform 0.2s ease-in-out, background 0.15s ease-in-out;
+  transition: background 0.15s ease-in-out;
   border-radius: 3px;
   scroll-snap-align: start;
 }
@@ -696,7 +689,7 @@ nav .social-media ul li:hover a {
   margin-right: 20px;
   font-size: 40px;
   cursor: pointer;
-  transition: transform 0.5s;
+  transition: transform 0.15s;
 }
 
 .contact-left .social-media ul li a {
@@ -720,7 +713,7 @@ nav .social-media ul li:hover a {
   border-radius: 6px;
   text-decoration: none;
   color: var(--mainColor1);
-  transition: background 0.3s;
+  transition: background 0.15s;
   font-size: 16px;
 }
 
@@ -839,7 +832,6 @@ nav .fas {
     height: 100vh;
     padding-top: 50px;
     z-index: 2;
-    transition: right 0.5s;
   }
 
   .nav-links ul .fas {

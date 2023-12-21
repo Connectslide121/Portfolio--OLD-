@@ -83,18 +83,6 @@ rings.forEach((ring) => {
   });
 });
 
-// rings.forEach((ring) => {
-//   gsap.to(ring, {
-//     scale: 1,
-//     ease: "none",
-//     scrollTrigger: {
-//       trigger: homeScrollSection,
-//       start: "bottom top",
-//       scrub: 0.6
-//     }
-//   });
-// });
-
 // About me scroll animation
 const aboutLeft = document.querySelector(".about-col-1");
 const aboutRight = document.querySelector(".about-col-2");
@@ -226,9 +214,36 @@ if (window.innerWidth <= 1300) {
   });
 }
 
-// My projects display selector
+// My projects filter selector
 
+const displayFrame = document.querySelector(".work-displayed");
+const filterItems = document.querySelectorAll(".filter");
+const projectList = document.querySelector("#work-list");
 const projects = document.querySelectorAll(".work");
+
+document.addEventListener("DOMContentLoaded", function () {
+  filterItems.forEach(function (filterItem) {
+    filterItem.addEventListener("click", function () {
+      filterItems.forEach(function (item) {
+        item.classList.remove("active-filter");
+      });
+
+      filterItem.classList.add("active-filter");
+
+      var filterValue = filterItem.textContent.toLowerCase().trim();
+
+      projects.forEach(function (project) {
+        var hasFilter = project.classList.contains(filterValue);
+
+        project.style.display = hasFilter ? "block" : "none";
+        projectList.classList = "work-list";
+        displayFrame.innerHTML = "";
+      });
+    });
+  });
+});
+
+// My projects display selector
 
 Array.from(projects).forEach((project) => {
   project.addEventListener("click", displayProject);
@@ -242,35 +257,9 @@ function displayProject(event) {
   const workToDisplay = event.target.closest(".work");
   workToDisplay.classList.add("active-work");
 
-  const displayFrame = document.querySelector(".work-displayed");
   displayFrame.innerHTML = workToDisplay.innerHTML;
+  projectList.classList = "work-scroller";
 }
-
-// My projects filter selector
-
-document.addEventListener("DOMContentLoaded", function () {
-  var filterItems = document.querySelectorAll(".filter");
-
-  var projectContainers = document.querySelectorAll(".work");
-
-  filterItems.forEach(function (filterItem) {
-    filterItem.addEventListener("click", function () {
-      filterItems.forEach(function (item) {
-        item.classList.remove("active-filter");
-      });
-
-      filterItem.classList.add("active-filter");
-
-      var filterValue = filterItem.textContent.toLowerCase().trim();
-
-      projectContainers.forEach(function (projectContainer) {
-        var hasFilter = projectContainer.classList.contains(filterValue);
-
-        projectContainer.style.display = hasFilter ? "block" : "none";
-      });
-    });
-  });
-});
 
 // Nav Links fix
 const aboutNavLink = document.querySelector(".aboutNavLink");

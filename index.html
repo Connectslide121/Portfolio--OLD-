@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-DXEW336RF1"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-DXEW336RF1");
+    </script>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jon Mendizabal - Portfolio</title>
@@ -318,37 +331,12 @@
         <!------------------------------------------------->
         <!----------------project display------------------>
         <!------------------------------------------------->
-        <div class="work-displayed">
-          <img
-            class="media"
-            src="images/works/calculator.png"
-            alt="Calculator"
-          />
-          <div class="work-description">
-            <h2>Calculator</h2>
-            <p>A calculator app made with React. My first ever React app.</p>
-            <div class="buttons">
-              <a
-                href="https://github.com/Connectslide121/Calculator"
-                title="Repository"
-                target="_blank"
-                ><i class="fa-brands fa-github"></i><span>SOURCE CODE</span></a
-              >
-              <a
-                href="https://connectslide121.github.io/Calculator/"
-                title="Visit site"
-                target="_blank"
-                ><i class="fa-solid fa-link"></i><span>LIVE DEMO</span></a
-              >
-            </div>
-            <div class="work-date"><h3>December 2023</h3></div>
-          </div>
-        </div>
+        <div class="work-displayed"></div>
       </div>
       <div class="work-scroller-wrapper">
-        <div class="work-scroller">
+        <div id="work-list" class="work-list">
           <!----------------project------------------>
-          <div class="work unfiltered front-end react javascript active-work">
+          <div class="work unfiltered front-end react javascript">
             <img
               class="media"
               src="images/works/calculator.png"
