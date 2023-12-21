@@ -435,6 +435,7 @@ nav .social-media ul li:hover a {
 .filters ul {
   list-style: none;
   display: flex;
+  flex-wrap: wrap;
 }
 
 .filter {
@@ -788,6 +789,7 @@ nav .fas {
   #home,
   #services,
   #about,
+  #my-work,
   #contact {
     height: 100%;
   }
@@ -893,20 +895,42 @@ nav .fas {
   }
 
   #my-work h1 {
-    margin: 0 0 20px 50px;
+    margin: 50px 0 20px 50px;
   }
 
-  .work-display {
-    height: 65vh;
+  .filters {
+    width: 70%;
+    font-size: 15px;
+    margin-left: 2%;
+  }
+
+  .filter {
+    padding: 5px 10px;
+  }
+
+  .work-list {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .work {
+    width: 200px;
+  }
+
+  .work-scroller {
+    margin: 0 5%;
+  }
+
+  .work-scroller::-webkit-scrollbar-track {
+    margin: 0 60px;
   }
 
   .work-displayed {
-    flex-basis: 85%;
     flex-direction: column;
   }
 
   .work-displayed .media {
-    width: 70%;
+    width: 100%;
     margin-top: 5%;
   }
 
@@ -917,11 +941,11 @@ nav .fas {
   }
 
   .work-displayed .work-description h2 {
-    font-size: 28px;
+    font-size: 24px;
   }
 
   .work-displayed .work-description p {
-    font-size: 20px;
+    font-size: 18px;
     margin: 20px 0;
   }
 
@@ -935,16 +959,6 @@ nav .fas {
 
   .work-displayed .work-date {
     font-size: 16px;
-  }
-
-  .filters {
-    flex-basis: 10%;
-    font-size: 15px;
-    margin-left: 2%;
-  }
-
-  .work-scroller {
-    grid-auto-columns: 27%;
   }
 
   #contact .container {
@@ -1004,27 +1018,17 @@ nav .fas {
     max-width: 100%;
   }
 
-  #my-work h1 {
-    margin: 0 0 20px 50px;
-  }
-
-  .work-display {
-    height: 65vh;
-    flex-direction: column;
-  }
-
   .work-displayed {
-    margin-right: 0;
-  }
-
-  .work-displayed .media {
     width: 90%;
   }
 
+  .work-displayed .media {
+    width: 100%;
+  }
+
   .work-displayed .work-description {
-    width: 80%;
-    flex-direction: column;
-    margin-bottom: 5%;
+    width: 90%;
+    margin-bottom: 3%;
   }
 
   .work-displayed .work-description h2 {
@@ -1052,16 +1056,8 @@ nav .fas {
     width: 90%;
   }
 
-  .filters ul {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
-  .work-scroller {
-    grid-auto-columns: 39%;
-  }
-
   .work {
+    width: 170px;
     padding: 5px;
   }
 
