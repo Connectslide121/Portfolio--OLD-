@@ -501,7 +501,7 @@ nav .social-media ul li:hover a {
   justify-content: center;
   background: var(--accentColor);
   color: var(--mainColor1);
-  font-size: 16px;
+  font-size: 15px;
   width: 48%;
   height: 50px;
   border-radius: 10px;
@@ -513,7 +513,7 @@ nav .social-media ul li:hover a {
 }
 
 .work-displayed .work-description .buttons i {
-  font-size: 32px;
+  font-size: 26px;
   margin: 0 10px 0 0;
 }
 
