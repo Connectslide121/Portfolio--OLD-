@@ -484,6 +484,16 @@ nav .social-media ul li:hover a {
   font-size: 38px;
 }
 
+.project-title {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 5%;
+}
+
+.project-title i {
+  color: #d8d50fee;
+}
+
 .work-displayed .work-description p {
   font-size: 18px;
   margin: 30px 0;
@@ -605,7 +615,7 @@ nav .social-media ul li:hover a {
 }
 
 .work h3 {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
 }
 

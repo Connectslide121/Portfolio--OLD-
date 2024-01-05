@@ -230,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       filterItem.classList.add("active-filter");
 
-      var filterValue = filterItem.textContent.toLowerCase().trim();
+      var filterValue = filterItem.classList[1];
 
       projects.forEach(function (project) {
         var hasFilter = project.classList.contains(filterValue);
