@@ -461,20 +461,21 @@ nav .social-media ul li:hover a {
   justify-content: center;
   gap: 5%;
   height: 100%;
-  width: 70%;
+  width: 80%;
 }
 
 .work-displayed .media {
-  width: 50%;
+  width: 40%;
   height: auto;
   border: solid 10px var(--accentColor);
   border-radius: 5px;
-  margin: 2% 0;
+  margin: 3% 0;
 }
 
 .work-displayed .work-description {
   height: 80%;
-  width: 35%;
+  width: 45%;
+  margin: 3% 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -579,7 +580,7 @@ nav .social-media ul li:hover a {
 }
 
 .work {
-  width: 250px;
+  width: 200px;
   padding: 10px;
   background: var(--accentColor);
   color: var(--mainColor1);

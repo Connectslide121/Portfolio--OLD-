@@ -316,7 +316,8 @@
         <div class="filters">
           <ul>
             <li class="filter all active-filter"><p>All projects</p></li>
-            <li class="filter starred"><p>Featured</p></li>
+            <li class="filter full-stack"><p>Featured</p></li>
+            <li class="filter featured"><p>Full-stack</p></li>
             <li class="filter front-end"><p>Front-end</p></li>
             <li class="filter javascript"><p>JavaScript</p></li>
             <li class="filter react"><p>React</p></li>
@@ -338,7 +339,7 @@
         <div id="work-list" class="work-list">
           <!----------------project------------------>
           <div
-            class="work all starred front-end react javascript ai external-api"
+            class="work all featured full-stack front-end react javascript ai external-api"
           >
             <video
               class="media"
@@ -354,10 +355,14 @@
                 <h2><i class="fa-solid fa-star"></i></h2>
               </div>
               <p>
-                A codepen style code editor powered by AI using OpenAI API to
-                create code and Unsplash API to add images. Build and modify web
-                apps via prompts or write and modify the code yourself. An
-                OpenAI API key is required to use it.
+                A codepen style code editor powered by AI using external
+                APIs:<br /><br />
+                -OpenAI API to generate code (OpenAI API key required) <br />
+                -Unsplash API to get images<br /><br />
+                Build and modify web apps via prompts or write and modify the
+                code yourself.<br /><br />
+                Back-end consists of an API with a connection to a MySQL server
+                using Entity Framework. Not implemented in the live demo yet.
               </p>
               <div class="buttons">
                 <a
@@ -470,7 +475,7 @@
             </div>
           </div>
           <!----------------project------------------>
-          <div class="work all starred front-end games javascript">
+          <div class="work all featured front-end games javascript">
             <video
               class="media"
               src="images/works/Sokoban.mp4"
@@ -507,7 +512,7 @@
             </div>
           </div>
           <!----------------project------------------>
-          <div class="work all starred back-end sql api">
+          <div class="work all featured back-end sql api">
             <img
               class="media"
               src="images/works/Community.png"
@@ -538,7 +543,7 @@
             </div>
           </div>
           <!----------------project------------------>
-          <div class="work all starred games unity">
+          <div class="work all featured games unity">
             <video
               class="media"
               src="images/works/PlasticSlurg.mp4"
