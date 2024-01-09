@@ -461,7 +461,7 @@ nav .social-media ul li:hover a {
   justify-content: center;
   gap: 5%;
   height: 100%;
-  width: 80%;
+  width: 90%;
 }
 
 .work-displayed .media {
@@ -554,7 +554,11 @@ nav .social-media ul li:hover a {
 }
 
 .work-scroller-wrapper {
-  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.work-scroller-wrapper .work-list {
   display: flex;
   justify-content: center;
 }
@@ -580,7 +584,7 @@ nav .social-media ul li:hover a {
 }
 
 .work {
-  width: 200px;
+  width: 220px;
   padding: 10px;
   background: var(--accentColor);
   color: var(--mainColor1);
