@@ -502,7 +502,7 @@ nav .social-media ul li:hover a {
 
 .work-displayed .work-description .buttons {
   display: flex;
-  justify-content: space-between;
+  gap: 25px;
 }
 .work-displayed .work-description .buttons a {
   text-decoration: none;
@@ -512,7 +512,7 @@ nav .social-media ul li:hover a {
   background: var(--accentColor);
   color: var(--mainColor1);
   font-size: 15px;
-  width: 48%;
+  width: 200px;
   height: 50px;
   border-radius: 10px;
   transition: background 0.15s ease-in-out;
